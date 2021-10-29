@@ -9,16 +9,19 @@ Source code for the mauscript
 * DOI: xyx
 * Citation: bib style
 
-Manuscript source: [inspire_maniscript LaTeX](https://github.com/DylanLawless/inspire_manscript/tree/main/inspire_manscript)
+### Content
+- Manuscript source: [inspire_maniscript LaTeX](https://github.com/DylanLawless/inspire_manscript/tree/main/inspire_manscript)
 
 ## inspire_analysis
 
 Since the data used in this study is partially public (all viral seuqence data) and partially private (personal clinical data), toy data has been provided to allow for publically-accessible format to aid in study reproduction.
 
-Data: [inspire_analysis/data](https://github.com/DylanLawless/inspire_manscript/tree/main/inspire_analysis/data)
-Data prep and analysis: [inspire_analysis/src](https://github.com/DylanLawless/inspire_manscript/tree/main/inspire_analysis/src)
+### Content
+- Data: [inspire_analysis/data](https://github.com/DylanLawless/inspire_manscript/tree/main/inspire_analysis/data)
+- Data prep and analysis: [inspire_analysis/src](https://github.com/DylanLawless/inspire_manscript/tree/main/inspire_analysis/src)
+- Analysis output images: [inspire_analysis/output](https://github.com/DylanLawless/inspire_manscript/tree/main/inspire_analysis/output)
 
-Data files:
+### Data files:
 * The files used in this analysis are:
 * MSA.split  ::  viral amino acid sequences
 * MSA.labels  ::  viral amino acid sequence read ID 
