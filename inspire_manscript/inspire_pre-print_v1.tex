@@ -32,7 +32,10 @@
 \begin{document}
 \date{} %don't want date printed
 %make title bold and 14 pt font (Latex default is non-bold, 16 pt)
-\title{\Large \bf Viral genetic determinants of persistent human orthopneumovirus infection.}
+\title{\Large \bf Viral genetic determinants of persistent human orthopneumovirus infection.
+\footnote{This document's private source code is available to co-authors from the \href{https://github.com/DylanLawless/inspire_manscript}{GitHub repository}, from the \href{https://www.overleaf.com/project/61718a4e077acc3d20ee68f1}{Overleaf online editor document}, or as MS Word format on box. The completed document will be published on 
+\href{https://www.biorxiv.org}{biorxiv} or \href{https://www.medrxiv.org}{medrxiv} before journal submission.}
+}
 %\thanks {Use thanks if u you need it}
 %for single author (just remove % characters)
 
@@ -90,8 +93,14 @@ This is important, as persistent infection, or prolonged shedding may contribute
 Further, the reservoir of RSV infection is not understood, 
 and it is possible that some RSV strains and/or hosts could serve as a dormant reservoir for infection that is activated by seasonal or other influences 
 \cite{hobson_persistent_2008}.
-Further, host genetic and viral genetic interactions have never been studied.[this may be out of scope to bring up in this paper]
-Add the 2 paragraph sections on viral population genetics, host contributing genetics. 
+Further, host genetic and viral genetic interactions have never been studied.
+With increasing adoption of human genomics in parallel with pathogen sequencing, novel methods for genome-to-genome analysis provide opportunities to identify selective pressure between host and pathogen (cite Naret).
+We have previously investigated to host genetics as a source of acceptability to infection (summarise result) (cite).
+Several environmental have a significant impact on the risk of infection. 
+Population genetics also contributes important features that must be accounted for during genetics association analysis. 
+These features not only depend on the host genetics (as seen with typical GWAS), but also the viral genetics.
+RSV strains A and B impart the largest separation within the viral population phylogeny.
+In this study we perform genomic analysis of RSV to identify variants that are significantly associated with persistent infection in otherwise healthy children. 
 
 \section{Methods}
 \subsection{Study population}
@@ -104,7 +113,8 @@ Additional details of this birth cohort has been previously published
 \cite{larkin_objectives_2015}.
 Briefly, the cohort includes 1952 term ($\ge$ 37 weeks gestation), non-low birth weight ($\ge$ 2250 g, 5 lbs), otherwise healthy infants from a population-representative sample from pediatric practices located in a rural, suburban and rural region of the southeastern US during 2012-2014. 
 Infants were born June through December so that they would by design be 6 months of age or less entering their first RSV season. 
-Infant (i.e., the first year of life) RSV infection was ascertained through passive and active biweekly surveillance during each infants' first RSV season.
+Infant (i.e., the first year of life) RSV infection was ascertained through passive and active biweekly surveillance during each infants' first RSV season
+(Table \ref{tab:1}).
 
 \subsection{Biweekly surveillance of RSV infection}
 To capture all RSV infections of children enrolled in INSPIRE throughout infancy (i.e., the first year of life), we conducted passive and active surveillance during their first RSV season by 1) performing bi-weekly phone, email, and/or in person follow-up, 2) frequently educating and reminding parents to call us at the onset of any acute respiratory symptoms, and 3) approaching all infants who were seen at one of the participating pediatric practices for an unscheduled visit. 
@@ -112,13 +122,15 @@ If an infant met pre-specified criteria for an acute respiratory infection, we t
 Nasal sample collections were assessed by reverse transcription-quantitative PCR for RSV [Jim to provide reference].
 At one year of age infants underwent blood draw for RSV serology to determine infection status during infancy. 
 [Plots with CT-value from Tina, either as supplemental or first mention later so not to pollute the order].
-Infants with positive PCR separated by more than 15 or more days were annotated during analysis as "persistent or repeat infection".
+Infants with positive PCR separated by more than 15 or more days were annotated during analysis as "persistent or repeat infection"
+(Figure \ref{fig:1}).
 
 \subsection{Descriptive analyses}
 Descriptive analyses of the cohort were conducted using R 4.0.5 (available at: 
 \url{http://www.r-project.org}). 
 Pearson or Wilcoxon tests were used for comparing infants with and without persistent RSV infection.
-The main descriptive features are provided in Table 1.
+The main descriptive features are provided in 
+Table \ref{tab:1}.
 [Consider plotting these also in the Hmisc Harrell style as seen in his book, RegerssionModellingStrategies2015].
 
 \subsection{RSV whole-genome sequencing}
@@ -165,11 +177,11 @@ Sequences were checked that they also be at least 90% as long as the maximum len
 for the corresponding gene in order to minimize the loss of aligned positions when computing the phylogenetic tree. 
 % <!---_Multiple seuqnce alignment:_--->
 % <!---aln/ Feb 18th--->
-Each of the eleven resulting sets was aligned with MAFFT v7 (\href{https://mafft.cbrc.jp/alignment/software/})
+Each of the eleven resulting sets was aligned with MAFFT v7 (\url{https://mafft.cbrc.jp/alignment/software/})
 \cite{katoh2013mafft},
 using default  parameters.
 The sequence of the orthologous gene from the bovine orthopneumovirus 
-(GenBank:NC\_001989 \href{https://www.ncbi.nlm.nih.gov/nuccore/NC_001989}) 
+(\href{https://www.ncbi.nlm.nih.gov/nuccore/NC_001989}{GenBank:NC\_001989}) 
 was added to each set as an outgroup. 
 % <!---
 %pep (outgroup seq)
@@ -227,7 +239,7 @@ with the most frequent residue defined as reference (REF) or alternative (ALT).
 Positions with at least one ALT were checked for potential misalignment or other sources of error. 
 Variants positions were selected for association analysis, while non-variant position were ignored.
 
-A number host features have been previously shown to influence infection susceptibility and were therefore included as covariates in our analysis (cite).
+A number host features have been previously shown to influence infection susceptibility and were therefore included as covariates in our analysis (cite Rosas-Salazar).
 Six samples were excluded due to insufficient covariate data, resulting in 344 test samples. 
 Of these, 36 were from the same patients ("persistent or repeat" infection) of which half (18) were included for association testing; 326 samples total.
 % <!--Correlations viewed with: corrplot, ggcorrplot, caret.-->
@@ -236,18 +248,21 @@ Of these, 36 were from the same patients ("persistent or repeat" infection) of w
 \subsection{Population structure}
 The genetic distances to nearest neighbors were computed based on phylogenetic 
 trees generated with MAFFT.
-[other methods also used but not pertinent; include some info from the code].
+[Other methods also used but not pertinent; include some info from the code].
 Principal component analysis (PCA) and singular value decomposition (SVD) were used in dimensionality reduction for exploratory data analysis of viral phylogeny.
 R package \textit{factoextra} was used for PCA, and to visualise eigenvalues and variance. 
 R package \textit{caret} was used to analyse genetic correlations.
 
 \subsection{Association testing}
-Viral amino acids (REF/ALT genotype) were tested for association with infection types \textit{single} and \textit{persistent}, 
+Viral amino acids (genotype collapsed into REF/ALT) were tested for association with infection types \textit{single} and \textit{persistent}, 
 including key covariates that are significantly associated with infection.
 Analysis was performed using logistic regression with the
 R stats (3.6.2) \textit{glm} function as a generalized linear model.
-% <!-- $$ glm(\text{Infection status } \text{\textasciitilde} \text{ genotype} + \text{PCs} + \text{birth month} + \text{sex} + \text{race} + \text{child-care} + \text{siblings}, \text{ family} = \text{'binomial'}) $$ -->
-The model consisted of the binary response (persistent infection Yes/No), and predictors; viral genotype (REF/ALT amino acid), viral PCs 1-5, host sex, and it also accounted for host features that have been previously demonstrated as significantly associated with infection; self-reported race/ethnicity, child-care attendance, living with siblings (cite Rosas-Salazar).
+The model consisted of the binary response (persistent infection Yes/No), and predictors; viral genotype (REF/ALT amino acid), viral PCs 1-5, host sex, and it also accounted for host features that have been previously demonstrated as significantly associated with infection; 
+self-reported race/ethnicity, child-care attendance, living with siblings (cite Rosas-Salazar).
+
+% $ glm(\text{Infection status} \text{\textasciitilde} \text{genotype} + \text{PCs} + \text{birth month} + \text{sex} + \text{race} + \text{child-care} + \text{siblings}, \text{family} = \text{'binomial'}) $
+
 % <!---
 % Logistic regression models are often used to analyse binary data (e.g. disease status), and can be described in the generalised linear model framework. 
 % Suppose that $y_i$ is the realisation of a random variable 
@@ -308,13 +323,12 @@ R package \textit{MASS} was used to analyse logistic regression model data.
 %serology, and genomic. 
 %Strain sub-analysis.
 %-->
-
 Second infections occurred only in those with strain B. 
 To test if the significantly associated variants were due to population structure, 
 a subset of only strain B was performed. 
-Due to the smaller sample size the result no longer passed the significant threshold. 
-However, the same direct of effect indicated that the association was not a false positive. 
-OR and CI. 
+% Due to the smaller sample size the result no longer passed the significant threshold. 
+% However, the same direct of effect indicated that the association was not a false positive. 
+% OR and CI. 
 % <!--
 %\subsection{Variance over time in public data}
 %-->
@@ -382,7 +396,7 @@ We observed persistent infections by viruses from different phylogenetic clades,
 Figure \ref{fig:2} B.
 A genotype correlation matrix produced with the R package \textit{caret} and PCA and eignenvalues from package \textit{factoextra} were used to for reducing the dimensionality of sequence data.
 Figure \ref{fig:2} scree plot.
-Dimension one accounted for 95.19% cumulative variance explained in our cohort.
+Dimension one accounted for 95.19\% cumulative variance explained in our cohort.
 All other dimensions account for very little variance, which is evenly distributed; no particular F or G protein protein coding sequence separates the cohort.
           % <!-- eigenvalue variance.percent cumulative.variance.percent -->
 % <!-- Dim.1   1.608637e+02     9.518559e+01                    95.18559 -->
@@ -438,7 +452,9 @@ p.P217T/S/L as candidate causal variants associated with persistent infection, a
 To determine whether this association was simply due to population stratification between strains A and B, a subset analysis was performed using independently assessed clinical laboratory strain labels for A and B.
 % <!-- Show how strains are defined in the genome sequence. --> 
 % <!-- ## Shown not just false positive, accounting for population structure and strain, --> 
-State the OR in same direction with overlapping SE.
+Due to the smaller sample size the result no longer passed the significant threshold. 
+However, the same direct of effect indicated that the association was not a false positive. 
+% State the OR in same direction with overlapping SE.
 
 To assess the possibility of a false positive due to population structure within our cohort,
 we assessed the magnitude of variance explained (VE) by the lead variant and found it as 
@@ -487,16 +503,31 @@ However, correlation between the two positions associated with persistent infect
 \subsection{Functional interpretation}
 We have collected the known features on the protein domain illustration.
 There are no known features that directly overlap our variants. 
-However, possible binding interections with host receptors are discussed in (cite).
-Look at function of variants, 3d structure, etc.
+However, possible binding interactions with host receptors are discussed in (cite).
+%Look at function of variants, 3d structure, etc.
+(Reword) Attachment of the virion to the host cell membrane is thought to occur through interaction with heparan sulfate, initiating infection 
+\cite{levine1987demonstration, feldman1999identification, feldman2000fusion}.
+(Reword) Interactions with host CX3CR1, the receptor for the CX3C chemokine fractalkine, have been reported to modulate the immune response and facilitate infection 
+\cite{johnson2015respiratory, tripp2001cx3c, jeong2015cx3cr1}.
+(Reword) Unlike the other paramyxovirus attachment proteins, RSV glycoprotein lacks both neuraminidase and hemagglutinating activities (cite, probable).
+(Reword) The isoform of secreted glycoprotein G also is also believed to help the virus escape antibody-dependent restriction of replication by acting as an antigen decoy and by modulating the activity of leukocytes bearing Fc-gamma receptors 
+\cite{bukreyev2008secreted}.
+Interactions  have also been identified with protein SH 
+\cite{rixon2005respiratory} 
+and via the N-terminus with protein M 
+\cite{ghildyal2005interaction}.
+G protein has been reported to form homo-oligomers (which we will check next for interaction residues. remove this citation if not fruitful)
+\cite{collins1992oligomerization}.
+The mature secreted form of the protein is also reported for amino acid positions 66 – 298.
+This secreted isoform includes the variants associated with persistent infection in our analysis. 
+[These 2 citations summaries wre copied and have not been read yet] Interacts with the host lectins CD209/DC-SIGN and CD209L/L-SIGN on dendritic cells; these interactions stimulate the phosphorylation of MAPK3/ERK1 and MAPK1/ERK2, which inhibits dendritic cell activation and could participate in the limited immunity against RSV reinfection 
+\cite{johnson2012respiratory}.
+Part of a complex composed of F1, F2 and G glycoproteins have been reported to form part of a complex
+\cite{low2008rsv}.
 
-Attachment of the virion to the host cell membrane occur through interaction with heparan sulfate, initiating infection (PubMed:3655746, PubMed:10400758, PubMed:10864656).
-Interacts with host CX3CR1, the receptor for the CX3C chemokine fractalkine, have been reported to modulate the immune response and facilitate infection (PubMed:26658574, PubMed:11477410, PubMed:26107373).
-Unlike the other paramyxovirus attachment proteins, RSV glycoprotein lacks both neuraminidase and hemagglutinating activities (cite, probable).
-
-The isoform of secreted glycoprotein G also is also believed to help the virus escape antibody-dependent restriction of replication by acting as an antigen decoy and by modulating the activity of leukocytes bearing Fc-gamma receptors (PMC2593351). 
-Double check and report the secretion position from uniprot here.
-The secreted isoform includes the variants associated with persistent infection in our analysis. 
+Bring up the idea of immune response once already inside cell. 
+Tina made the point that initial binding may not be the most important feature.
+Known neutralization epitopes were not found for our variant site (Jim).
 
 \subsection{Other notes}
 * Criteria for clearing infection; Tina has the details about this. 
@@ -639,7 +670,7 @@ Study participants were excluded based on a missing genotype call rate of 10%.
 Subject independence was assessed using 
  KING (\url{https://people.virginia.edu/~wc9c/KING/})
 any samples with a high degree of kinship or duplication 
-(pairwise identify-by-state (IBS) estimated kinship coefficient > 0.18) were removed 
+(pairwise identify-by-state (IBS) estimated kinship coefficient $> 0.18$) were removed 
 \cite{manichaikul_robust_2010}. 
 
 Variants were removed for minor allele frequencies $<0.05$, missingness $>0.1$, 
@@ -672,30 +703,42 @@ Population structure was controlled by GRM eigenvectors and analysis covariates 
 \bibliographystyle{unsrtnat}
 \bibliography{references}
 
-\section{Figures}
+
+\section{Tables and Figures}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c}
+         &  \\
+         & 
+    \end{tabular}
+        \includegraphics[scale=0.6]{t1}
+    \caption{Caption}
+    \label{tab:1}
+\end{table}
+
 \begin{figure}[ht] \hspace*{0cm} % This line is adjusting position on page left or right. 
-    \includegraphics[scale=0.2]{inspire_viral}
+    \includegraphics[scale=0.2]{f1}
 	\caption{legend.}
 	\label{fig:1}
 \end{figure}
 
 \begin{figure}[ht] \hspace*{0cm}
-%    \includegraphics[scale=1]{}
+    \includegraphics[scale=0.4]{f2}
 	\caption{legend.}
 	\label{fig:2} \end{figure}
 
 \begin{figure}[ht] \hspace*{0cm}
-%    \includegraphics[scale=1]{}
+    \includegraphics[scale=0.4]{f3}
 	\caption{legend.}
 	\label{fig:3} \end{figure}
 	
 	\begin{figure}[ht] \hspace*{0cm}
-%    \includegraphics[scale=1]{}
+    \includegraphics[scale=0.4]{f4}
 	\caption{legend.}
 	\label{fig:4} \end{figure}
 	
 	\begin{figure}[ht] \hspace*{0cm}
-%    \includegraphics[scale=1]{}
+    \includegraphics[scale=0.5]{fx}
 	\caption{legend.}
 	\label{fig:5} \end{figure}
 	
