@@ -28,7 +28,16 @@
 \usepackage{hypernat} % hypernat also required to allow citations to compress. 
 \usepackage{graphicx}
 \graphicspath{ {images/} } % sets the path to image files (Figures)
-    
+
+\usepackage{booktabs} % required for tables
+\usepackage{rotating,tabularx} % tabularx is the table style used, rotating can also be used
+\newcolumntype{Z}{ >{\centering\arraybackslash}X } % defining table content layout per box
+\usepackage{ltablex} % allow page break between lines in tabularx
+\usepackage{caption} \captionsetup{font=normalsize} % to set the caption size as normal even when table is tiny.
+
+\usepackage{pdflscape} % for rotated table
+\usepackage{multirow} % for table
+
 \begin{document}
 \date{} %don't want date printed
 %make title bold and 14 pt font (Latex default is non-bold, 16 pt)
@@ -102,14 +111,14 @@ This is important, as persistent infection, or prolonged shedding may contribute
 Further, the reservoir of RSV infection is not understood, 
 and it is possible that some RSV strains and/or hosts could serve as a dormant reservoir for infection that is activated by seasonal or other influences 
 \cite{hobson_persistent_2008}.
-Further, host genetic and viral genetic interactions have never been studied.
-With increasing adoption of human genomics in parallel with pathogen sequencing, novel methods for genome-to-genome analysis provide opportunities to identify selective pressure between host and pathogen (cite Naret).
+Further, host genetic and viral genetic interactions have never been studied for RSV.
+With increasing adoption of human genomics in parallel with pathogen sequencing, novel methods for genome-to-genome analysis provide opportunities to identify selective pressure between host and pathogen \cite{naret2018correcting}.
 We have previously investigated to host genetics as a source of acceptability to infection (summarise result) (cite).
-Several environmental have a significant impact on the risk of infection. 
+Several environmental factors have a significant impact on the risk of infection. 
 Population genetics also contributes important features that must be accounted for during genetics association analysis. 
-These features not only depend on the host genetics (as seen with typical GWAS), but also the viral genetics.
+These features not only depend on the host genetics (as seen within a typical GWAS), but also depend on the viral genetics.
 RSV strains A and B impart the largest separation within the viral population phylogeny.
-In this study we perform genomic analysis of RSV to identify variants that are significantly associated with persistent infection in otherwise healthy children. 
+In this study we perform genomic analysis of RSV to identify variants that are significantly associated with persistent infection in otherwise healthy children.
 
 \section{Methods}
 \subsection{Study population}
@@ -120,8 +129,8 @@ The informed consent document explained study procedures, use of data and biospe
 The study population is a longitudinal birth cohort - The INfant Susceptibility to Pulmonary Infections and Asthma Following RSV Exposure in Infancy Birth Cohort (INSPIRE) - specifically designed to capture the first RSV infection during infancy in a term health birth cohort. 
 Additional details of this birth cohort has been previously published 
 \cite{larkin_objectives_2015}.
-Briefly, the cohort includes 1952 term ($\ge$ 37 weeks gestation), non-low birth weight ($\ge$ 2250 g, 5 lbs), otherwise healthy infants from a population-representative sample from pediatric practices located in a rural, suburban and rural region of the southeastern US during 2012-2014. 
-Infants were born June through December so that they would by design be 6 months of age or less entering their first RSV season. 
+Briefly, the cohort includes 1952 term ($\ge$ 37 weeks gestation), non-low birth weight ($\ge$ 2250 g, 5 lbs), otherwise healthy infants from a population-representative sample from pediatric practices located in a rural, suburban, and rural region of the southeastern US during 2012-2014. 
+Infants were born June through December so that they would, by design, be 6 months of age or less entering their first RSV season. 
 Infant (i.e., the first year of life) RSV infection was ascertained through passive and active biweekly surveillance during each infants' first RSV season
 (Table \ref{tab:1}).
 
@@ -239,7 +248,7 @@ had frame shift variants but which did not affect the regions included in our te
 % <!--Label repeat infections -->
 Viral sequence data and clinical information was was merged and cleaned with R.
 Clinical IDs matching more than one viral sequence IDs were used to label "repeat or persistent" infections. 
-Genetic variantion was quantified in these samples and for subsequent analysis, only the first viral sequence was included for association testing. 
+Genetic variation was quantified in these samples and for subsequent analysis, only the first viral sequence was included for association testing. 
 Strain A and B typing had been completed previously and labels were included to annotate each sample accordingly.
 
 The cohort-specific variant frequency per position was calculated;
@@ -345,21 +354,17 @@ a subset of only strain B was performed.
 \subsection{Biological interpretation}
 Some but not all of these methods will be included for our results section. 
 Adjust based on discussion with co-authors.
-* Infant RSV infection results in decreased barrier function of the airway epithelium.
-
-* Association between INF-gama and RSV amino acid position (w= wild vs A=alternatives) adjusted for covariates.
-* Wilcox test comparing IFN-gamma, and INF-alpha, between RSV amino acid positions (W= wild type vs A=alternatives [3 combined]).
-
-* Illustration and discuss known protein domains.
-* Interactions,
-* PTM
-* Motifs,
-* Epitopes,
-* protein structure.
-* Define the choice of PDB used. 
-* Multiple organism alignment. 
-* Domain blast.
-
+Infant RSV infection results in decreased barrier function of the airway epithelium [cite].
+Association between INF-gama and RSV amino acid position (w= wild vs A=alternatives) was adjusted for the same covariates as the main analysis. Wilcox test comparing IFN-gamma, and INF-alpha, between RSV amino acid positions (W= wild type vs A=alternatives [3 combined]).
+Protein structures were analysed with data sourced from 
+RCSB PDB \url{https://www.rcsb.org}; Define the choice of PDB used. 
+Protein function and doamins were assessed using 
+UniProt	\url{https://www.uniprot.org}.
+Interactions, PTM, motifs,and epitopes were assessed from literature. 
+* Domain blast. 
+* Multiple organism alignment - not complete.
+Protein features were assessed using feature annotation data in bed file format from 
+\url{https://www.ncbi.nlm.nih.gov}.
 \paragraph{Figure and sup table of IFN response}
 
 \section{Results}
@@ -368,12 +373,12 @@ The INSPIRE cohort consisted of 1,949 enrolled infants
 (Figure \ref{fig:1}.).
 Of these, 1,220 (~63%) had $\ge$ 1 in-person respiratory illness visit(s). 
 In total, there were 2,093 in-person respiratory illness visits completed and the median (interquartile range [IQR]) number of in-person respiratory illness visits per infant was 1 (1-2). 
-The characteristics of these infants compared with the other RSV infected infants and the entire cohort is shown in Table 1.
+% The characteristics of these infants compared with the other RSV infected infants and the entire cohort is shown in Table 1.
 From the cohort, 344 RSV viral samples from 326 individuals were sequenced (methods).
 There were 20 infants with RSV positive PCR $\ge$ 15 days apart who we suspected as having either persistent or repeat infection (based on genetic analysis).
-
 % <!-- Also those who were sick enough to have a resp illness visit. --> 
-**Table 1.** Cohort characteristics of infants with persistent RSV infection compared with other RSV infection and entire cohort. Infection is defined as RSV sequence positive, with $\ge$ 15 days between testing. Pearson1, Wilcoxon2.
+Table \ref{tab:1} lists the cohort characteristics of infants with persistent RSV infection compared with other RSV infection and entire cohort. 
+Infection is defined as RSV sequence positive, with $\ge$ 15 days between testing. Pearson1, Wilcoxon2.
 % <!-- There are other variables that we can include, although this seems sufficient. -->
 [For Tebeb: We will need to recalculate this to represent just the first infection, as this small number infections include repeat infections which likely drives the median higher.]
 
@@ -512,15 +517,30 @@ However, correlation between the two positions associated with persistent infect
 % <!-- Need to look at the methods again for this. --> 
 
 \subsection{Functional interpretation}
-We have collected the known features on the protein domain illustration.
-There are no known features that directly overlap our variants. 
+The main features of RSV surface glycoprotein are illustrated in Figure \ref{fig:5}.
+There are no known features that directly overlap with the variant associated with persistent infection in our cohort. 
 However, possible binding interactions with host receptors are discussed in (cite).
 %Look at function of variants, 3d structure, etc.
-(Reword) Attachment of the virion to the host cell membrane is thought to occur through interaction with heparan sulfate, initiating infection 
+(Reword) Attachment of the virion to the host cell membrane is thought to occur through interaction with heparan sulfate (p.187-198), initiating infection 
 \cite{levine1987demonstration, feldman1999identification, feldman2000fusion}.
-(Reword) Interactions with host CX3CR1, the receptor for the CX3C chemokine fractalkine, have been reported to modulate the immune response and facilitate infection 
+(Reword) Interactions between viral G protein and host CX3CR1, the receptor for the CX3C chemokine fractalkine, have been reported to modulate the immune response and facilitate infection 
 \cite{johnson2015respiratory, tripp2001cx3c, jeong2015cx3cr1}.
-(Reword) Unlike the other paramyxovirus attachment proteins, RSV glycoprotein lacks both neuraminidase and hemagglutinating activities (cite, probable).
+CX3CR1 also is a coreceptor for HIV-1. 
+Variations in the \textit{CX3CR1} are known to have important effects on the susceptibility to HIV-1 infection and the hosts' potential for controlling infection [cite, ask Jacques].
+
+Viral envelope glycoproteins bind to specific cellular receptors and initiate fusion with the host cell membrane, 
+which allows the penetration of the viral genome into host cells. 
+The negative-strand RNA family of Paramyxoviridae rely on a pair of binding and fusion functions for infection, mediated by one or multiple envelope glycoproteins.
+The cell attachment proteins span the viral envelope and project from the surface as spikes 
+[confirm the consensus domain position here for A/B; 1-43 cytoplasmic, 43-63 helical, 64-298 extracellular].
+These proteins are generally designated as either hemagglutinin (H), hemagglutinin-neuraminidase (HN), or glycoprotein (G). 
+Haemagglutination activity which is responsible for the binding of virus (i.e. Influenza) to sialic acid on the surface of target cells.
+Haemagglutination and neuraminidase (HN) activity cleaves sialic acid on the cell surface, preventing viral particles from reattaching to previously infected cells. 
+Unlike the other paramyxovirus attachment proteins, 
+RSV glycoprotein lacks hemagglutinin-neuraminidase (HN) activities
+It uses the attachment protein with neither haemagglutination nor neuraminidase activity, designated as G (glycoprotein), wchih are found in henipaviruses.
+\cite{takimoto2002role, malvoisin1993measles, hu1992functional, horvath1992biological, bousse1994regions}
+
 (Reword) The isoform of secreted glycoprotein G also is also believed to help the virus escape antibody-dependent restriction of replication by acting as an antigen decoy and by modulating the activity of leukocytes bearing Fc-gamma receptors 
 \cite{bukreyev2008secreted}.
 Interactions  have also been identified with protein SH 
@@ -554,7 +574,38 @@ There are a few details that we want to clarify.
 * Kenya - family sampling every 5 days (tropical medicine funded this, and South Africa Heather Zar)
 
 
+
 \section{IFN response}
+
+We initially investigated if there was an immune reposes biomarker (serologies) that associated with the variant of interest. 
+IFN associated with strain A/B.
+The strains also cor with our variant, 
+but the INF response is unlikely to be due to our single variant.
+Write this is a short section with no figure or table. 
+
+
+Intermediate notes to be deleted. :
+Note this is a secondary exploratory analysis.
+
+1. GWAS on viral amino : assoc with persistent infection
+
+2. Carriers of variant at this position : assoc with IFN
+
+Since variant is highly cor with strain: 
+
+Option 1 - test A/B for IFN (not done, probably yes)
+
+Option 2 - test variant for IFN (done, yes)
+
+Option 3 - test variant stratified for A/B for IFN (done, correction kills signal)
+
+
+
+ - If our maker is cor with A/B do not correct for PC (strain)
+ - maybe A/B is driver of IFN rather than variant
+ - test A/B vs marker  (the tally (df2) shows the correlation basically)
+ - colinear problem if A/B and variant are correlated. 
+
 \begin{itemize}
 
     \item Acute infection during infancy
@@ -671,6 +722,9 @@ Functional interpretation section:
 \item MAFFT \url{https://mafft.cbrc.jp/alignment/software/} \cite{katoh2013mafft}
 \item Tbl2asn \url{https://www.ncbi.nlm.nih.gov/genbank/tbl2asn2/}
 \item Viral Genome ORF Reader, VIGOR 3.0 \url{https://sourceforge.net/projects/jcvi-vigor/files/}
+\item RCSB PDB	\url{https://www.rcsb.org}
+\item UniProt	\url{https://www.uniprot.org}
+
 \end{description}
 
 \subsection{Additional Data sources}
@@ -738,16 +792,79 @@ Population structure was controlled by GRM eigenvectors and analysis covariates 
 
 
 \section{Tables and Figures}
-\begin{table}[h]
-    \centering
-    \begin{tabular}{c|c}
-         &  \\
-         & 
-    \end{tabular}
-        \includegraphics[scale=0.6]{t1}
-    \caption{Caption}
-    \label{tab:1}
-\end{table}
+
+
+ \begin{landscape}										
+\begin{table}[ht]										
+\centering										
+\begin{tabularx}{\linewidth}{ X l X X X X }								
+\toprule										
+{		} & {		} & {	Persistent RSV N=19	} & {	Other RSV N=342	} & {	Total N=1949	} \\
+\midrule										
+\multirow{2}{*}{	Illness	} &{	Illness age, months (median, IQR)	} & {	6 (4, 6) 	} & {	4 (2, 5)	} & {	NA	} \\
+{		} &{	Respiratory severity score (median, IQR)	} & {	2.0 (1.2, 3.0)	} & {	3.0 (2.0, 4.0)	} & {	NA	 } \\
+\midrule										
+\multirow{2}{*}{	Viral strain	} & {	RSV A	} & {	73\%	} & {	60\%	} & {	NA	} \\
+{		} & {	RSV B	} & {	27\% 	} & {	40\%	} & {		} \\
+\midrule										
+\multirow{2}{*} {	RSV season	} & {	2012-13	} & {	68\%	} & {	54\%	} & {	44\%	} \\
+{		} & {	2013-14	} & {	32\%	} & {	46\%	} & {	56\%	} \\
+\midrule										
+\multirow{4}{*}{	Self reported Race	} & {	Non-Hispanic Black	} & {	11\%	} & {	16\%	} & {	18\%	} \\
+{		} & {	 Non-Hispanic White	} & {	79\%	} & {	66\%	} & {	65\%	} \\
+{		} & {	 Hispanic	} & {	0\%	} & {	9\%	} & {	9\%	} \\
+{		} & {	 Multi-race/ethnicity/other 	} & {	11\%	} & {	8\%	} & {	9\%	} \\
+\midrule										
+\multirow{2}{*}{	Sex	} & {	Female	} & {	53\%	} & {	44\%	} & {	48\%	} \\
+{		} & {	 Male	} & {	47\%	} & {	56\%	} & {	52\%	} \\
+ \midrule										
+ {	Smoke	} & {	Second-hand smoke exposure	} & {	58\%	} & {	44\%	} & {	47\%	} \\
+\midrule										
+ \multirow{3}{*}{	Insurance	} & {	Medicaid	} & {	32\%	} & {	52\%	} & {	54\%	} \\
+{		} & {	Private	} & {	68\%	} & {	47\%	} & {	45\%	} \\
+{		} & {	None/unknown	} & {	0\%	} & {	1\%	} & {	1\%	} \\
+\midrule										
+ \multirow{2}{*}{	Familial	} & {	Daycare	} & {		} & {		} & {		} \\
+{		} & {	Siblings	} & {		} & {		} & {		} \\
+\bottomrule										
+\caption{										
+Cohort characteristics of infants with persistent RSV infection compared with other RSV infection and entire cohort. 										
+Infection is defined as RSV sequence positive, with $\ge$15 days between testing. Respiratory severity score (median, IQR) Test statistic $P = 0.27^1$. Pearson$^1$, Wilcoxon$^2$.}										
+\label{tab:1}
+\end{tabularx}
+\end{table} 										
+\end{landscape}										
+\clearpage										
+
+
+%Enrolled in INSPIRE throughout infancy (i.e., the first year of life), 
+
+%Filter 1:
+%we conducted passive and active surveillance during their first RSV season by 
+%1)	- performing bi-weekly phone, 
+%	- email, and/or 
+%	- in person follow-up, 
+%
+%2) frequently educating and reminding parents to call us at the onset of any acute respiratory symptoms, and 
+%
+%3) approaching all infants who were seen at one of the participating pediatric practices for an unscheduled visit. 
+%
+%Filter 2:
+%If an infant met pre-specified criteria for an acute respiratory infection, 
+%we then conducted an in-person respiratory illness visit at which time we:
+%	- administered a parental questionnaire, 
+%	- performed a physical exam, 
+%	- collected a nasal wash, 
+%	- and (in infants seen during an unscheduled visit) completed a structured medical chart review.
+%
+%Filter 3: 
+%	- Nasal sample collections were assessed by reverse transcription-quantitative PCR for RSV [Jim to provide reference].
+%
+%Filter 4:
+%	- At one year of age infants underwent blood draw for RSV serology to determine infection status during infancy. 
+%
+%Filter 5:
+%Infants with positive PCR separated by more than 15 or more days were annotated during analysis as "persistent or repeat infection".
 
 \begin{figure}[ht] \hspace*{0cm} % This line is adjusting position on page left or right. 
     \includegraphics[scale=0.2]{f1}
@@ -757,7 +874,7 @@ Population structure was controlled by GRM eigenvectors and analysis covariates 
 
 \begin{figure}[ht] \hspace*{0cm}
     \includegraphics[scale=0.4]{f2}
-	\caption{legend.}
+	\caption{legend}
 	\label{fig:2} \end{figure}
 
 \begin{figure}[ht] \hspace*{0cm}
@@ -767,12 +884,14 @@ Population structure was controlled by GRM eigenvectors and analysis covariates 
 	
 	\begin{figure}[ht] \hspace*{0cm}
     \includegraphics[scale=0.4]{f4}
-	\caption{legend.}
+	\caption{This is a place holder image. The figures are currently in adobe illustrator format: protein domain, structure - interaction, features.}
 	\label{fig:4} \end{figure}
 	
 	\begin{figure}[ht] \hspace*{0cm}
     \includegraphics[scale=0.5]{fx}
-	\caption{legend.}
+	\caption{We do not need a table here - just a reminder of discussion with Tina.
+	Is just the short result in text enough? IFN associated with strain A/B, and which cor with our variant, but unlikely due to our single variant 
+	-- Yes - Tina agrees. .}
 	\label{fig:5} \end{figure}
 	
 \end{document}
