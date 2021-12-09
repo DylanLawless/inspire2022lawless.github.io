@@ -144,9 +144,9 @@ One parent of each participant in the cohort study provided written informed con
 The informed consent document explained study procedures, use of data and biospecimens for future studies, including genetic studies.
 
 The study population is a longitudinal birth cohort - The INfant Susceptibility to Pulmonary Infections and Asthma Following RSV Exposure in Infancy Birth Cohort (INSPIRE) - specifically designed to capture the first RSV infection during infancy in a term healthy birth cohort. 
-Additional details of this birth cohort has been previously published 
+Additional details of this birth cohort have been previously published 
 \cite{larkin_objectives_2015}.
-Briefly, the cohort includes 1952 term ($\ge$ 37 weeks gestation), non-low birth weight ($\ge$ 2250 g, 5 lbs), otherwise healthy infants from a population-representative sample from pediatric practices located in a rural, suburban, and rural region of the southeastern US during 2012-2014. 
+Briefly, the cohort includes 1952 term ($\ge$ 37 weeks gestation), non-low birth weight ($\ge$ 2250 g, 5 lbs), otherwise healthy infants from a population-representative sample of pediatric practices located in a rural, suburban, and rural regions of the southeastern US during 2012-2014. 
 Infants were born June through December so that they would, by design, be 6 months of age or less entering their first RSV season. 
 Infant (i.e., the first year of life) RSV infection was ascertained through passive and active biweekly surveillance during each infants' first RSV season and RSV serology
 (Table \ref{tab:1}).
@@ -197,7 +197,7 @@ A total of 350 viral sequences in \textit{.sqn} file format were used for downst
 % <!---_Fasta format:_--->
 % <!---fa--->
 We computed a phylogenetic tree for each gene, as follows.
-NCBI-tools asn2fsa (\url{https://www.huge-man-linux.net/man1/asn2fsa.html}) was used to to convert to fasta format.
+NCBI-tools asn2fsa (\url{https://www.huge-man-linux.net/man1/asn2fsa.html}) were used to to convert to fasta format.
 % <!--- /work/gr-fe/lawless/inspire/rsv_viral_seq/ 1.export_nucleotide.sh --->
 % <!--- 2.simplify_header.sh --->
 % <!---_Data curation:_--->
@@ -208,7 +208,7 @@ Figure \ref{fig:1}.
 These were separated and repooled to create 11 single fasta files for each gene containing all 350 samples. 
 % <!---split_seg.sh --->
 % <!---With awk, I split each fasta to a new file and labeled with the real name. i.e. segment 1 for all samples is in the file seg\_1, etc. dir: ./seg--->
-Sequences were checked that they also be at least 90% as long as the maximum length 
+Sequences were checked that they also be at least 90\% as long as the maximum length 
 for the corresponding gene in order to minimize the loss of aligned positions when computing the phylogenetic tree. 
 % <!---_Multiple seuqnce alignment:_--->
 % <!---aln/ Feb 18th--->
@@ -298,50 +298,6 @@ self-reported race/ethnicity, child-care attendance, living with siblings (cite 
 
 % $ glm(\text{Infection status} \text{\textasciitilde} \text{genotype} + \text{PCs} + \text{birth month} + \text{sex} + \text{race} + \text{child-care} + \text{siblings}, \text{family} = \text{'binomial'}) $
 
-% <!---
-% Logistic regression models are often used to analyse binary data (e.g. disease status), and can be described in the generalised linear model framework. 
-% Suppose that $y_i$ is the realisation of a random variable 
-% $Y_i$ for the 
-% $i$-th individual, 
-% where $Y_i = 1$ if the individual has the disease and 0 otherwise. 
-% $Y_i$ is assumed to be Bernoulli distributed,
-
-% $$ Y_i ∼ \text{Bernoulli}(\pi_i), $$
-
-% with probability $\pi_i$. 
-% In logistic regression, the logit link function is used to relate the underlying probability $\pi_i$ to a linear function of the predictors,
-
-% $$ 
-% logit(\pi_i) = log (\frac{\pi_i}{1-\pi_i}) = x'_i \beta
-% $$
-
-% * where $x_i$ is the vector of covariates and 
-% * $\beta$ is a vector of regression coefficients. 
-
-% Maximum likelihood estimation is used to estimate the parameters in the model.
-% Logistic regression in case-cohort studies applied directly to the cases and the subcohort noncases gives asymptotic inference of odds ratios.
-
-% Logistic regression models were fitted using the glm package in R. 
-% In the simulations, genotype and baseline age were included as covariates in the model. 
-% That is,
-
-% $$ 
-% x'i\beta{} = \beta{}_A A_i + \beta{}_G G_i 
-% $$
-
-% where 
-% * Ai is age measured in years for the i-th individual; 
-% * $G_i$ is genotype for the i-th individual coded as 0, 1 or 2 according to the number of risk alleles; 
-% * $\beta_A$ is the log(odds ratio) for a one year increase in age; 
-% * and $\beta_G$ is the log(odds ratio) for a one allele increase in the risk allele. 
-
-% In the applied example, the covariates included in the logistic regression models were the genotype of the genetic variant (coded as 0, 1 or 2 depending on the % number of risk alleles per individual), 
-% * age (in years), 
-% * sex, 
-% * EPIC-CVD centre (as a categorical variable), 
-% * and the first ten prinicipal components of ancestry.
-% Conditional analysis.
-% --->
 The environmental host covariates did not contribute any significant effect in our model for the candidate-causal association.
 Two viral PCs were included in our model for accuracy, however the clinical 
 strain labels (A/B) also reflect the same cohort population structure.
@@ -361,7 +317,7 @@ R package \textit{MASS} was used to analyse logistic regression model data.
 Second infections occurred only in those with strain B. 
 To test if the significantly associated variants were due to population structure, 
 a subset of only strain B was performed. 
-% Due to the smaller sample size the result no longer passed the significant threshold. 
+% In result instead; Due to the smaller sample size the result no longer passed the significant threshold. 
 % However, the same direct of effect indicated that the association was not a false positive. 
 % OR and CI. 
 % <!--
@@ -371,7 +327,7 @@ a subset of only strain B was performed.
 \subsection{Biological interpretation}
 Some but not all of these methods will be included for our results section. 
 Adjust based on discussion with co-authors.
-Infant RSV infection results in decreased barrier function of the airway epithelium [cite].
+Infant RSV infection results in decreased barrier function of the airway epithelium [PMCID: PMC8538412].
 Association between INF-gama and RSV amino acid position (w= wild vs A=alternatives) was adjusted for the same covariates as the main analysis. Wilcox test comparing interferon (IFN)-$\gamma$, and INF-$\alpha$, between RSV amino acid positions (W= wild type vs A=alternatives [3 combined]).
 Protein structures were analysed with data sourced from 
 RCSB PDB \url{https://www.rcsb.org}; Define the choice of PDB used. 
@@ -392,15 +348,15 @@ Of these, 1,220 (~63\%) had $\ge$ 1 in-person respiratory illness visit(s).
 In total, there were 2,093 in-person respiratory illness visits completed and the median (interquartile range [IQR]) number of in-person respiratory illness visits per infant was 1 (1-2). 
 % The characteristics of these infants compared with the other RSV infected infants and the entire cohort is shown in Table 1.
 From the cohort, 344 RSV viral samples from 326 individuals were sequenced (methods).
-There were 20 infants with RSV positive PCR $\ge$ 15 days apart who we suspected as having either persistent or repeat infection (based on genetic analysis).
+There were 19 infants with RSV positive PCR $\ge$ 15 days apart who we suspected as having either persistent or repeat infection (based on genetic analysis).
 % <!-- Also those who were sick enough to have a resp illness visit. --> 
 Table \ref{tab:1} lists the cohort characteristics of infants with persistent RSV infection compared with other RSV infection and the entire cohort. 
-Infection is defined as RSV sequence positive, with $\ge$ 15 days between testing. Pearson1, Wilcoxon2.
+Repeat or persistent infection is defined as RSV sequence positive, with $\ge$ 15 days between testing. Pearson1, Wilcoxon2.
 % <!-- There are other variables that we can include, although this seems sufficient. -->
 [For Tebeb: We will need to recalculate this to represent just the first infection, as this small number infections include repeat infections which likely drives the median higher.]
 
 The relatively small sample size of our cohort required analysis that targeted only genes which were \textit{a priori} likely to functionally contribute to the clinical phenotype. 
-Therefore, our analysis focused on F and G glycoproteins (citations).
+Therefore, our analysis focused on F and G glycoproteins (PMCID: PMC8310105, PMID: 33115881, PMID: 23598484, PMID: 31533056).
 % <!-- [Include some points for our reasoning; -->
 % <!-- Would we have false positives in other genes? -->
 % <!-- We can interpret the results in F and G. -->
@@ -425,7 +381,7 @@ which has emerged in recent years within RSV-A strains
 RSV-B strains with an analogous duplication have existed for two decades, 
 although the mechanisms leading to emergence and clinical implications have not been entirely defined.
 
-We observed persistent infections by viruses from different phylogenetic clades, rather than one specific clade 
+We observed repeat or persistent infections by viruses from different phylogenetic clades, rather than one specific clade 
 Figure \ref{fig:2} B.
 A genotype correlation matrix produced with the R package \textit{caret} and PCA and eignenvalues from package \textit{factoextra} were used for reducing the dimensionality of sequence data.
 Figure \ref{fig:2} scree plot.
@@ -448,11 +404,10 @@ The duration of RSV shedding duration in Kenyan infants has been reported previo
 Based on these finding, infections separated by at least 15 days were expected to be "new" infections. 
 % <!-- In addition to our within-cohort genetic analysis showing --> 
 Figure \ref{fig:2} C
-shows genetic invariance between for viral sequences within the same host for infections separated by at least 15 days. 
+shows genetic invariance between viral sequences within the same host for infections separated by at least 15 days. 
 There is a significant difference between the genetic diversity for multiple viral samples from individuals compared to diversity between all other samples from the same viral clades; $\text{P-value} = 1.3e-8$.
-We therefore, report these cases as persistent infection rather than second infections.
+We therefore, conclude and refer to these cases as persistent infection rather than second infections.
 % <!-- Have a look at update figure but the first version might be fine. --> 
-% <!-- Complete. Check for other ways, criteria, variation within host doesn’t work since we don't have read data, only variant call. -->
 
 \subsection{Variants in G glycoprotein significantly associated with persistent infection}
 The consensus sequence within the cohort was assigned based on the major allele.
@@ -460,7 +415,7 @@ Variants at the amino acid level were defined as either REF/ALT and assessed for
 The model consisted of
 the binary response (persistent infection Yes/No),
 and predictors; viral genotype (REF/ALT amino acid), viral PCs 1-5, host sex, and it also accounted for host features that have been previously demonstrated as significantly associated with infection;
-self-reported race/ethnicity, child-care attendance, living with siblings (cite).
+self-reported race/ethnicity, child-care attendance, living with siblings (Hall CB, Geiman JM, Biggar R, Kotok DI, Hogan PM, Douglas GR Jr. Respiratory syncytial virus infections within families. N Engl J Med 1976; 294:414–9. [PubMed] [Google Scholar]).
 Analysis was performed using R stats (3.6.2) \textit{glm} function. 
 % <!-- glm ( infection ~ genotype + PCs + sex + other). -->
 A significant genetic association was identified for persistent infection after Bonferroni correction multiple testing (threshold $<.05/23=.002$), 
@@ -486,7 +441,7 @@ To determine whether this association was simply due to population stratificatio
 % <!-- Show how strains are defined in the genome sequence. --> 
 % <!-- ## Shown not just false positive, accounting for population structure and strain, --> 
 Due to the smaller sample size the result no longer passed the significant threshold. 
-However, the same direct of effect indicated that the association was not a false positive. 
+However, the same direction of effect indicated that the association was not a false positive. 
 % State the OR in same direction with overlapping SE.
 
 To assess the possibility of a false positive due to population structure within our cohort,
@@ -515,9 +470,9 @@ We observed no enrichment for our variants of interest over time;
 a low frequency was observed in the available samples with no particular features compared to other low frequency variants. 
 However, correlation between the two positions associated with persistent infection indicates that it does not arise as random mutation event.
 
-% <!-- We already know it is not denovo in induals. -->
+% <!-- We already know it is not denovo in individuals. -->
 % <!-- Is our candidate persisting over time or is it arising repeatedly. -->
-% <!-- We may be able to see this by looking at surrouding variation over time. -->
+% <!-- We may be able to see this by looking at surrounding variation over time. -->
 % <!-- The phylo tree shows the variant split over subgroups, only in B strain. --> 
 % <!-- Spend some time listing the possibilities, facts we have, and facts that are missing. -->
 % <!-- Discuss with Jim again. --> 
@@ -529,9 +484,7 @@ However, correlation between the two positions associated with persistent infect
 % <!-- which is the most obvious feature. -->
 
 % <!-- Don't think it could arise in a host over infection. --> 
-% <!-- Chirs was saying because of LD it couldn't be the case. -->
-% <!-- But not certain about the LD yet. --> 
-% <!-- Need to look at the methods again for this. --> 
+% <!-- Chris was saying because of LD it couldn't be the case. -->
 
 \subsection{Functional interpretation}
 The main features of RSV surface glycoprotein are illustrated in Figure \ref{fig:5}.
@@ -556,7 +509,7 @@ Haemagglutination activity which is responsible for the binding of virus (i.e. I
 Haemagglutination and neuraminidase (HN) activity cleaves sialic acid on the cell surface, preventing viral particles from reattaching to previously infected cells. 
 Unlike the other paramyxovirus attachment proteins, 
 RSV glycoprotein lacks hemagglutinin-neuraminidase (HN) activities
-It uses the attachment protein with neither haemagglutination nor neuraminidase activity, designated as G (glycoprotein), wchih are found in henipaviruses.
+It uses the attachment protein with neither haemagglutination nor neuraminidase activity, designated as G (glycoprotein), which are found in henipaviruses.
 \cite{takimoto2002role, malvoisin1993measles, hu1992functional, horvath1992biological, bousse1994regions}
 
 Interactions  have been identified with protein SH 
@@ -593,14 +546,19 @@ There are a few details that we want to clarify.
 
 
 
-\section{IFN response}
+\section{Clinical and interferon (IFN) response}
 
-We initially investigated patient serologies as potential immune reposes biomarkers that associated with the variant of interest.
-IFN$\alpha$ and IFN$\gamma$ associated with strain A/B
+Infections with this variant were not associated with more severe infection. Infections were on average less severe compared with other circulating variants, and resulting in upper respiratory tract infection (Table __). We also assessed the association of nasal cytokines in nasal wash samples during acute infection as anti-viral immune response biomarkers with the variant of interest.
+IFN$\alpha$ and IFN$\gamma$ were associated with strain A/B
 (double check and report the final values here). 
 Since the viral strains correlate with the presence of our variants of interest, the co-linearity meant that it was not possible to attribute these variants as the cause of a differential interferon response.
 However, this more pronounced antiviral response is unlikely to be due to the variants associated with persistent infection and more likely due to other features that separate strain A and B; an observation that has been anecdotally reported previously 
 (some reference to strain B being more pathogenic than strain A - rephrase if the reports are more than anecdotal, and common knowledge). 
+
+
+[Need a section on limitations:]
+While this study has a number of significant strengths, including this being one of few population-based studies of the first RSV infection during infancy regardless of symptoms among a term healthy infant population, there are limitations which much be considered. First, this cohort was not designed to study persistence of infection, and repeat sampling following initial RSV infection was only done based on symptoms and likely missed some persistent infections in this population. This resulted in a small number of persistent infections to study. Others?
+
 
 % Intermediate notes to be deleted. :
 %Note this is a secondary exploratory analysis.
@@ -640,32 +598,11 @@ However, this more pronounced antiviral response is unlikely to be due to the va
 
 Jim had a nice point about integrating clinical and stats/genomics.
 
-We initially performed a host GWAS to potentially identify any common host variant association with susceptibility to infection
-\cite{lawless2020genome}.
-Among 1959 enrolled,
- 54\% of infants were RSV infected
- 46\% were uninfected at age 1.
-There were significant differences in environmental factors associated with RSV infection, 
-including child-care (p=0.001), 
-siblings (p=0.002) and 
-self-reported race (p=0.002). 
-GWAS analyses of a subset of 663 participants 
-adjusted for birth month, sex,  race, 
-child-care and  siblings
-revealed no significant associations. 
-Multiple testing burden may mask any small genetic effects.
-Therefore, we estimated narrow sense heritability ($h_l)$, for which a measure of $>0$ would indicate accumulation of small genetic effects
-\cite{golan2011accurate}.
-A normally distributed latent liability variable 
-was used to model the genetic correlation, 
-including covariates.
-The maximum likelihood estimate 
-for $h_l$ was exactly 0.
-Therefore we found no evidence of host genetic susceptibility due to common variants. 
-The possibility of rare variants causing susceptibility to infection may exist, 
-although this is very unlikely to affect our analysis on the cohort of our sample population.
 
-Accounting for host genetic factors allowed our analysis to focus on the viral genetic features which drive 
+
+In this study of term healthy infants in whom we identified their first infection through surveillance, we conducted a viral GWAS of RSV F and G genes and identified an RSV variant, V221, associated with persistent RSV infection. This variant was not associated with severe disease, has not arisen as a recent mutation, and has persisted in the population at a low prevalence for decades. While we hypothesized that this variant might induce dampened anti-viral immune responses making it more difficult to be cleared, we were unable to demonstrate that in our nasal cytokine data. 
+
+We have previously demonstrated that there is no evidence for host genetic susceptibility due to common variants for risk of infection with RSV during infancy (cite your ESHG abstract, and if our other paper is published). Accounting for host genetic factors allowed our analysis to focus on the viral genetic features which drive 
 persistence.
 The possibility of viral mutational immune escape has been reported for 
 infants who struggle to control primary RSV infections, allowing for prolonged viral replication and not previously described viral rebound
@@ -692,6 +629,7 @@ Persist - variation within host - expand that this could be done and state how b
 CT values go up when it is being cleared  - first illness CT rarely lower than second CT = reducing virus.
 
 Functional interpretation section:
+The implications of these findings may only be speculated, however, why this variant, which appears quite stable and has persisted at low frequency in the population for decades is uncertain. It is possible that a virus that persists or is cleared less rapidly may have a greater impact on epigenetic changes and reprogramming of the developing airway epithelium, or results in a low-level chronic stimulation or immune exhaustion. We have previously demonstrated that infants infected with RSV in their first year of life have dampened subsequent anti-viral immune responses in early childhood (Frontiers in Immunol Chirkova T et al. under review) as well as changes in airway epithelial cell metabolism (PMID: 34696488).
 \begin{description}[noitemsep]
 \item What Qs does the reader have?
 \item Why is the variant present at low level in population. 
