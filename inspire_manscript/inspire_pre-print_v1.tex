@@ -52,24 +52,23 @@ All code used in this project will be available on the
 %\thanks {Use thanks if u you need it}
 %for single author (just remove % characters)
 
-\author[1]{\rm Dylan Lawless, PHD}
-\author[2]{\rm Christopher G. McKennan, PhD}
+\author[epfl]{\rm Dylan Lawless, PHD}
+\author[penn]{\rm Christopher G. McKennan, PhD}
 \author[]{\rm Suman Das, PhD}
-\author[]{\rm Larry J Anderson}
-\author[]{\rm  Tebeb Gebretsadik}
+\author[emoryPed]{\rm Larry J Anderson}
+\author[bioVan]{\rm  Tebeb Gebretsadik}
 \author[]{\rm Meghan Shilts}
 \author[]{\rm Christian Rosas-Salazar}
-\author[3]{\rm James D. Chappell, MD}
-\author[1]{\rm Jacques Fellay, MD, PhD }
-\author[3,4]{\rm Tina V. Hartert, MD, MPH}
+\author[pedVan]{\rm James D. Chappell, MD}
+\author[epfl]{\rm Jacques Fellay, MD, PhD }
+\author[pedVan,medVan]{\rm Tina V. Hartert, MD, MPH}
 
-\affil[1]{Global Health Institute, School of Life Sciences, École Polytechnique Fédérale de Lausanne, Lausanne, Switzerland}
-
-\affil[2]{Department of Statistics, University of Pittsburgh, Pittsburgh, Pennsylvania, United States of America}
-
-\affil[3]{Department of Pediatrics, Vanderbilt University Medical Center, Nashville, Tennessee, United States of America}
-\affil[4]{Department of Medicine, Vanderbilt University Medical Center, Nashville, Tennessee, United States of America}
-
+\affil[epfl]{Global Health Institute, School of Life Sciences, École Polytechnique Fédérale de Lausanne, Lausanne, Switzerland}
+\affil[penn]{Department of Statistics, University of Pittsburgh, Pittsburgh, Pennsylvania, United States of America}
+\affil[pedVan]{Department of Pediatrics, Vanderbilt University Medical Center, Nashville, Tennessee, United States of America}
+\affil[medVan]{Department of Medicine, Vanderbilt University Medical Center, Nashville, Tennessee, United States of America}
+\affil[emoryPed]{Department of Pediatrics, Emory University School of Medicine, Atlanta, Georgia, United States of America}
+\affil[bioVan]{Department of Biostatistics, Vanderbilt University Medical Center, Nashville, Tennessee, United States of America}
 %\affil[ ]{\textit {\{email1,email2,email3,email4\}@xyz.edu}}
 \maketitle
 
@@ -327,7 +326,8 @@ a subset of only strain B was performed.
 \subsection{Biological interpretation}
 Some but not all of these methods will be included for our results section. 
 Adjust based on discussion with co-authors.
-Infant RSV infection results in decreased barrier function of the airway epithelium [PMCID: PMC8538412].
+Infant RSV infection results in decreased barrier function of the airway epithelium
+\cite{connelly2021metabolic}.
 Association between INF-gama and RSV amino acid position (w= wild vs A=alternatives) was adjusted for the same covariates as the main analysis. Wilcox test comparing interferon (IFN)-$\gamma$, and INF-$\alpha$, between RSV amino acid positions (W= wild type vs A=alternatives [3 combined]).
 Protein structures were analysed with data sourced from 
 RCSB PDB \url{https://www.rcsb.org}; Define the choice of PDB used. 
@@ -415,7 +415,9 @@ Variants at the amino acid level were defined as either REF/ALT and assessed for
 The model consisted of
 the binary response (persistent infection Yes/No),
 and predictors; viral genotype (REF/ALT amino acid), viral PCs 1-5, host sex, and it also accounted for host features that have been previously demonstrated as significantly associated with infection;
-self-reported race/ethnicity, child-care attendance, living with siblings (Hall CB, Geiman JM, Biggar R, Kotok DI, Hogan PM, Douglas GR Jr. Respiratory syncytial virus infections within families. N Engl J Med 1976; 294:414–9. [PubMed] [Google Scholar]).
+self-reported race/ethnicity, child-care attendance, living with siblings
+\cite{hall1976respiratory}.
+% NB don't jettison this citation.
 Analysis was performed using R stats (3.6.2) \textit{glm} function. 
 % <!-- glm ( infection ~ genotype + PCs + sex + other). -->
 A significant genetic association was identified for persistent infection after Bonferroni correction multiple testing (threshold $<.05/23=.002$), 
@@ -548,7 +550,8 @@ There are a few details that we want to clarify.
 
 \section{Clinical and interferon (IFN) response}
 
-Infections with this variant were not associated with more severe infection. Infections were on average less severe compared with other circulating variants, and resulting in upper respiratory tract infection (Table __). We also assessed the association of nasal cytokines in nasal wash samples during acute infection as anti-viral immune response biomarkers with the variant of interest.
+Infections with this variant were not associated with more severe infection. Infections were on average less severe compared with other circulating variants, and resulting in upper respiratory tract infection (Table \ref{tab:1}). 
+We also assessed the association of nasal cytokines in nasal wash samples during acute infection as anti-viral immune response biomarkers with the variant of interest.
 IFN$\alpha$ and IFN$\gamma$ were associated with strain A/B
 (double check and report the final values here). 
 Since the viral strains correlate with the presence of our variants of interest, the co-linearity meant that it was not possible to attribute these variants as the cause of a differential interferon response.
@@ -556,8 +559,6 @@ However, this more pronounced antiviral response is unlikely to be due to the va
 (some reference to strain B being more pathogenic than strain A - rephrase if the reports are more than anecdotal, and common knowledge). 
 
 
-[Need a section on limitations:]
-While this study has a number of significant strengths, including this being one of few population-based studies of the first RSV infection during infancy regardless of symptoms among a term healthy infant population, there are limitations which much be considered. First, this cohort was not designed to study persistence of infection, and repeat sampling following initial RSV infection was only done based on symptoms and likely missed some persistent infections in this population. This resulted in a small number of persistent infections to study. Others?
 
 
 % Intermediate notes to be deleted. :
@@ -596,18 +597,34 @@ While this study has a number of significant strengths, including this being one
 
 \section{Discussion}
 
-Jim had a nice point about integrating clinical and stats/genomics.
+[Need a section on limitations:]
+While this study has a number of significant strengths, including this being one of few population-based studies of the first RSV infection during infancy regardless of symptoms among a term healthy infant population, there are limitations which much be considered.
+First, this cohort was not designed to study persistence of infection, and repeat sampling following initial RSV infection was only done based on symptoms and likely missed some persistent infections in this population. 
+This resulted in a small number of persistent infections to study. Others?
 
 
 
-In this study of term healthy infants in whom we identified their first infection through surveillance, we conducted a viral GWAS of RSV F and G genes and identified an RSV variant, V221, associated with persistent RSV infection. This variant was not associated with severe disease, has not arisen as a recent mutation, and has persisted in the population at a low prevalence for decades. While we hypothesized that this variant might induce dampened anti-viral immune responses making it more difficult to be cleared, we were unable to demonstrate that in our nasal cytokine data. 
+%In this study of term healthy infants in whom we identified their first infection through surveillance, we conducted a viral genetic association study of RSV F and G genes and identified an RSV variant, V221, associated with persistent RSV infection. 
+%This variant was not associated with severe disease, has not arisen as a recent mutation, and has persisted in the population at a low prevalence for decades. 
+%While we hypothesized that this variant might induce dampened anti-viral immune responses making it more difficult to be cleared, we were unable to demonstrate that in our nasal cytokine data. 
 
-We have previously demonstrated that there is no evidence for host genetic susceptibility due to common variants for risk of infection with RSV during infancy (cite your ESHG abstract, and if our other paper is published). Accounting for host genetic factors allowed our analysis to focus on the viral genetic features which drive 
+Genomic analysis of both human and pathogen in tandem is being increasingly adopted. 
+Application of the same statistical methods that are commonly used for human GWAS while
+extending the boundary from host genome to pathogen genome can allow for robust analysis of novel genotype-phenotype associations.
+In this study we combine the outcome of host phenotype and covariates with the 
+pathogen genotype as a predictor. 
+Cohort sizes as little as 2-3 times larger than that reported here are capable of detecting signals in G2G
+\cite{fellay2020exploring}  % temp use this citation but switch to Mack's if available. % \cite{mack hbv, n=400}.
+While we have not overtly assessed patients for rare monogenic variants that may cause an underlying immunodeficiency, our enrollment criteria included only patients who were otherwise healthy.
+We have also previously demonstrated that there is no evidence for host genetic susceptibility due to common variants for risk of infection with RSV during infancy 
+(cite your ESHG abstract, and if our other paper is published).
+TEMP
+Accounting for host genetic factors allowed our analysis to focus on the viral genetic features which drive 
 persistence.
 The possibility of viral mutational immune escape has been reported for 
 infants who struggle to control primary RSV infections, allowing for prolonged viral replication and not previously described viral rebound
 \cite{brint2017prolonged}.
-% <!-- \url{https://www.nature.com/articles/pr2017173} -->
+
 We suspected that our variants may either be enriched by selective pressure over time, 
 however inspecting public data from the last two decades shows presence of these variants at low frequencies.
 Within-host variation with \textit{de novo} mutation may allow this variant to present within some individuals but failing to persist within the population, however, we have not been able to conclusively assess this possibility.
@@ -629,7 +646,7 @@ Persist - variation within host - expand that this could be done and state how b
 CT values go up when it is being cleared  - first illness CT rarely lower than second CT = reducing virus.
 
 Functional interpretation section:
-The implications of these findings may only be speculated, however, why this variant, which appears quite stable and has persisted at low frequency in the population for decades is uncertain. It is possible that a virus that persists or is cleared less rapidly may have a greater impact on epigenetic changes and reprogramming of the developing airway epithelium, or results in a low-level chronic stimulation or immune exhaustion. We have previously demonstrated that infants infected with RSV in their first year of life have dampened subsequent anti-viral immune responses in early childhood (Frontiers in Immunol Chirkova T et al. under review) as well as changes in airway epithelial cell metabolism (PMID: 34696488).
+The implications of these findings may only be speculated, however, why this variant, which appears quite stable and has persisted at low frequency in the population for decades is uncertain. It is possible that a virus that persists or is cleared less rapidly may have a greater impact on epigenetic changes and reprogramming of the developing airway epithelium, or results in a low-level chronic stimulation or immune exhaustion. We have previously demonstrated that infants infected with RSV in their first year of life have dampened subsequent anti-viral immune responses in early childhood (Frontiers in Immunol Chirkova T et al. under review) as well as changes in airway epithelial cell metabolism \cite{connelly2021metabolic}.
 \begin{description}[noitemsep]
 \item What Qs does the reader have?
 \item Why is the variant present at low level in population. 
