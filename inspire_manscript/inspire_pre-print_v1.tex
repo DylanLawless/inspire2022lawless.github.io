@@ -94,7 +94,7 @@ MSA (multiple sequence alignment);
 OR (odds ratio);
 PCR (polymerase chain reaction);
 PCA (Principal component analysis);
-REF  (reference);
+REF (reference);
 RT (reverse transcription);
 SVD (singular value decomposition);
 VE (variance explained);
@@ -278,7 +278,6 @@ Six samples were excluded due to insufficient covariate data, resulting in 344 t
 Of these, 36 were from the same patients ("persistent or repeat" infection) of which half (18) were included for association testing; 326 samples total.
 % <!--Correlations viewed with: corrplot, ggcorrplot, caret.-->
 
-
 \subsection{Population structure}
 The genetic distances to nearest neighbors were computed based on phylogenetic 
 trees generated with MAFFT.
@@ -361,7 +360,7 @@ Therefore, our analysis focused on F and G glycoproteins (PMCID: PMC8310105, PMI
 % <!-- Would we have false positives in other genes? -->
 % <!-- We can interpret the results in F and G. -->
 % <!-- These are the surface proteins that are most studied for vaccine development etc. -->
-% <!-- Variation in other genes is lower; quntify this. --> 
+% <!-- Variation in other genes is lower; quantify this. --> 
 % <!-- G and SH are variable more than others. -->
 % <!-- M2 also has a fair amount of sequence variation. --> 
 % <!-- F is more variable than others but maybe not the most so. --> 
@@ -394,7 +393,8 @@ To test for type I errors due to the population structure between strain A and B
 a subset analysis of individual strains was performed to confirm the validity of the combined analysis.
 % <!-- The main analysis was also repeated using viral strain labels A and B (separately derived from the clinical laboratory testing) instead of PCs which did not alter the analysis results, indicating no errors in sample handling. --> 
 
-Note for presentation slides: there is no general theoretical reason that the most informative linear function of the predictor variables should lie among the dominant principal components of the multivariate distribution of the predictor variables. However, if there were then we would like to know since it would produce a false positive in this case. Conversely, for example, in a principal component regression you would hope to find the assoc based on PCs.
+% Note for presentation slides: there is no general theoretical reason that the most informative linear function of the predictor variables should lie among the dominant principal components of the multivariate distribution of the predictor variables. 
+% However, if there were then we would like to know since it would produce a false positive in this case. Conversely, for example, in a principal component regression you would hope to find the assoc based on PCs.
 
 \subsection{Genetic invariance of persistent infection}
 The duration of RSV shedding duration in Kenyan infants has been reported previously
@@ -408,7 +408,6 @@ shows genetic invariance between viral sequences within the same host for infect
 There is a significant difference between the genetic diversity for multiple viral samples from individuals compared to diversity between all other samples from the same viral clades; $\text{P-value} = 1.3e-8$.
 We therefore, conclude and refer to these cases as persistent infection rather than second infections.
 % <!-- Have a look at update figure but the first version might be fine. --> 
-
 \subsection{Variants in G glycoprotein significantly associated with persistent infection}
 The consensus sequence within the cohort was assigned based on the major allele.
 Variants at the amino acid level were defined as either REF/ALT and assessed for their association with persistence.
@@ -472,84 +471,22 @@ We observed no enrichment for our variants of interest over time;
 a low frequency was observed in the available samples with no particular features compared to other low frequency variants. 
 However, correlation between the two positions associated with persistent infection indicates that it does not arise as random mutation event.
 
-% <!-- We already know it is not denovo in individuals. -->
-% <!-- Is our candidate persisting over time or is it arising repeatedly. -->
-% <!-- We may be able to see this by looking at surrounding variation over time. -->
-% <!-- The phylo tree shows the variant split over subgroups, only in B strain. --> 
-% <!-- Spend some time listing the possibilities, facts we have, and facts that are missing. -->
-% <!-- Discuss with Jim again. --> 
-% <!-- Our variant over time did not reveal anything special. -->
-% <!-- However, other parts of the gene are illuminating. --> 
-% <!-- For example we can clearly see the introduction of G gene duplication, --> 
-% <!-- and other parts of the gene that explain variation explained over time. --> 
-% <!-- We can discuss if we want to mention the visibility of G gene duplication, --> 
-% <!-- which is the most obvious feature. -->
-
-% <!-- Don't think it could arise in a host over infection. --> 
-% <!-- Chris was saying because of LD it couldn't be the case. -->
 
 \subsection{Functional interpretation}
 The main features of RSV surface glycoprotein are illustrated in Figure \ref{fig:5}.
 There are no known features that directly overlap with the variant associated with persistent infection in our cohort. 
-However, possible binding interactions with host receptors are discussed in (cite).
-%Look at function of variants, 3d structure, etc.
-(Reword) Attachment of the virion to the host cell membrane is thought to occur through interaction with heparan sulfate as shown in Figure \ref{fig:5}
-(p.187-198), thereby initiating infection 
-\cite{levine1987demonstration, feldman1999identification, feldman2000fusion}.
-Specifically, interactions between viral G protein and host CX3CR1, the receptor for the CX3C chemokine fractalkine, have been reported to modulate the immune response and facilitate infection 
-\cite{johnson2015respiratory, tripp2001cx3c, jeong2015cx3cr1}.
-CX3CR1 also is a coreceptor for HIV-1. 
-Variations in the \textit{CX3CR1} are known to have important effects on the susceptibility to HIV-1 infection and the hosts' potential for controlling infection [cite, ask Jacques].
-
-Viral envelope glycoproteins bind to specific cellular receptors and initiate fusion with the host cell membrane, 
-which allows the penetration of the viral genome into host cells. 
-The negative-strand RNA family of Paramyxoviridae rely on a pair of binding and fusion functions for infection, mediated by one or multiple envelope glycoproteins.
-The cell attachment proteins span the viral envelope and project from the surface as spikes 
+Figure \ref{fig:5} shows the possible site for  initiation of infection by interaction of heparan sulfate and host cell membrane (p.187-198), during the  \cite{levine1987demonstration, feldman1999identification, feldman2000fusion}.
+Paramyxoviridae cell attachment proteins (G protein in RSV) span the viral envelope and project from the surface as spikes 
 [confirm the consensus domain position here for A/B; 1-43 cytoplasmic, 43-63 helical, 64-298 extracellular].
-These proteins are generally designated as either hemagglutinin (H), hemagglutinin-neuraminidase (HN), or glycoprotein (G). 
-Haemagglutination activity which is responsible for the binding of virus (i.e. Influenza) to sialic acid on the surface of target cells.
-Haemagglutination and neuraminidase (HN) activity cleaves sialic acid on the cell surface, preventing viral particles from reattaching to previously infected cells. 
-Unlike the other paramyxovirus attachment proteins, 
-RSV glycoprotein lacks hemagglutinin-neuraminidase (HN) activities
-It uses the attachment protein with neither haemagglutination nor neuraminidase activity, designated as G (glycoprotein), which are found in henipaviruses.
-\cite{takimoto2002role, malvoisin1993measles, hu1992functional, horvath1992biological, bousse1994regions}
-
 Interactions  have been identified with protein SH 
 \cite{rixon2005respiratory} 
 and via the N-terminus with protein M 
 \cite{ghildyal2005interaction} (Figure \ref{fig:5}).
 G protein has been reported to form homo-oligomers (which we will check next for interaction residues. remove this citation if not fruitful)
 \cite{collins1992oligomerization}.
-Figure \ref{fig:5} shows the isoform of secreted glycoprotein G which is believed to help the virus escape antibody-dependent restriction of replication by acting as an antigen decoy and by modulating the activity of leukocytes bearing Fc-gamma receptors 
-\cite{bukreyev2008secreted}.
-This mature secreted form of the protein is reported for amino acid positions p.66 – 298.
-This secreted isoform includes the variants associated with persistent infection in our analysis. 
-[These 2 following citation summaries were copied and I have not read them yet] Interacts with the host lectins CD209/DC-SIGN and CD209L/L-SIGN on dendritic cells; these interactions stimulate the phosphorylation of MAPK3/ERK1 and MAPK1/ERK2, which inhibits dendritic cell activation and could participate in the limited immunity against RSV reinfection 
-\cite{johnson2012respiratory}.
-Part of a complex composed of F1, F2 and G glycoproteins have been reported to form part of a complex
-\cite{low2008rsv}.
+Figure \ref{fig:5} shows the isoform of mature secreted glycoprotein G is reported for amino acid positions p.66 – 298.
 
-Bring up the idea of immune response once already inside cell. 
-Tina made the point that initial binding may not be the most important feature.
-Known neutralization epitopes were not found for our variant site (Jim).
-
-\subsection{Other notes}
-* Criteria for clearing infection; Tina has the details about this. 
-There are a few details that we want to clarify. 
-* RNA virus like HIV persist for life
-	- Reservoirs within host?
-	- environmental?
-	- closer equator less seasonality.
-	- virus may retreat to parts of the world where it can overseason; temp, humidity, etc.
-* Severity of second infection
-	Characterised URI/LRI and score
-* Emergence?
-* Kenya - family sampling every 5 days (tropical medicine funded this, and South Africa Heather Zar)
-
-
-
-\section{Clinical and interferon (IFN) response}
-
+\subsection{Clinical and interferon response}
 Infections with this variant were not associated with more severe infection. Infections were on average less severe compared with other circulating variants, and resulting in upper respiratory tract infection (Table \ref{tab:1}). 
 We also assessed the association of nasal cytokines in nasal wash samples during acute infection as anti-viral immune response biomarkers with the variant of interest.
 IFN$\alpha$ and IFN$\gamma$ were associated with strain A/B
@@ -558,79 +495,20 @@ Since the viral strains correlate with the presence of our variants of interest,
 However, this more pronounced antiviral response is unlikely to be due to the variants associated with persistent infection and more likely due to other features that separate strain A and B; an observation that has been anecdotally reported previously 
 (some reference to strain B being more pathogenic than strain A - rephrase if the reports are more than anecdotal, and common knowledge). 
 
-
-
-
-% Intermediate notes to be deleted. :
-%Note this is a secondary exploratory analysis.
-%1. GWAS on viral amino : assoc with persistent infection
-%2. Carriers of variant at this position : assoc with IFN
-%Since variant is highly cor with strain: 
-%Option 1 - test A/B for IFN (not done, probably yes)
-% Option 2 - test variant for IFN (done, yes)
-
-% Option 3 - test variant stratified for A/B for IFN (done, correction kills signal)
-
-% - If our maker is cor with A/B do not correct for PC (strain)
-% - maybe A/B is driver of IFN rather than variant
-% - test A/B vs marker  (the tally (df2) shows the correlation basically)
-% - colinear problem if A/B and variant are correlated. 
-
-% \begin{itemize}
-%    \item Acute infection during infancy
-%    \item this could be interesting. 
-%    \item Is a greater or lesser anti-viral response expected? How would a difference be explained. 
-%\end{itemize}
-
-%\section{IFN response}
-%\begin{itemize}
-%    \item IFNg at age 3, stimulate with lab strain and measure CD4 responses. 
-%    \item If we look at 3year old responses, we would either expect
-%    \item - something long lasting that make immune resp differ
-%    \item -  or something in the host that always makes their imm resp diff
-%\end{itemize}
-
-%\begin{itemize}
-%\item Ab reposponse at 1 year. 
-%\item Same arguement - should be right after infectiton
-%\end{itemize}
-
 \section{Discussion}
+In this study of term healthy infants in whom we identified their first RSV infection through surveillance, we conducted a viral genetic association study and identified variants associated with persistent infection. 
+The variants were not associated with severe disease, had not arisen as a recent mutation, and have persisted in the population at a low prevalence for decades.
+We hypothesized that they might induce dampened anti-viral immune responses making it more difficult to be cleared. 
+However, we were unable to demonstrate so using nasal cytokine data.
+Since these variants are co-linear with strain A and B, the differences in antiviral response are most likely strain-dependent rather than due to these particular variants.
+We do not expect any host immune memory before this first infection, potentially beyond maternal antibody.
 
-[Need a section on limitations:]
+%\subsection{limitations}
 While this study has a number of significant strengths, including this being one of few population-based studies of the first RSV infection during infancy regardless of symptoms among a term healthy infant population, there are limitations which much be considered.
 First, this cohort was not designed to study persistence of infection, and repeat sampling following initial RSV infection was only done based on symptoms and likely missed some persistent infections in this population. 
-This resulted in a small number of persistent infections to study. Others?
+This resulted in a small number of persistent infections to study.
 
-
-
-%In this study of term healthy infants in whom we identified their first infection through surveillance, we conducted a viral genetic association study of RSV F and G genes and identified an RSV variant, V221, associated with persistent RSV infection. 
-%This variant was not associated with severe disease, has not arisen as a recent mutation, and has persisted in the population at a low prevalence for decades. 
-%While we hypothesized that this variant might induce dampened anti-viral immune responses making it more difficult to be cleared, we were unable to demonstrate that in our nasal cytokine data. 
-
-Genomic analysis of both human and pathogen in tandem is being increasingly adopted. 
-Application of the same statistical methods that are commonly used for human GWAS while
-extending the boundary from host genome to pathogen genome can allow for robust analysis of novel genotype-phenotype associations.
-In this study we combine the outcome of host phenotype and covariates with the 
-pathogen genotype as a predictor. 
-Cohort sizes as little as 2-3 times larger than that reported here are capable of detecting signals in G2G
-\cite{fellay2020exploring}  % temp use this citation but switch to Mack's if available. % \cite{mack hbv, n=400}.
-While we have not overtly assessed patients for rare monogenic variants that may cause an underlying immunodeficiency, our enrollment criteria included only patients who were otherwise healthy.
-We have also previously demonstrated that there is no evidence for host genetic susceptibility due to common variants for risk of infection with RSV during infancy 
-(cite your ESHG abstract, and if our other paper is published).
-TEMP
-Accounting for host genetic factors allowed our analysis to focus on the viral genetic features which drive 
-persistence.
-The possibility of viral mutational immune escape has been reported for 
-infants who struggle to control primary RSV infections, allowing for prolonged viral replication and not previously described viral rebound
-\cite{brint2017prolonged}.
-
-We suspected that our variants may either be enriched by selective pressure over time, 
-however inspecting public data from the last two decades shows presence of these variants at low frequencies.
-Within-host variation with \textit{de novo} mutation may allow this variant to present within some individuals but failing to persist within the population, however, we have not been able to conclusively assess this possibility.
-
-Our analysis also consists of the primary host infection for affected children and therefore we do not expect any host immune memory before this first infection, potentially beyond maternal antibody.
-
+%\subsection{asthma}
 A host genetic interaction for asthma has been demonstrated previously 
 \cite{moffatt2010large}.
 We performed an interaction analysis for the outcome of host asthma, 
@@ -639,34 +517,61 @@ but no significant interaction was found.
 However, our sample size is unlikely to be sufficient to answer this question, 
 which may be addressed with future studies. 
 
-\textbf{Other:}
-The variants identified in this study appear to be present for children that are less sick.
-We are formally testing this based on immune response markers. TBD.
-Persist - variation within host - expand that this could be done and state how but we do not have the data. 
-CT values go up when it is being cleared  - first illness CT rarely lower than second CT = reducing virus.
+%\subsection{Other genetics}
+Genomic analysis of both human and pathogen in tandem is being increasingly adopted. 
+Application of the same statistical methods that are commonly used for human GWAS while extending the boundary from host genome to pathogen genome can allow for robust analysis of novel genotype-phenotype associations.
+In this study we combine the outcome of host phenotype and covariates with the pathogen genotype as a predictor. 
+Cohort sizes as little as 2-3 times larger than that reported here are capable of detecting signals in genome-to-genome analysis
+\cite{fellay2020exploring}  % temp use this citation but switch to Mack's if available. % \cite{mack hbv, n=400}.
+While we have not overtly assessed patients for rare monogenic variants that may cause an underlying immunodeficiency, our enrollment criteria included only patients who were otherwise healthy.
+We have also previously demonstrated that there is no evidence for host genetic susceptibility due to common variants for risk of infection with RSV during infancy 
+(cite your ESHG abstract, and if our other paper is published).
+Accounting for host genetic factors allowed our analysis to focus on the viral genetic features which drive 
+persistence.
+The possibility of viral mutational immune escape has been reported for 
+infants who struggle to control primary RSV infections, allowing for prolonged viral replication and not previously described viral rebound
+\cite{brint2017prolonged}.
 
-Functional interpretation section:
-The implications of these findings may only be speculated, however, why this variant, which appears quite stable and has persisted at low frequency in the population for decades is uncertain. It is possible that a virus that persists or is cleared less rapidly may have a greater impact on epigenetic changes and reprogramming of the developing airway epithelium, or results in a low-level chronic stimulation or immune exhaustion. We have previously demonstrated that infants infected with RSV in their first year of life have dampened subsequent anti-viral immune responses in early childhood (Frontiers in Immunol Chirkova T et al. under review) as well as changes in airway epithelial cell metabolism \cite{connelly2021metabolic}.
-\begin{description}[noitemsep]
-\item What Qs does the reader have?
-\item Why is the variant present at low level in population. 
-\item Chronic disease.
-\item Airway reprogramming.
-\item Cleared virus may have less of influence than chronic.
-\item Infants without RSV less likely to have asthma.
-\item Infants infected go on to have blunted subsequent antiviral responses.
-\item Chronic stimulation versus immune exhaustion?
-\item Metabolism of airway epithelium, glycolytic pathways.
-\item How would this mutation lead to persistence? 
-	- Epitope
-	- Evasion
-	- etc.
-\item Selected in some backgrounds but not very fit?
-\item Not increasing over time. Stable.
-\item Heather Zar - papers
-\item Acute and chronic resp morbidity to give it the spin for CID.
-	\item Note that not only the persistent have variants of interest, but many others also have this variants. 
-\end{description}
+%\subsection{functional interpret}
+We suspected that the variants of interest may either be enriched by selective pressure over time, however inspecting public data from the last two decades shows presence of these variants at low frequencies.
+Within-host variation with \textit{de novo} mutation may allow variants to present within some individuals but failing to persist within the population, however, we have not been able to conclusively assess this possibility.
+Why these variants, which appear quite stable, have persisted at low frequency in the population for decades is uncertain. 
+It is possible that a virus that persists or is cleared less rapidly may have a greater impact on epigenetic changes and reprogramming of the developing airway epithelium, or results in a low-level chronic stimulation or immune exhaustion. 
+We have previously demonstrated that infants infected with RSV in their first year of life have dampened subsequent anti-viral immune responses in early childhood (Frontiers in Immunol Chirkova T et al. under review) as well as changes in airway epithelial cell metabolism 
+\cite{connelly2021metabolic}.
+
+Known neutralization epitopes were not found for our variant site (Jim).
+Attachment of the virion to the host cell membrane is thought to occur through interaction with heparan sulfate as shown in Figure \ref{fig:5}
+(p.187-198), thereby initiating infection 
+\cite{levine1987demonstration, feldman1999identification, feldman2000fusion}.
+Specifically, interactions between viral G protein and host CX3CR1, the receptor for the CX3C chemokine fractalkine, have been reported to modulate the immune response and facilitate infection 
+\cite{johnson2015respiratory, tripp2001cx3c, jeong2015cx3cr1}.
+CX3CR1 also is a coreceptor for HIV-1. 
+Variations in the \textit{CX3CR1} are known to have important effects on the susceptibility to HIV-1 infection and the hosts' potential for controlling infection [cite, ask Jacques].
+Viral envelope glycoproteins bind to specific cellular receptors and initiate fusion with the host cell membrane, 
+which allows the penetration of the viral genome into host cells. 
+The negative-strand RNA family of Paramyxoviridae rely on a pair of binding and fusion functions for infection, mediated by one or multiple envelope glycoproteins,
+which span the viral envelope and project from the surface as spikes [confirm the consensus domain position here for A/B; 1-43 cytoplasmic, 43-63 helical, 64-298 extracellular].
+These proteins are generally designated as either hemagglutinin (H), hemagglutinin-neuraminidase (HN), or glycoprotein (G). 
+Haemagglutination activity which is responsible for the binding of virus (i.e. Influenza) to sialic acid on the surface of target cells.
+Haemagglutination and neuraminidase (HN) activity cleaves sialic acid on the cell surface, preventing viral particles from reattaching to previously infected cells. 
+Unlike the other paramyxovirus attachment proteins, 
+RSV glycoprotein lacks hemagglutinin-neuraminidase (HN) activities
+It uses the attachment protein with neither haemagglutination nor neuraminidase activity, designated as G (glycoprotein), which are found in henipaviruses.
+\cite{takimoto2002role, malvoisin1993measles, hu1992functional, horvath1992biological, bousse1994regions}
+The mature isoform of secreted glycoprotein G is believed to help the virus escape antibody-dependent restriction of replication by acting as an antigen decoy and by modulating the activity of leukocytes bearing Fc-gamma receptors 
+\cite{bukreyev2008secreted}.
+This secreted isoform is reported for amino acid positions p.66 – 298, and includes the variants associated with persistent infection in our analysis. 
+%[These 2 following citation summaries were copied and I have not read them yet] 
+%Interacts with the host lectins CD209/DC-SIGN and CD209L/L-SIGN on dendritic cells; these interactions stimulate the phosphorylation of MAPK3/ERK1 and MAPK1/ERK2, which inhibits dendritic cell activation and could participate in the limited immunity against RSV reinfection 
+%\cite{johnson2012respiratory}.
+%Part of a complex composed of F1, F2 and G glycoproteins have been reported to form part of a complex
+%\cite{low2008rsv}.
+
+%Bring up the idea of immune response once already inside cell. 
+%Tina made the point that initial binding may not be the most important feature.
+%CT values go up when it is being cleared  - first illness CT rarely lower than second CT = reducing virus.
+Conclusion line.
 
 \section{Links}
 \subsection{Software}
@@ -761,7 +666,6 @@ Population structure was controlled by GRM eigenvectors and analysis covariates 
 
 \section{Tables and Figures}
 
-
  \begin{landscape}										
 \begin{table}[ht]										
 \centering										
@@ -804,36 +708,6 @@ Infection is defined as RSV sequence positive, with $\ge$15 days between testing
 \end{landscape}										
 \clearpage										
 
-
-%Enrolled in INSPIRE throughout infancy (i.e., the first year of life), 
-
-%Filter 1:
-%we conducted passive and active surveillance during their first RSV season by 
-%1)	- performing bi-weekly phone, 
-%	- email, and/or 
-%	- in person follow-up, 
-%
-%2) frequently educating and reminding parents to call us at the onset of any acute respiratory symptoms, and 
-%
-%3) approaching all infants who were seen at one of the participating pediatric practices for an unscheduled visit. 
-%
-%Filter 2:
-%If an infant met pre-specified criteria for an acute respiratory infection, 
-%we then conducted an in-person respiratory illness visit at which time we:
-%	- administered a parental questionnaire, 
-%	- performed a physical exam, 
-%	- collected a nasal wash, 
-%	- and (in infants seen during an unscheduled visit) completed a structured medical chart review.
-%
-%Filter 3: 
-%	- Nasal sample collections were assessed by reverse transcription-quantitative PCR for RSV [Jim to provide reference].
-%
-%Filter 4:
-%	- At one year of age infants underwent blood draw for RSV serology to determine infection status during infancy. 
-%
-%Filter 5:
-%Infants with positive PCR separated by more than 15 or more days were annotated during analysis as "persistent or repeat infection".
-
 \begin{figure}[ht] \hspace*{0cm} % This line is adjusting position on page left or right. 
     \includegraphics[scale=0.2]{f1}
 	\caption{legend.}
@@ -861,5 +735,6 @@ Infection is defined as RSV sequence positive, with $\ge$15 days between testing
 	Is just the short result in text enough? IFN associated with strain A/B, and which cor with our variant, but unlikely due to our single variant 
 	-- Yes - Tina agrees. .}
 	\label{fig:5} \end{figure}
-	
+
 \end{document}
+
