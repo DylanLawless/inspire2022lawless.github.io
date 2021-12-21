@@ -133,7 +133,8 @@ We have previously investigated host genetics as a source of acceptability to in
 Several environmental factors have a significant impact on the risk of infection. 
 Population genetics also contributes important features that must be accounted for during genetics association analysis. 
 These features not only depend on the host genetics as seen within a typical genome-wide association study (GWAS), but also depend on the viral genetics.
-RSV strains A and B impart the largest separation within the viral population phylogeny.
+Analysis of viral populations not only requires variant-level information, but genome-wide information since pathogen fitness can modulate the effect of variant-specific mutation.  
+RSV strains A and B impart the largest separation within the viral population phylogeny and are important features to control, similar to the use of principal component analysis (PCA) in human GWAS.
 In this study we perform genomic analysis of RSV to identify variants that are significantly associated with persistent infection in otherwise healthy children.
 
 \section{Methods}
@@ -327,16 +328,31 @@ Some but not all of these methods will be included for our results section.
 Adjust based on discussion with co-authors.
 Infant RSV infection results in decreased barrier function of the airway epithelium
 \cite{connelly2021metabolic}.
-Association between INF-gama and RSV amino acid position (w= wild vs A=alternatives) was adjusted for the same covariates as the main analysis. Wilcox test comparing interferon (IFN)-$\gamma$, and INF-$\alpha$, between RSV amino acid positions (W= wild type vs A=alternatives [3 combined]).
+Association between INF-gama and RSV amino acid position (W= wild type vs A=alternatives) was adjusted for the same covariates as the main analysis. Wilcox test comparing interferon (IFN)-$\gamma$, and INF-$\alpha$, between RSV amino acid positions (W= wild type vs A=alternatives [3 combined]).
 Protein structures were analysed with data sourced from 
-RCSB PDB \url{https://www.rcsb.org}; Define the choice of PDB used. 
-Protein function and doamins were assessed using 
+RCSB PDB \url{https://www.rcsb.org}; 
+(Define the choice of PDB used - refer to R script). 
+Protein function and domains were assessed using 
 UniProt	\url{https://www.uniprot.org}.
 Interactions, PTM, motifs,and epitopes were assessed from literature. 
-* Domain blast. 
-* Multiple organism alignment - not complete.
-Protein features were assessed using feature annotation data in bed file format from 
-\url{https://www.ncbi.nlm.nih.gov}.
+%* Domain blast. 
+%* Multiple organism alignment - not complete.
+Protein features were assessed using data from 
+\url{https://www.ncbi.nlm.nih.gov/ipg/NP_056862.1}.
+via SwissProt O36633.1 Human respiratory syncytial virus B1. 
+% https://www.ncbi.nlm.nih.gov/projects/sviewer/?id=O36633.1
+
+UniProtKB P03423 (GLYC\_HRSVA) (strain A2) and O36633 (GLYC\_HRSVB) (strain B1) in gff format;
+% uniprot_RSV_GLYC_HRSVA_P03423.gff
+\url{https://www.uniprot.org/uniprot/P03423}, 
+% uniprot_RSV_GLYC_HRSVB_O36633.gff
+\url{https://www.uniprot.org/uniprot/O36633}.
+
+The variant effect on protein was assessed evidence about structure, family & domains, features, and location; including
+protein chain, topological domain, transmembrane, site, disulfide bonds, glycosylation, alternative sequence, mutagenesis, compositional bias, helix, turn, region.
+With additional annotation notes on protein functions for positions that were; disordered, binding to host heparan sulfate, cleavage, helical, mature secreted glycoprotein G, extracellular, polar residues, cytoplasmic, and missing in secreted isoform.
+
+
 \paragraph{Figure and sup table of IFN response}
 
 \section{Results}
@@ -602,10 +618,28 @@ Conclusion line.
 
 \subsection{Additional Data sources}
 \begin{description}[noitemsep]
-\item GenBank:NC\_001989 \url{https://www.ncbi.nlm.nih.gov/nuccore/NC_001989}
-\item Dataset \url{https://www.ncbi.nlm.nih.gov/bioproject/267583}
-\item Dataset \url{https://www.ncbi.nlm.nih.gov/bioproject/225816}
-\item J. Craig Venter Institute \url{https://www.jcvi.org}
+\item Dataset \url{https://www.ncbi.nlm.nih.gov/bioproject/267583}.
+\item Dataset \url{https://www.ncbi.nlm.nih.gov/bioproject/225816}.
+\item J. Craig Venter Institute \url{https://www.jcvi.org}.
+\item GenBank:NC\_001989 Bovine orthopneumovirus, complete genome \url{https://www.ncbi.nlm.nih.gov/nuccore/NC_001989}.
+\item Reference data \url{https://www.ncbi.nlm.nih.gov/gene/?term=1489824}.
+G attachment glycoprotein [Human orthopneumovirus]; ID: 1489824; Location: NC\_001781.1 (4675..5600); Aliases: HRSVgp07.
+\item Reference data \url{https://www.ncbi.nlm.nih.gov/gene/?term=37607642}. 
+G attachment glycoprotein [Human orthopneumovirus]; ID: 37607642; Location: NC\_038235.1 (4673..5595); Aliases: DZD21\_gp07.
+
+\item Reference data for all public NCBI Virus 
+\url{https://www.ncbi.nlm.nih.gov/labs/virus/vssi/} for species: Human orthopneumovirus; genus: orthopneumovirus; family: Pneumoviridae.
+
+\item Reference data \url{https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Human\%20orthopneumovirus,\%20taxid:11250}
+- contains sequence data for 
+Virus Lineage ss=Human orthopneumovirus, taxid:11250
+nucleotide: 26’965, 
+protein: 53’804, 
+RefSeq Genomes: 2.
+\item Reference \url{https://www.ncbi.nlm.nih.gov/protein/NP_056862.1}
+\item GCF\_002815475.1	(release 2018-08-19) Nucleotide Accessions: NC\_038235.1, protein: Y\_009518856.1
+\item Reference \url{https://www.ncbi.nlm.nih.gov/protein/YP_009518856.1}
+\item GCF\_000855545.1	(release 2015-02-12) Nucleotide Accessions: NC\_001781.1, protein: NP\_056862.1 (strain B1).
 \end{description}
 % <!-- 73 samples, we would like the accessions for the other samples if possible. -->
 % <!-- https://www.ncbi.nlm.nih.gov/nuccore?term=PRJNA225816&cmd=DetailsSearch -->
