@@ -43,11 +43,11 @@
 %make title bold and 14 pt font (Latex default is non-bold, 16 pt)
 \title{\Large \bf Viral genetic determinants of persistent human orthopneumovirus infection.
 \footnote{This document's private source code is available to co-authors from the 
-\href{https://github.com/DylanLawless/inspire_manscript}{GitHub repository}, from the 
-\href{https://www.overleaf.com/project/61718a4e077acc3d20ee68f1}{Overleaf online editor document}, or as MS Word format on box. The completed document will be published on 
-\href{https://www.biorxiv.org}{biorxiv} or \href{https://www.medrxiv.org}{medrxiv} before journal submission.
-All code used in this project will be available on the 
-\href{https://github.com/DylanLawless/inspire_manscript}{GitHub repository} and supplemented with "toy" data.}
+\href{https://github.com/DylanLawless/inspire_manscript}{GitHub repository} and from the 
+\href{https://www.overleaf.com/project/61718a4e077acc3d20ee68f1}{overleaf online editor document}. The completed document will be published on  \href{https://www.medrxiv.org}{medrxiv} before submission.
+All code will be available on the 
+\href{https://github.com/DylanLawless/inspire_manscript}{GitHub repository}.
+Supplemental live results at \href{https://lawlessgenomics.com/rsv2021lawless.github.io}{rsv2021lawless.github.io}. Please note the URL is on my personal domain temporarily; this will be switched for release.}
 }
 %\thanks {Use thanks if u you need it}
 %for single author (just remove % characters)
@@ -370,16 +370,18 @@ The INSPIRE cohort consisted of 1,949 enrolled infants
 Of these, 1,220 ($\sim 63\%$) had $\ge$ 1 in-person respiratory illness visit(s). 
 In total, there were 2,093 in-person respiratory illness visits completed and the median (interquartile range [IQR]) number of in-person respiratory illness visits per infant was 1 (1-2). 
 % The characteristics of these infants compared with the other RSV infected infants and the entire cohort is shown in Table 1.
-From the cohort, 344 RSV viral samples from 326 individuals were sequenced (methods).
+From the cohort, 344 RSV viral samples from 326 individuals were sequenced.
 There were 19 infants with RSV-positive PCR $\ge$ 15 days apart who we suspected as having either persistent or repeat infection (based on genetic analysis).
 % <!-- Also those who were sick enough to have a resp illness visit. --> 
 Table \ref{tab:1} lists the cohort characteristics of infants with persistent RSV infection compared with other RSV infection and the entire cohort. 
-Repeat or persistent infection is defined as RSV sequence positive with $\ge$ 15 days between testing. Pearson1, Wilcoxon2.
+Repeat or persistent infection is defined as RSV sequence positive with $\ge$ 15 days between testing.
+% Pearson1, Wilcoxon2.
 % <!-- There are other variables that we can include, although this seems sufficient. -->
 % [For Tebeb: We will need to recalculate this to represent just the first infection, as this small number infections include repeat infections which likely drives the median higher.]
 
 The relatively small sample size of our cohort required analysis that targeted only genes which were \textit{a priori} likely to functionally contribute to the clinical phenotype. 
 Therefore, our analysis focused on F and G glycoproteins (citations probably not required: PMC8310105, 33115881, 23598484, 31533056).
+No association was identified for F protein and is therefore omitted from discussion.
 % <!-- [Include some points for our reasoning; -->
 % <!-- Would we have false positives in other genes? -->
 % <!-- We can interpret the results in F and G. -->
@@ -408,7 +410,7 @@ We observed repeat or persistent infections by viruses from different phylogenet
 (Figure \ref{fig:2} B).
 A genotype correlation matrix and PCA eignenvalues were used for reducing the dimensionality of sequence data.
 Figure \ref{fig:2} scree plot show that dimension one accounted for 95.19\% cumulative variance explained in our cohort.
-All other dimensions account for very little variance, which is evenly distributed; no particular F or G protein protein coding sequence separates the cohort.
+All other dimensions account for very little variance, which is evenly distributed; no particular protein coding sequence separated the cohort.
           % <!-- eigenvalue variance.percent cumulative.variance.percent -->
 % <!-- Dim.1   1.608637e+02     9.518559e+01                    95.18559 -->
 For his reason, in our main analysis, viral population structure is accounted for by the first five PCs. 
@@ -424,12 +426,12 @@ The duration of RSV shedding duration in Kenyan infants has been reported previo
 \cite{okiro2010duration}.
  % <!-- \url{https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-10-15#Sec1} -->
 % <!-- This is the follow up. Ask Tina about the first paper too. --> 
-Based on these finding, infections separated by at least 15 days were expected to be "new" infections. 
+Based on these finding, infections separated by at least 15 days were expected to be ``new'' infections. 
 % <!-- In addition to our within-cohort genetic analysis showing --> 
 Figure \ref{fig:2} C
 shows genetic invariance between viral sequences within the same host for infections separated by at least 15 days. 
-There is a significant difference between the genetic diversity for multiple viral samples from individuals compared to diversity between all other samples from the same viral clades; $\text{P-value} = 1.3e-8$.
-We therefore, conclude and refer to these cases as persistent infection rather than second infections.
+There is a significant difference between the genetic diversity for multiple viral samples from individuals compared to diversity between all other samples from the same viral clades; $\text{P-value} = 1.3e^{-8}$.
+We therefore refer to these cases as persistent infection rather than second infections.
 % <!-- Have a look at update figure but the first version might be fine. --> 
 \subsection{Variants in G glycoprotein significantly associated with persistent infection}
 The consensus sequence within the cohort was assigned based on the major allele.
@@ -437,12 +439,12 @@ Variants at the amino acid level were defined as either REF/ALT and assessed for
 The model consisted of
 the binary response (persistent infection Yes/No),
 and predictors; viral genotype (REF/ALT amino acid), viral PCs 1-5, host sex, and it also accounted for host features that have been previously demonstrated as significantly associated with infection;
-self-reported race/ethnicity, child-care attendance, living with siblings
+self-reported race/ethnicity, child-care attendance, or living with siblings
 \cite{hall1976respiratory}.
 % NB don't jettison this citation.
 Analysis was performed using R stats (3.6.2) \textit{glm} function. 
 % <!-- glm ( infection ~ genotype + PCs + sex + other). -->
-A significant genetic association was identified for persistent infection after Bonferroni correction multiple testing (threshold $<.05/23=.002$), 
+A significant genetic association was identified for persistent infection after Bonferroni correction for multiple testing (threshold for number independent variants $<0.05/23=0.002$), 
 as shown in 
 Figure \ref{fig:3} A. 
 Since many variants within RSV coding genes have non-random association due to strong linkage disequilibrium (LD), 
@@ -453,7 +455,7 @@ we quantified the correlation of variants in LD with the lead proxy.
 % <!-- Conditional analysis was used to identify any independant signal. --> 
 % <!-- Pruning, go through methods with Chris multiple test correction with threshold set at number of proxy SNVs rather than gene-wide SNV number. -->
 Clumping was performed with ranking based on minor allele frequency (MAF) and with a cut-off threshold of $r^2 \ge 0.8$.
-The association model was repeated for all variants to produce a Manhattan plot with $r^2$ by color and P-value statistics as shown in 
+The association model was repeated for all variants to produce a LocusZoom-style Manhattan plot with $r^2$ by color and P-value statistics as shown in 
 Figure \ref{fig:3} B.
 This shows both G protein 
 % <!-- "V126" --> 
@@ -464,8 +466,7 @@ p.P217T/S/L as candidate causal variants associated with persistent infection, a
 To determine whether this association was simply due to population stratification between strains A and B, a subset analysis was performed using independently assessed clinical laboratory strain labels for A and B.
 % <!-- Show how strains are defined in the genome sequence. --> 
 % <!-- ## Shown not just false positive, accounting for population structure and strain, --> 
-Due to the smaller sample size the result no longer passed the significant threshold. 
-However, the same direction of effect indicated that the association was not a false positive. 
+The same direction of effect indicated that the association was not a false positive, although the smaller sample size means that sub-analysis result no longer passes the significant threshold. 
 % State the OR in same direction with overlapping SE.
 
 To assess the possibility of a false positive due to population structure within our cohort,
@@ -497,26 +498,31 @@ However, correlation between the two positions associated with persistent infect
 
 \subsection{Functional interpretation}
 The main features of RSV surface glycoprotein are illustrated in Figure \ref{fig:5}.
-There are no known features that directly overlap with the variant associated with persistent infection in our cohort. 
+The variant associated with persistent infection in our cohort are seen in the extracellular region. 
+There are no known mechanistic features that directly overlap. 
 Figure \ref{fig:5} shows the possible site for  initiation of infection by interaction of heparan sulfate and host cell membrane (p.187-198), during the  \cite{levine1987demonstration, feldman1999identification, feldman2000fusion}.
+Protein structure evidence from PDB was insufficient to determine an effect on conformation. 
 Paramyxoviridae cell attachment proteins (G protein in RSV) span the viral envelope and project from the surface as spikes 
-[confirm the consensus domain position here for A/B; 1-43 cytoplasmic, 43-63 helical, 64-298 extracellular].
+% [note: confirm the consensus] A/B; 
+(1-43 cytoplasmic, 43-63 helical, 64-298 extracellular).
 Interactions  have been identified with protein SH 
 \cite{rixon2005respiratory} 
 and via the N-terminus with protein M 
 \cite{ghildyal2005interaction} (Figure \ref{fig:5}).
 G protein has been reported to form homo-oligomers (which we will check next for interaction residues. remove this citation if not fruitful)
 \cite{collins1992oligomerization}.
-Figure \ref{fig:5} shows the isoform of mature secreted glycoprotein G is reported for amino acid positions p.66 – 298.
+Known neutralization epitopes were not found at these positions.
+Figure \ref{fig:5} shows the isoform of mature secreted glycoprotein G is reported for amino acid positions p.66 – 298, including the variants of interest.
 
 \subsection{Clinical and interferon response}
-Infections with this variant were not associated with more severe infection. Infections were on average less severe compared with other circulating variants, and resulting in upper respiratory tract infection (Table \ref{tab:1}). 
-We also assessed the association of nasal cytokines in nasal wash samples during acute infection as anti-viral immune response biomarkers with the variant of interest.
+These variants were not associated with more severe infection in patients. 
+Infections were on average less severe compared with other circulating variants, and resulting in upper respiratory tract infection (Table \ref{tab:1}). 
+We also assessed the association of nasal cytokines in nasal wash samples during acute infection as anti-viral immune response biomarkers with the variants of interest.
 IFN$\alpha$ and IFN$\gamma$ were associated with strain A/B
 (double check and report the final values here). 
-Since the viral strains correlate with the presence of our variants of interest, the co-linearity meant that it was not possible to attribute these variants as the cause of a differential interferon response.
+Since the viral strains correlate with the presence of our variants of interest, co-linearity meant that it was not possible to attribute these variants as the cause of a differential interferon response.
 However, this more pronounced antiviral response is unlikely to be due to the variants associated with persistent infection and more likely due to other features that separate strain A and B; an observation that has been anecdotally reported previously 
-(some reference to strain B being more pathogenic than strain A - rephrase if the reports are more than anecdotal, and common knowledge). 
+(do we have a reference to strain B being more pathogenic than strain A - rephrase if the reports are anecdotal or common knowledge). 
 
 \section{Discussion}
 In this study of term healthy infants in whom we identified their first RSV infection through surveillance, we conducted a viral genetic association study and identified variants associated with persistent infection. 
@@ -527,15 +533,16 @@ Since these variants are co-linear with strain A and B, the differences in antiv
 We do not expect any host immune memory before this first infection, potentially beyond maternal antibody.
 
 %\subsection{limitations}
-While this study has a number of significant strengths, including this being one of few population-based studies of the first RSV infection during infancy regardless of symptoms among a term healthy infant population, there are limitations which much be considered.
-First, this cohort was not designed to study persistence of infection, and repeat sampling following initial RSV infection was only done based on symptoms and likely missed some persistent infections in this population. 
+While this study has a number of significant strengths, including this being one of few population-based studies of the first RSV infection during infancy regardless of symptoms among a term healthy infant population, there are limitations which must be considered.
+This cohort was not designed to study persistence of infection, and repeat sampling following initial RSV infection was only done based on symptoms and likely missed some persistent infections in this population. 
 This resulted in a small number of persistent infections to study.
+The small sample size also required focus on surface proteins for their prior probability of association and interpretation.
+A larger cohort may in future perform a whole genome analysis.
 
 %\subsection{asthma}
 A host genetic interaction for asthma has been demonstrated previously 
 \cite{moffatt2010large}.
-We performed an interaction analysis for the outcome of host asthma, 
-host genetics and pathogen genetics 
+We performed an interaction analysis for the outcome of host asthma, host genetics, and pathogen genetics 
 but no significant interaction was found. 
 However, our sample size is unlikely to be sufficient to answer this question, 
 which may be addressed with future studies. 
@@ -545,10 +552,10 @@ Genomic analysis of both human and pathogen in tandem is being increasingly adop
 Application of the same statistical methods that are commonly used for human GWAS while extending the boundary from host genome to pathogen genome can allow for robust analysis of novel genotype-phenotype associations.
 In this study we combine the outcome of host phenotype and covariates with the pathogen genotype as a predictor. 
 Cohort sizes as little as 2-3 times larger than that reported here are capable of detecting signals in genome-to-genome analysis
-\cite{fellay2020exploring}  % temp use this citation but switch to Mack's if available. % \cite{mack hbv, n=400}.
+\cite{fellay2020exploring}.  % temp use this citation but switch to Mack's if available. % \cite{mack hbv, n=400}.
 While we have not overtly assessed patients for rare monogenic variants that may cause an underlying immunodeficiency, our enrollment criteria included only patients who were otherwise healthy.
-We have also previously demonstrated that there is no evidence for host genetic susceptibility due to common variants for risk of infection with RSV during infancy 
-(cite your ESHG abstract, and if our other paper is published).
+We have also previously demonstrated that there is no evidence for host genetic susceptibility due to common variants for risk of infection with RSV during infancy (cite). 
+%your ESHG abstract, and if our other paper is published).
 Accounting for host genetic factors allowed our analysis to focus on the viral genetic features which drive 
 persistence.
 The possibility of viral mutational immune escape has been reported for 
@@ -569,17 +576,19 @@ Attachment of the virion to the host cell membrane is thought to occur through i
 \cite{levine1987demonstration, feldman1999identification, feldman2000fusion}.
 Specifically, interactions between viral G protein and host CX3CR1, the receptor for the CX3C chemokine fractalkine, have been reported to modulate the immune response and facilitate infection 
 \cite{johnson2015respiratory, tripp2001cx3c, jeong2015cx3cr1}.
-CX3CR1 also is a coreceptor for HIV-1. 
-Variations in the \textit{CX3CR1} are known to have important effects on the susceptibility to HIV-1 infection and the hosts' potential for controlling infection [cite, ask Jacques].
-Viral envelope glycoproteins bind to specific cellular receptors and initiate fusion with the host cell membrane, 
+CX3CR1 well known as a coreceptor for HIV-1. 
+Variations in \textit{CX3CR1} are known to have important effects on the susceptibility to HIV-1 infection and the hosts' potential for controlling infection [cite, ask Jacques].
+In general, viral envelope glycoproteins bind to specific cellular receptors and initiate fusion with the host cell membrane, 
 which allows the penetration of the viral genome into host cells. 
 The negative-strand RNA family of Paramyxoviridae rely on a pair of binding and fusion functions for infection, mediated by one or multiple envelope glycoproteins,
-which span the viral envelope and project from the surface as spikes [confirm the consensus domain position here for A/B; 1-43 cytoplasmic, 43-63 helical, 64-298 extracellular].
+which span the viral envelope and project from the surface as spikes 
+%[confirm the consensus domain position here for A/B; 
+(p.1-43 cytoplasmic, 43-63 helical, 64-298 extracellular).
 These proteins are generally designated as either hemagglutinin (H), hemagglutinin-neuraminidase (HN), or glycoprotein (G). 
 Haemagglutination activity which is responsible for the binding of virus (i.e. Influenza) to sialic acid on the surface of target cells.
 Haemagglutination and neuraminidase (HN) activity cleaves sialic acid on the cell surface, preventing viral particles from reattaching to previously infected cells. 
 Unlike the other paramyxovirus attachment proteins, 
-RSV glycoprotein lacks hemagglutinin-neuraminidase (HN) activities
+RSV glycoprotein lacks hemagglutinin-neuraminidase (HN) activities.
 It uses the attachment protein with neither haemagglutination nor neuraminidase activity, designated as G (glycoprotein), which are found in henipaviruses.
 \cite{takimoto2002role, malvoisin1993measles, hu1992functional, horvath1992biological, bousse1994regions}
 The mature isoform of secreted glycoprotein G is believed to help the virus escape antibody-dependent restriction of replication by acting as an antigen decoy and by modulating the activity of leukocytes bearing Fc-gamma receptors 
@@ -594,19 +603,17 @@ This secreted isoform is reported for amino acid positions p.66 – 298, and inc
 %Bring up the idea of immune response once already inside cell. 
 %Tina made the point that initial binding may not be the most important feature.
 %CT values go up when it is being cleared  - first illness CT rarely lower than second CT = reducing virus.
-Conclusion line.
 
-
-Note: Testing glycosylation. 
-define window of glycos sites (2-3 AA size)
-random sample (variant) and get P that it lies within this site.
+%Note: Testing glycosylation. 
+%define window of glycos sites (2-3 AA size)
+%random sample (variant) and get P that it lies within this site.
 
 \section{Links}
 \subsection{Software}
 \begin{description}[noitemsep]
 
 \item R v4.1.0 was used for data preparation and analysis \url{http://www.r-project.org}.
-\item R package \textit{caret} was used to analysis: genetic correlations.
+\item R package \textit{caret} was used for analysis: genetic correlations.
 \item R package \textit{dplyr} was used for data curation.
 \item R package \textit{factoextra} was used for analysis: PCA, and to visualise eigenvalues and variance.
 \item R package \textit{ggplot2} was used for data visualisation.
@@ -621,6 +628,7 @@ random sample (variant) and get P that it lies within this site.
 \item GenBank \url{https://www.ncbi.nlm.nih.gov/genbank/}
 \item IQ-Tree \url{https://www.iqtree.org/}
 \item MAFFT \url{https://mafft.cbrc.jp/alignment/software/} \cite{katoh2013mafft}
+\item  NextAlign \href{https://github.com/nextstrain/nextclade}{https://github.com/nextstrain/nextclade}.
 \item Tbl2asn \url{https://www.ncbi.nlm.nih.gov/genbank/tbl2asn2/}
 \item Viral Genome ORF Reader, VIGOR 3.0 \url{https://sourceforge.net/projects/jcvi-vigor/files/}
 \item RCSB PDB	\url{https://www.rcsb.org}
@@ -754,38 +762,32 @@ Infection is defined as RSV sequence positive, with $\ge$15 days between testing
 \end{landscape}										
 \clearpage										
 
-\begin{figure}[ht] \hspace*{0cm} % This line is adjusting position on page left or right. 
-%    \includegraphics[scale=0.2]{f1}
+\begin{figure}[ht] \hspace*{0cm}  \begin{center}
+    \includegraphics[scale=0.2]{f1}
 	\caption{legend.}
 	\label{fig:1}
+ \end{center} \end{figure}
+
+\begin{figure}[ht] \hspace*{0cm} \begin{center}
+    \includegraphics[scale=0.3]{f2}
+	\caption{legend}
+	\label{fig:2} \end{center}
 \end{figure}
 
-\begin{figure}[ht] \hspace*{0cm}
-%    \includegraphics[scale=0.4]{f2}
-	\caption{legend}
-	\label{fig:2} \end{figure}
-
-\begin{figure}[ht] \hspace*{0cm}
-%    \includegraphics[scale=0.4]{f3}
+\begin{figure}[ht] \hspace*{0cm} \begin{center}
+    \includegraphics[scale=0.3]{f3}
 	\caption{legend.}
-	\label{fig:3} \end{figure}
+	\label{fig:3} \end{center}
+\end{figure}
 	
-	\begin{figure}[ht] \hspace*{0cm}
-%    \includegraphics[scale=0.4]{f4}
-	\caption{This is a place holder image. The figures are currently in adobe illustrator format: protein domain, structure - interaction, features.}
-	\label{fig:4} \end{figure}
 	
-	\begin{figure}[ht] \hspace*{0cm}
+\begin{figure}[ht] \hspace*{0cm} \begin{center}
 %    \includegraphics[scale=0.5]{fx}
-	\caption{We do not need a table here - just a reminder of discussion with Tina.
+	\caption{IFN response. We do not need a table here - just a reminder of discussion with Tina.
 	Is just the short result in text enough? IFN associated with strain A/B, and which cor with our variant, but unlikely due to our single variant 
-	-- Yes - Tina agrees. .}
-	\label{fig:5} \end{figure}
-
-
-\section{Public data v2}
-Install local \href{https://github.com/nextstrain/nextclade/blob/master/docs/dev/developers-guide-cli.md}{https://github.com/nextstrain/nextclade/blob/master/docs/dev/developers-guide-cli.md} for nextalign.
-
+	-- Yes - Tina agrees.}
+	\label{fig:4} \end{center}
+\end{figure}
 
 \end{document}
 
