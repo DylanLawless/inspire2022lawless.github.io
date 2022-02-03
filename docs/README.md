@@ -1,5 +1,5 @@
 # Supplementary project data
-<https://lawlessgenomics.com/rsv2021lawless.github.io>
+<https://lawlessgenomics.com/inspire2022lawless.github.io>
 
 * Pre-print <https://www.overleaf.com/project/61718a4e077acc3d20ee68f1>
 * This repo contains the interactive results from [citation].
@@ -33,7 +33,7 @@
 ## Study population
 <!-- <div> -->
 <iframe scrolling="no" seamless="seamless" src="
-	https://lawlessgenomics.com/rsv2022lawless.github.io/pages/rsv_persist2022.html
+	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/rsv_persist2022.html
 	"
 	style="border:none;" 
 	height=600
@@ -43,7 +43,7 @@
 
 ## Evidence summary
 <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="
-	https://lawlessgenomics.com/rsv2022lawless.github.io/pages/gene_illustrate_rsv_detail.html
+	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/gene_illustrate_rsv_detail.html
 	"
 	height="1000" 
 	width="95%"></iframe>
@@ -119,6 +119,7 @@ git config user.name DylanLawless
 
 # Colophon
 This page uses the body font Switzer-Light, a neo-grotesk Latin-script typeface with 18 styles, designed by Jérémie Hornus.
+Body text color is #0a2e4a and additional colors are found in \_sass/variables.scss
 The layout is based on the jekyll-theme-cayman.
 It was developed using a local installation of the Jekyll Ruby gem and published using GitHub Pages.
 Add the methods section for all data access and software here.
