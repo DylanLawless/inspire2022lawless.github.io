@@ -1,10 +1,11 @@
 # Supplementary project data
-<https://lawlessgenomics.com/inspire2022lawless.github.io>
 
-* Pre-print <https://www.overleaf.com/project/61718a4e077acc3d20ee68f1>
-* This repo contains the interactive results from [citation].
-* The pre-print can be found on medarxiv [citation].
-* Branch and md5sum of publication version:
+* This webpage: <https://lawlessgenomics.com/inspire2022lawless.github.io>
+* Manuscript and source code: <https://github.com/DylanLawless/inspire2022lawless.github.io>
+* Pre-print on Overleaf <https://www.overleaf.com/project/61718a4e077acc3d20ee68f1>
+* Final publication doi [citation].
+* Pre-print on medarxiv [citation].
+* Git commit ID and md5sum of publication version:
 
 <!-- <div class="evidence-graph-container"> -->
 <!--   <div class="evidence-graph left" margin-bottom="3vh"> -->
