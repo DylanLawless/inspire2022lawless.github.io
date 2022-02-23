@@ -1,5 +1,13 @@
 \documentclass{article}
-
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ left=30mm,
+ right=30mm,
+ top=30mm,
+ bottom=30mm,
+ }
+ 
 \usepackage[utf8]{inputenc}
 \usepackage{authblk} % authors
 
@@ -399,6 +407,12 @@ No association was identified for F protein and is therefore omitted from discus
 % <!-- Larry / Suman can help. -->
 % <!-- Their clinical relevance.] -->
 
+\begin{figure}[ht] \hspace*{0cm}  \begin{center}
+    \includegraphics[scale=0.1]{f1_rsv_persist2022}
+	\caption{legend.}
+	\label{fig:1}
+ \end{center} \end{figure}
+ 
 \subsection{Population structure}
 The phylogenetic tree based on G protein is shown in 
 Figure \ref{fig:2} A.
@@ -461,7 +475,7 @@ The association model was repeated for all variants to produce a LocusZoom-style
 Figure \ref{fig:3} B.
 This shows both G protein 
 % <!-- "V126" --> 
-p.E123K/D and 
+p.fE123K/D and 
 % <!-- "V221" --> 
 p.P217T/S/L as candidate causal variants associated with persistent infection, and no other variants in correlation with this association. 
 
@@ -496,6 +510,18 @@ we assessed the public viral data repository of NCBI Human orthopneumovirus, tax
 We observed no enrichment for our variants of interest over time; 
 a low frequency was observed in the available samples with no particular features compared to other low frequency variants. 
 However, correlation between the two positions associated with persistent infection indicates that it does not arise as random mutation event.
+
+\begin{figure}[ht] \hspace{-0.5cm} 
+    \includegraphics[scale=0.8]{f2}
+	\caption{legend}
+	\label{fig:2} 
+\end{figure}
+
+\begin{figure}[ht] \hspace{-0.5cm} 
+    \includegraphics[scale=0.85]{f3}
+	\caption{legend.}
+	\label{fig:3}
+\end{figure}
 
 
 \subsection{Functional interpretation}
@@ -610,6 +636,7 @@ This secreted isoform is reported for amino acid positions p.66 – 298, and inc
 %define window of glycos sites (2-3 AA size)
 %random sample (variant) and get P that it lies within this site.
 
+
 \section{Links}
 \subsection{Software}
 \begin{description}[noitemsep]
@@ -638,7 +665,7 @@ This secreted isoform is reported for amino acid positions p.66 – 298, and inc
 
 \end{description}
 
-\subsection{Additional Data sources}
+\subsection{Data sources}
 \begin{description}[noitemsep]
 \item Dataset \url{https://www.ncbi.nlm.nih.gov/bioproject/267583}.
 \item Dataset \url{https://www.ncbi.nlm.nih.gov/bioproject/225816}.
@@ -648,10 +675,8 @@ This secreted isoform is reported for amino acid positions p.66 – 298, and inc
 G attachment glycoprotein [Human orthopneumovirus]; ID: 1489824; Location: NC\_001781.1 (4675..5600); Aliases: HRSVgp07.
 \item Reference data \url{https://www.ncbi.nlm.nih.gov/gene/?term=37607642}. 
 G attachment glycoprotein [Human orthopneumovirus]; ID: 37607642; Location: NC\_038235.1 (4673..5595); Aliases: DZD21\_gp07.
-
 \item Reference data for all public NCBI Virus 
 \url{https://www.ncbi.nlm.nih.gov/labs/virus/vssi/} for species: Human orthopneumovirus; genus: orthopneumovirus; family: Pneumoviridae.
-
 \item Reference data \url{https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Human\%20orthopneumovirus,\%20taxid:11250}
 - contains sequence data for 
 Virus Lineage ss=Human orthopneumovirus, taxid:11250
@@ -764,23 +789,21 @@ Infection is defined as RSV sequence positive, with $\ge$15 days between testing
 \end{landscape}										
 \clearpage										
 
-\begin{figure}[ht] \hspace*{0cm}  \begin{center}
-    \includegraphics[scale=0.2]{f1}
+\begin{figure}[ht] \hspace{-0.5cm} 
+    \includegraphics[scale=0.85]{S1}
 	\caption{legend.}
-	\label{fig:1}
- \end{center} \end{figure}
-
-\begin{figure}[ht] \hspace*{0cm} \begin{center}
-    \includegraphics[scale=0.3]{f2}
-	\caption{legend}
-	\label{fig:2} \end{center}
+	\label{fig:S1}
 \end{figure}
 
-\begin{figure}[ht] \hspace*{0cm} \begin{center}
-    \includegraphics[scale=0.3]{f3}
-	\caption{legend.}
-	\label{fig:3} \end{center}
+
+\begin{figure}[ht] \hspace{-0.5cm} \begin{center}
+    \includegraphics[scale=0.6]{S2}
+	\caption{legend.} 
+	\label{fig:S2} \end{center}
 \end{figure}
+
+
+
 	
 	
 \begin{figure}[ht] \hspace*{0cm} \begin{center}
