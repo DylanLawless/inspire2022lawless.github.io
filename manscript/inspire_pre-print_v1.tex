@@ -62,9 +62,9 @@ Please note the URL is on my personal domain temporarily; this will be switched 
 %\thanks {Use thanks if u you need it}
 %for single author (just remove % characters)
 
-\author[epfl]{\rm Dylan Lawless, PHD}
+\author[epfl]{\rm Dylan Lawless, PhD}
 \author[penn]{\rm Christopher G. McKennan, PhD}
-\author[sib]{\rm Thomas Junier, PHD}
+\author[sib]{\rm Thomas Junier, PhD}
 \author[epfl]{\rm Zhi Ming Xu, MSc}
 \author[]{\rm Suman Das, PhD}
 \author[emoryPed]{\rm Larry J Anderson}
@@ -409,7 +409,7 @@ Therefore, our analysis focused on G glycoprotein (citations probably not requir
 
 \begin{figure}[ht] \hspace*{0cm}  \begin{center}
     \includegraphics[scale=0.1]{f1_rsv_persist2022}
-	\caption{INSPIRE cohort summary. Natural quasi random RSV infection events were monitored by RT-qPCR, serology, and sequencing.}
+	\caption{\textbf{INSPIRE cohort summary}. Natural quasi random RSV infection events were monitored by RT-qPCR, serology, and sequencing.}
 	\label{fig:1}
  \end{center} \end{figure}
  
@@ -447,7 +447,7 @@ Therefore, our analysis focused on G glycoprotein (citations probably not requir
 {		} & {	Siblings	} & {		} & {		} & {		} \\
 \bottomrule										
 \caption{										
-Cohort characteristics of infants with persistent RSV infection compared with other RSV infection and entire cohort. 										
+\textbf{Cohort characteristics of infants with persistent RSV infection compared with other RSV infection and entire cohort}. 	
 Infection is defined as RSV sequence positive, with $\ge$15 days between testing. Respiratory severity score (median, IQR) Test statistic $P = 0.27^1$. Pearson$^1$, Wilcoxon$^2$.}							
 \label{tab:1}
 \end{tabularx}
@@ -500,9 +500,16 @@ We therefore refer to these cases as persistent infection rather than second inf
 
 \begin{figure}[ht] \hspace{-0.5cm} 
     \includegraphics[scale=0.8]{f2}
-	\caption{Legend.}
+	\caption{\textbf{Population structure}.
+(A) Protein coding genes in RSV.
+(B) Phylogenetic tree based based on multiple sequence alignemnt (MSA) of amino acid G protein sequences.
+(C) Principal component analysis (PCA) PCs1-3 with labels indicating repeat/persistent infections from different phylogenetic clades.
+(D) Panel [i] summarises every pairwise genetic distance between every viral sequence.
+Genetic invariance in repeat/persistent infections separated by at least 15 days compared to other genetic variation within clades  
+(panel [ii]) and within all possible pairs (panel [iii]).}
 	\label{fig:2} 
 \end{figure}
+\clearpage
 
 \subsection{Variants in G glycoprotein significantly associated with persistent infection}
 The consensus sequence within the cohort was assigned based on the major allele.
@@ -540,7 +547,7 @@ After identifying a significant association with persistent infection,
 we quantified the correlation of variants with the lead proxy.
 % <!-- Conditional analysis was used to identify any independant signal. --> 
 % <!-- Pruning, go through methods with Chris multiple test correction with threshold set at number of proxy SNVs rather than gene-wide SNV number. -->
-Clumping was performed with ranking based on minor allele frequency (MAF) and with a cut-off threshold of $r^2 \ge 0.8$.
+Clumping was performed with ranking based on minor allele frequency (MAF) and with a cut-off threshold of $r^2 \ge 0.8$ (Supplemental Figure \ref{fig:S1}).
 The association model was repeated for all variants to produce a LocusZoom-style Manhattan plot with $r^2$ by color and P-value statistics as shown in 
 Figure \ref{fig:3} C.
 This shows both G protein 
@@ -589,7 +596,7 @@ Figure \ref{fig:3} D (Features) shows the isoform of mature secreted glycoprotei
 
 \begin{figure}[ht] \hspace{-0.5cm} 
     \includegraphics[scale=0.85]{f3}
-	\caption{Genetic association with persistent infection. (A) Amino acid association with persistent infection after multiple testing correction (significant threshold shown by dotted line). (B) Variance explained (VE) within cohort. The effect of each variant on cohort structure is shown for PCs1-2. A large \% VE for a significantly associated variant would indicate a false positive. (C) Variants in strong correlation were clumped for association testing using proxies for $r^2 \ge 0.8$. One significant association was identified (shown in A); the $r^2$ values for all other variants show a single highly correlated variant with the lead proxy (red). 
+	\caption{\textbf{Genetic association with persistent infection}. (A) Amino acid association with persistent infection after multiple testing correction (significant threshold shown by dotted line). (B) Variance explained (VE) within cohort. The effect of each variant on cohort structure is shown for PCs1-2. A large \% VE for a significantly associated variant would indicate a false positive. (C) Variants in strong correlation were clumped for association testing using proxies for $r^2 \ge 0.8$. One significant association was identified (shown in A); the $r^2$ values for all other variants show a single highly correlated variant with the lead proxy (red). 
 	(D) Evidence for biological interpretation for every amino acid position is summarised}
 	\label{fig:3}
 \end{figure}
@@ -805,14 +812,14 @@ Population structure was controlled by GRM eigenvectors and analysis covariates 
 									
 \begin{figure}[ht] \hspace{-0.5cm} 
     \includegraphics[scale=0.85]{S1}
-	\caption{\textbf{Supplemental} Variant clumping for reduction in association testing. [Left] Correlation between all positions. [Right] Correlation between proxy variants are clumping to remove $r^2 \ge 0.8$.}
+	\caption{\textbf{Supplemental: Variant clumping for reduction in association testing}. [Left] Correlation between all positions. [Right] Correlation between proxy variants are clumping to remove $r^2 \ge 0.8$.}
 	\label{fig:S1}
 \end{figure}
 
 
 \begin{figure}[ht] \hspace{-0.5cm} \begin{center}
     \includegraphics[scale=0.6]{S2}
-	\caption{\textbf{Supplemental} Publicly available RSV sequence data for $>30$ years was assessed. (A) Global sample collection per year. (B) Variant associated with persistent infection tracked in public data. (C) \% variance explained per year for all G protein amino acid variants from 1990-2022} 
+	\caption{\textbf{Supplemental: Publicly available RSV sequence data for $>30$ years}. (A) Global sample collection per year. (B) Variant associated with persistent infection tracked in public data. (C) \% variance explained per year for all G protein amino acid variants from 1990-2022} 
 	\label{fig:S2} \end{center}
 \end{figure}
 
