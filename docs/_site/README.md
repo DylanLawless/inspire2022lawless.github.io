@@ -43,41 +43,61 @@
 	></iframe>
 <!-- </div> -->
 
+Figure 1: INSPIRE cohort summary. Natural quasi random RSV infection events were monitored by RT-qPCR, serology, and sequencing.
+
+
 ## Population structure
 <iframe scrolling="no" seamless="seamless" src="
 	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/update_G_pca.html"
 	style="border:none;"
-	height=600
+	height=400
 	width="100">
 </iframe>
+
+To add images (B), (C) and (D).
+
+Figure 2: Population structure. (A) Protein coding genes in RSV. (B) Phylogenetic tree based based on multiple sequence alignemnt (MSA) of amino acid G protein sequences. (C) Principal component analysis (PCA) PCs1-3 with labels indicating repeat/persistent infections from different phylogenetic clades. (D) Panel [i] summarises every pairwise genetic distance between every viral sequence. Genetic invariance in repeat/persistent infections separated by at least 15 days compared to other genetic variation within clades (panel [ii]) and within all possible pairs (panel [iii]).
+
+## Genetic association
+<iframe scrolling="no" seamless="seamless" src="
+	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/manplot.html"
+	style="border:none;"
+	height=300
+	width="60%">
+</iframe>
+
+Figure 3: Genetic association with persistent infection. (A) Amino acid association with persistent infection after multiple testing correction (significant threshold shown by dotted line). 
+
+## Variant explained
+
+This figure uses the relative MSA positions. I will update positions if we keep interative results.
+i.e. p.221 in relative position is p.218 in strain B reference sequence (as seen in genetic association plot signal variant).
 
 <iframe scrolling="no" seamless="seamless" src="
 	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/pca_variance_explaied.html"
 	style="border:none;"
-	height=600
+	height=400
 	width="100">
 </iframe>
 
-<iframe scrolling="no" seamless="seamless" src="
-	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/manplot.html"
-	style="border:none;"
-	height=600
-	width="100">
-</iframe>
+Figure 3 (B) Variance explained (VE) within cohort. The effect of each variant on cohort structure is shown for PCs1-2. A large % VE for a significantly associated variant would indicate a false positive. (C) Variants in strong correlation were clumped for association testing using proxies for r2 ≥ 0.8. One significant association was identified (shown in A); the r2 values for all other variants show a single highly correlated variant with the lead proxy (red). 
 
+## Evidence summary
 <iframe scrolling="no" seamless="seamless" src="
 	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/gene_illustrate_rsv_Pval.html"
 	style="border:none;"
-	height=600
+	height=1000
 	width="100">
 </iframe>
 
-## Evidence summary
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="
-	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/gene_illustrate_rsv_detail.html
-	"
-	height="1000" 
-	width="95%"></iframe>
+Figure 3 (D) Evidence for biological interpretation for every amino acid position is summarised.
+
+# To add
+
+Figure 4: Supplemental: Variant clumping for reduction in association testing. [Left] Correlation between all positions. [Right] Correlation between proxy variants are clumping to remove r2 ≥ 0.8.
+
+Figure 5: Supplemental: Publicly available RSV sequence data for > 30 years. (A) Global sample collection per year. (B) Variant associated with persistent infection tracked in public data.
+(C) % variance explained per year for all G protein amino acid variants from 1990-2022.
 
 # Software
 - R v4.1.0 was used for data preparation and analysis <http://www.r-project.org>.
