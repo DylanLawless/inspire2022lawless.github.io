@@ -7,6 +7,7 @@
 * Pre-print on medarxiv [citation].
 * Git commit ID and md5sum of publication version:
 
+<!-- test -->
 <!-- <div class="evidence-graph-container"> -->
 <!--   <div class="evidence-graph left" margin-bottom="3vh"> -->
 
@@ -41,6 +42,35 @@
 	width="100"
 	></iframe>
 <!-- </div> -->
+
+## Population structure
+<iframe scrolling="no" seamless="seamless" src="
+	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/update_G_pca.html"
+	style="border:none;"
+	height=600
+	width="100">
+</iframe>
+
+<iframe scrolling="no" seamless="seamless" src="
+	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/pca_variance_explaied.html"
+	style="border:none;"
+	height=600
+	width="100">
+</iframe>
+
+<iframe scrolling="no" seamless="seamless" src="
+	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/manplot.html"
+	style="border:none;"
+	height=600
+	width="100">
+</iframe>
+
+<iframe scrolling="no" seamless="seamless" src="
+	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/gene_illustrate_rsv_Pval.html"
+	style="border:none;"
+	height=600
+	width="100">
+</iframe>
 
 ## Evidence summary
 <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="
@@ -110,7 +140,7 @@ Host dylanlawless.github.com
 
 
 # Clone using the correct Host as per config.
-git clone git@dylanlawless.github.com:DylanLawless/DylanLawless.github.io.git
+git clone git@dylanlawless.github.com:DylanLawless/inspire2022lawless.github.io.git
 
 # Set the local user here (instead of global, i.e. /Users/user/.gitconfig)
 cd "the clone repo dir"

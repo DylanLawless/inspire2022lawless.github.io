@@ -43,6 +43,35 @@
 	></iframe>
 <!-- </div> -->
 
+## Population structure
+<iframe scrolling="no" seamless="seamless" src="
+	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/update_G_pca.html"
+	style="border:none;"
+	height=600
+	width="100">
+</iframe>
+
+<iframe scrolling="no" seamless="seamless" src="
+	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/pca_variance_explaied.html"
+	style="border:none;"
+	height=600
+	width="100">
+</iframe>
+
+<iframe scrolling="no" seamless="seamless" src="
+	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/manplot.html"
+	style="border:none;"
+	height=600
+	width="100">
+</iframe>
+
+<iframe scrolling="no" seamless="seamless" src="
+	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/gene_illustrate_rsv_Pval.html"
+	style="border:none;"
+	height=600
+	width="100">
+</iframe>
+
 ## Evidence summary
 <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="
 	https://lawlessgenomics.com/inspire2022lawless.github.io/pages/gene_illustrate_rsv_detail.html
