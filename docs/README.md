@@ -110,7 +110,7 @@ Host dylanlawless.github.com
 
 
 # Clone using the correct Host as per config.
-git clone git@dylanlawless.github.com:DylanLawless/DylanLawless.github.io.git
+git clone git@dylanlawless.github.com:DylanLawless/inspire2022lawless.github.io.git
 
 # Set the local user here (instead of global, i.e. /Users/user/.gitconfig)
 cd "the clone repo dir"
