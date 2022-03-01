@@ -1,12 +1,9 @@
-\documentclass{article}
-\usepackage{geometry}
- \geometry{
- a4paper,
- left=30mm,
- right=30mm,
- top=30mm,
- bottom=30mm,
- }
+\documentclass{article} % for elife comment
+% \documentclass[9pt
+% \item neno]{elife}
+
+\usepackage{geometry} % for elife comment
+  \geometry{a4paper, left=30mm, right=30mm, top=30mm, bottom=30mm} % for elife comment
  
 \usepackage[utf8]{inputenc}
 \usepackage{authblk} % authors
@@ -49,7 +46,7 @@
 \begin{document}
 \date{} %don't want date printed
 %make title bold and 14 pt font (Latex default is non-bold, 16 pt)
-\title{\Large \bf Viral genetic determinants of persistent human orthopneumovirus infection.
+\title{\Large \bf Viral genetic determinants of prolonged human orthopneumovirus infection.
 \footnote{This document's source code is available to co-authors from the 
 \href{https://github.com/DylanLawless/inspire2022lawless.github.io}{GitHub repository} 
 and from the 
@@ -85,6 +82,7 @@ Please note the URL is on my personal domain temporarily; this will be switched 
 %\affil[ ]{\textit {\{email1,email2,email3,email4\}@xyz.edu}}
 \maketitle
 
+%W eLife
 % CID - clinical spin, Jim describes other good examples in this journal. Up to 5 keywords  Word limit: 3000 words (excluding the abstract and references). Key points should be summarized on the title page in 40-words or less. Abstract: Up to 250 words. Tables/Figures: As required / No max? References: 40 or less. References should be numbered consecutively, in brackets on the text line (e.g., [3, 7–9, 57]). For references with more than 6 authors, the first 3 authors should be listed, followed by et al. 
 % % <!-- ## Backups -->
 % <!-- * JID -  would probably do well here. -->
@@ -120,9 +118,9 @@ RSV is a common cause of acute respiratory infection during infancy with nearly 
 Infection and immunological response are shaped by both host and pathogen genetics as well as other environmental factors. 
 Our surveillance cohort of 1741 infants with
 natural quasi random infection events included monitoring by RT-qPCR, serology, and sequencing. 
-We performed viral genetic association testing to detect variants that contribute to persistent infection.
+We performed viral genetic association testing to detect variants that contribute to prolonged infection.
 Analysis controlled for all know demographic factors including host age, sex, ethnicity, sibling contact transmission, viral population, and we have previously excluded host genetic causes of infection susceptibility.
-We identify RSV variants in surface G glycoprotein that were associated with persistent infection, investigated their functional role, and reviewed all publicly available pathogen sequence data spanning several decades. 
+We identify RSV variants in surface G glycoprotein that were associated with prolonged infection, investigated their functional role, and reviewed all publicly available pathogen sequence data spanning several decades. 
 RSV plays a major role in global health and remains a target for vaccine development.
 Strong evidence also supports RSV as a modifiable risk factor for asthma development. Preventing or delaying infant infection is likely to have a positive impact on life-long human health worldwide.
 
@@ -141,10 +139,10 @@ rohwedder_detection_1998}.
 Prolonged shedding of RSV, especially in young infants and following first infection, has been demonstrated, with longer average duration of viral shedding using polymerase chain reaction (PCR) to detect RSV 
 \cite{munywoki_influence_2015}.
 While younger age and first infection are associated with persistence of infection, what is not understood is whether there are viral factors contributing to prolonged shedding or persistence of RSV in young infants. 
-This is important, as persistent infection, or prolonged shedding may contribute to enhanced transmission and developmental changes to the early life airway epithelium. 
+This is important, as prolonged infection, or prolonged shedding may contribute to enhanced transmission and developmental changes to the early life airway epithelium. 
 Further, the reservoir of RSV infection is not understood, 
 and it is possible that some RSV strains and/or hosts could serve as a dormant reservoir for infection that is activated by seasonal or other influences 
-\cite{hobson_persistent_2008}.
+\cite{hobson_prolonged_2008}.
 Host genetic and viral genetic interactions have never been studied for RSV.
 With increasing adoption of human genomics in parallel with pathogen sequencing, novel methods for genome-to-genome analysis provide opportunities to identify selective pressure between host and pathogen \cite{naret2018correcting}.
 We have previously investigated host genetics as a source of susceptibility to infection.
@@ -158,7 +156,7 @@ Population genetics also contributes important features that must be accounted f
 These features not only depend on host genetics as seen within a typical genome-wide association study (GWAS), but also depend on viral genetics.
 Analysis of viral populations not only requires variant-level information, but genome-wide information since pathogen fitness can modulate the effect of variant-specific mutation.  
 RSV strains A and B impart the largest separation within the viral population phylogeny and are important features to control, similar to the use of principal component analysis (PCA) in human GWAS.
-In this study we perform genomic analysis of RSV to identify variants that are significantly associated with persistent infection in otherwise healthy children.
+In this study we perform genomic analysis of RSV to identify variants that are significantly associated with prolonged infection in otherwise healthy children.
 
 \section{Methods}
 \subsection{Study population}
@@ -181,13 +179,13 @@ Nasal sample collections were assessed by reverse transcription-quantitative PCR
 \cite{larkin2015objectives}.
 At one year of age infants underwent blood draw for RSV serology to determine infection status during infancy. 
 [Plots with CT-value from Tina, either as supplemental or first mention later so not to pollute the order].
-Infants with positive PCR separated by 15 or more days were annotated during analysis as ``persistent or repeat infection''
+Infants with positive PCR separated by 15 or more days were annotated during analysis as ``prolonged or repeat infection''
 (Figure \ref{fig:1}).
 
 \subsection{Descriptive analyses}
 Descriptive analyses of the cohort were conducted using R 4.0.5 (available at: 
 \url{http://www.r-project.org}). 
-Pearson or Wilcoxon tests were used for comparing infants with and without persistent RSV infection.
+Pearson or Wilcoxon tests were used for comparing infants with and without prolonged RSV infection.
 The main descriptive features are provided in 
 Table \ref{tab:1}.
 [Consider plotting these also in the Hmisc Harrell style as seen in his book, RegerssionModellingStrategies2015].
@@ -287,7 +285,7 @@ Examining the sequences with an alignment viewer showed that a small number of s
 % <!-- ## Data merged and cleaned -->
 % <!--Label repeat infections -->
 Viral sequence data and clinical information was merged and cleaned with R.
-Clinical IDs matching more than one viral sequence ID were used to re-identify samples from the same individual as ``repeat or persistent'' infections. 
+Clinical IDs matching more than one viral sequence ID were used to re-identify samples from the same individual as ``repeat or prolonged'' infections. 
 Genetic variation was quantified in these samples and for subsequent analysis only the first viral sequence was included for association testing. 
 Typing of strain A and B had been completed previously and labels were included to annotate each sample accordingly.
 
@@ -299,7 +297,7 @@ Variants positions were selected for association analysis, while non-variant pos
 
 A number of host features have been previously shown to influence infection susceptibility and were therefore included as covariates in our analysis (cite Rosas-Salazar).
 Six samples were excluded due to insufficient covariate data, resulting in 344 test samples. 
-Of these, 36 were from the same patients (``persistent or repeat'' infection) of which half (18) were included for association testing; 326 samples total.
+Of these, 36 were from the same patients (``prolonged or repeat'' infection) of which half (18) were included for association testing; 326 samples total.
 % <!--Correlations viewed with: corrplot, ggcorrplot, caret.-->
 
 \subsection{Population structure}
@@ -311,11 +309,11 @@ R package \textit{factoextra} was used for PCA, and to visualise eigenvalues and
 R package \textit{caret} was used to analyse genetic correlations.
 
 \subsection{Association testing}
-Viral amino acids (genotype collapsed into REF/ALT) were tested for association with infection types \textit{single} and \textit{persistent}, 
+Viral amino acids (genotype collapsed into REF/ALT) were tested for association with infection types \textit{single} and \textit{prolonged}, 
 including key covariates that are significantly associated with infection.
 Analysis was performed using logistic regression with the
 R stats (3.6.2) \textit{glm} function as a generalized linear model.
-The model consisted of the binary response (persistent infection Yes/No), and predictors; viral genotype (REF/ALT amino acid), viral PCs 1-5, host sex, and it also accounted for host features that have been previously demonstrated as significantly associated with infection; 
+The model consisted of the binary response (prolonged infection Yes/No), and predictors; viral genotype (REF/ALT amino acid), viral PCs 1-5, host sex, and it also accounted for host features that have been previously demonstrated as significantly associated with infection; 
 self-reported race/ethnicity, child-care attendance, living with siblings (cite Rosas-Salazar).
 
 % $ glm(\text{Infection status} \text{\textasciitilde} \text{genotype} + \text{PCs} + \text{birth month} + \text{sex} + \text{race} + \text{child-care} + \text{siblings}, \text{family} = \text{'binomial'}) $
@@ -382,17 +380,16 @@ Of these, 1,220 ($\sim 63\%$) had $\ge$ 1 in-person respiratory illness visit(s)
 In total, there were 2,093 in-person respiratory illness visits completed and the median (interquartile range [IQR]) number of in-person respiratory illness visits per infant was 1 (1-2). 
 % The characteristics of these infants compared with the other RSV infected infants and the entire cohort is shown in Table 1.
 From the cohort, 344 RSV viral samples from 326 individuals were sequenced.
-There were 19 infants with RSV-positive PCR $\ge$ 15 days apart who we suspected as having either persistent or repeat infection (based on genetic analysis).
+There were 19 infants with RSV-positive PCR $\ge$ 15 days apart who we suspected as having either prolonged or repeat infection (based on genetic analysis).
 % <!-- Also those who were sick enough to have a resp illness visit. --> 
-Table \ref{tab:1} lists the cohort characteristics of infants with persistent RSV infection compared with other RSV infection and the entire cohort. 
-Repeat or persistent infection is defined as RSV sequence positive with $\ge$ 15 days between testing.
+Table \ref{tab:1} lists the cohort characteristics of infants with prolonged RSV infection compared with other RSV infection and the entire cohort. 
+Repeat or prolonged infection is defined as RSV sequence positive with $\ge$ 15 days between testing.
 % Pearson1, Wilcoxon2.
 % <!-- There are other variables that we can include, although this seems sufficient. -->
 % [For Tebeb: We will need to recalculate this to represent just the first infection, as this small number infections include repeat infections which likely drives the median higher.]
 
 The relatively small sample size of our cohort required analysis that targeted only genes which were \textit{a priori} likely to functionally contribute to the clinical phenotype. 
 Therefore, our analysis focused on G glycoprotein (citations probably not required: PMC8310105, 33115881, 23598484, 31533056).
-% No association was identified for F protein and is therefore omitted from discussion.
 % <!-- [Include some points for our reasoning; -->
 % <!-- Would we have false positives in other genes? -->
 % <!-- We can interpret the results in F and G. -->
@@ -419,7 +416,7 @@ Therefore, our analysis focused on G glycoprotein (citations probably not requir
 \centering										
 \begin{tabularx}{\linewidth}{ X l X X X X }								
 \toprule										
-{		} & {		} & {	Persistent RSV N=19	} & {	Other RSV N=342	} & {	Total N=1949	} \\
+{		} & {		} & {	Prolonged RSV N=19	} & {	Other RSV N=342	} & {	Total N=1949	} \\
 \midrule										
 \multirow{2}{*}{	Illness	} &{	Illness age, months (median, IQR)	} & {	6 (4, 6) 	} & {	4 (2, 5)	} & {	NA	} \\
 {		} &{	Respiratory severity score (median, IQR)	} & {	2.0 (1.2, 3.0)	} & {	3.0 (2.0, 4.0)	} & {	NA	 } \\
@@ -448,7 +445,7 @@ Therefore, our analysis focused on G glycoprotein (citations probably not requir
 {		} & {	Siblings	} & {		} & {		} & {		} \\
 \bottomrule										
 \caption{										
-\textbf{Cohort characteristics of infants with persistent RSV infection compared with other RSV infection and entire cohort}. 	
+\textbf{Cohort characteristics of infants with prolonged RSV infection compared with other RSV infection and entire cohort}. 	
 Infection is defined as RSV sequence positive, with $\ge$15 days between testing. Respiratory severity score (median, IQR) Test statistic $P = 0.27^1$. Pearson$^1$, Wilcoxon$^2$.}							
 \label{tab:1}
 \end{tabularx}
@@ -469,7 +466,7 @@ which has emerged in recent years within RSV-A strains
 RSV-B strains with an analogous duplication have existed for two decades, 
 although the mechanisms leading to emergence and clinical implications have not been entirely defined.
 
-We observed repeat or persistent infections by viruses from different phylogenetic clades, rather than one specific clade 
+We observed repeat or prolonged infections by viruses from different phylogenetic clades, rather than one specific clade 
 (Figure \ref{fig:2} C).
 A genotype correlation matrix and PCA eignenvalues were used for reducing the dimensionality of sequence data.
 Dimension one accounted for 95.19\% cumulative variance explained in our cohort.
@@ -485,7 +482,7 @@ a subset analysis of individual strains was performed to confirm the validity of
 % Note for presentation slides: there is no general theoretical reason that the most informative linear function of the predictor variables should lie among the dominant principal components of the multivariate distribution of the predictor variables. 
 % However, if there were then we would like to know since it would produce a false positive in this case. Conversely, for example, in a principal component regression you would hope to find the assoc based on PCs.
 
-\subsection{Genetic invariance of persistent infection}
+\subsection{Genetic invariance of prolonged infection}
 The duration of RSV shedding duration in Kenyan infants has been reported previously
 \cite{okiro2010duration}.
  % <!-- \url{https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-10-15#Sec1} -->
@@ -494,9 +491,9 @@ Based on these finding, infections separated by at least 15 days were expected t
 % <!-- In addition to our within-cohort genetic analysis showing --> 
 Figure \ref{fig:2} D (panel [i]) summarises every pairwise genetic distance between every viral sequence.
 Sequence from the same clades have the smallest distance; panel [ii] shows genetic invariance between viral sequences within the same host for infections separated by at least 15 days. 
-There was no genetic variation in repeat/persistent viral sequence within individuals versus significantly increased genetic diversity between any of the most closely related sequences ($\text{P-value} = 0.008$).
+There was no genetic variation in repeat/prolonged viral sequence within individuals versus significantly increased genetic diversity between any of the most closely related sequences ($\text{P-value} = 0.008$).
 Panel [iii] shows distances between all possible pairs within clades ($\text{P-value} = 1.3e^{-8}$).
-We therefore refer to these cases as persistent infection rather than second infections.
+We therefore refer to these cases as prolonged infection rather than second infections.
 % <!-- Have a look at update figure but the first version might be fine. --> 
 
 \begin{figure}[ht] \hspace{-0.5cm} 
@@ -504,26 +501,26 @@ We therefore refer to these cases as persistent infection rather than second inf
 	\caption{\textbf{Population structure}.
 (A) Protein coding genes in RSV.
 (B) Phylogenetic tree based based on multiple sequence alignemnt (MSA) of amino acid G protein sequences.
-(C) Principal component analysis (PCA) PCs1-3 with labels indicating repeat/persistent infections from different phylogenetic clades.
+(C) Principal component analysis (PCA) PCs1-3 with labels indicating repeat/prolonged infections from different phylogenetic clades.
 (D) Panel [i] summarises every pairwise genetic distance between every viral sequence.
-Genetic invariance in repeat/persistent infections separated by at least 15 days compared to other genetic variation within clades  
+Genetic invariance in repeat/prolonged infections separated by at least 15 days compared to other genetic variation within clades  
 (panel [ii]) and within all possible pairs (panel [iii]).}
 	\label{fig:2} 
 \end{figure}
 \clearpage
 
-\subsection{Variants in G glycoprotein significantly associated with persistent infection}
+\subsection{Variants in G glycoprotein significantly associated with prolonged infection}
 The consensus sequence within the cohort was assigned based on the major allele.
 Variants at the amino acid level were defined as either REF/ALT and assessed for their association with persistence.
 The model consisted of
-the binary response (persistent infection Yes/No),
+the binary response (prolonged infection Yes/No),
 and predictors; viral genotype (REF/ALT amino acid), viral PCs 1-5, host sex, and it also accounted for host features that have been previously demonstrated as significantly associated with infection;
 self-reported race/ethnicity, child-care attendance, or living with siblings
 \cite{hall1976respiratory}.
 % NB don't jettison this citation.
 Analysis was performed using R stats (3.6.2) \textit{glm} function. 
 % <!-- glm ( infection ~ genotype + PCs + sex + other). -->
-A significant genetic association was identified for persistent infection after Bonferroni correction for multiple testing (threshold for number independent variants $<0.05/23=0.002$), 
+A significant genetic association was identified for prolonged infection after Bonferroni correction for multiple testing (threshold for number independent variants $<0.05/23=0.002$), 
 as shown in 
 Figure \ref{fig:3} A. 
 Since many variants within RSV coding genes have non-random association due to selection, like linkage disequilibrium (LD) in human GWAS, 
@@ -544,7 +541,7 @@ The lead association variant had
 $-0.996\%$ VE for PC1 and $-1.66\%$ VE for PC2; 
 a negligible effect that precludes spurious association by allele frequency between populations.
 
-After identifying a significant association with persistent infection,
+After identifying a significant association with prolonged infection,
 we quantified the correlation of variants with the lead proxy.
 % <!-- Conditional analysis was used to identify any independant signal. --> 
 % <!-- Pruning, go through methods with Chris multiple test correction with threshold set at number of proxy SNVs rather than gene-wide SNV number. -->
@@ -555,7 +552,7 @@ This shows both G protein
 % <!-- "V126" --> 
 p.fE123K/D and 
 % <!-- "V221" --> 
-p.P218T/S/L as candidate causal variants associated with persistent infection, and no other variants in correlation with this association. 
+p.P218T/S/L as candidate causal variants associated with prolonged infection, and no other variants in correlation with this association. 
 
 % <!-- We see that for 344 samples: --> 
 % <!-- positions 280-300 = 80% variance in cohort. -->
@@ -575,11 +572,11 @@ we assessed the public viral data repository of NCBI Human orthopneumovirus, tax
 27 unique countries worldwide, sample collection dates as far back as 1956, and 1084 glycoprotein protein sequences after curation.
 We observed no enrichment for our variants of interest over time; 
 a low frequency was observed in the available samples with no particular features compared to other low frequency variants. 
-However, correlation between the two positions associated with persistent infection indicates that it does not arise as random mutation event.
+However, correlation between the two positions associated with prolonged infection indicates that it does not arise as random mutation event.
 
 \subsection{Functional interpretation}
 The main features of RSV surface glycoprotein are illustrated in Figure \ref{fig:3} D.
-The variant associated with persistent infection in our cohort are seen in the extracellular region. 
+The variant associated with prolonged infection in our cohort are seen in the extracellular region. 
 There are no known mechanistic features that directly overlap. 
 Figure \ref{fig:3} D (Structure) shows the possible site for  initiation of infection by interaction of heparan sulfate and host cell membrane (p.187-198), during the  \cite{levine1987demonstration, feldman1999identification, feldman2000fusion}.
 Protein structure evidence from PDB was insufficient to determine an effect on conformation. 
@@ -597,7 +594,7 @@ Figure \ref{fig:3} D (Features) shows the isoform of mature secreted glycoprotei
 
 \begin{figure}[ht] \hspace{-0.5cm} 
     \includegraphics[scale=0.85]{f3}
-	\caption{\textbf{Genetic association with persistent infection}. (A) Amino acid association with persistent infection after multiple testing correction (significant threshold shown by dotted line). (B) Variance explained (VE) within cohort. The effect of each variant on cohort structure is shown for PCs1-2. A large \% VE for a significantly associated variant would indicate a false positive. (C) Variants in strong correlation were clumped for association testing using proxies for $r^2 \ge 0.8$. One significant association was identified (shown in A); the $r^2$ values for all other variants show a single highly correlated variant with the lead proxy (red). 
+	\caption{\textbf{Genetic association with prolonged infection}. (A) Amino acid association with prolonged infection after multiple testing correction (significant threshold shown by dotted line). (B) Variance explained (VE) within cohort. The effect of each variant on cohort structure is shown for PCs1-2. A large \% VE for a significantly associated variant would indicate a false positive. (C) Variants in strong correlation were clumped for association testing using proxies for $r^2 \ge 0.8$. One significant association was identified (shown in A); the $r^2$ values for all other variants show a single highly correlated variant with the lead proxy (red). 
 	(D) Evidence for biological interpretation for every amino acid position is summarised}
 	\label{fig:3}
 \end{figure}
@@ -609,11 +606,11 @@ Infections were on average less severe compared with other circulating variants,
 We also assessed the association of nasal cytokines in nasal wash samples during acute infection as anti-viral immune response biomarkers with the variants of interest.
 IFN$\alpha$ and IFN$\gamma$ were associated with strain A/B.
 Since the viral strains correlated with the presence of the variants of interest, co-linearity meant that it was not possible to attribute these variants as the cause of a differential interferon response.
-However, the more pronounced antiviral response is unlikely to be due to the variants associated with persistent infection and more likely due to other features that separate strain A and B; an observation that has been anecdotally reported previously 
+However, the more pronounced antiviral response is unlikely to be due to the variants associated with prolonged infection and more likely due to other features that separate strain A and B; an observation that has been anecdotally reported previously 
 (do we have a reference to strain B being more pathogenic than strain A? - rephrase if the reports are anecdotal or common knowledge). 
 
 \section{Discussion}
-In this study of term healthy infants in whom we identified their first RSV infection through surveillance, we conducted a viral genetic association study and identified variants associated with persistent infection. 
+In this study of term healthy infants in whom we identified their first RSV infection through surveillance, we conducted a viral genetic association study and identified variants associated with prolonged infection. 
 The variants were not associated with severe disease, had not arisen as a recent mutation, and have persisted in the population at a low prevalence for decades.
 We hypothesized that they might induce dampened anti-viral immune responses making it more difficult to be cleared. 
 However, we were unable to demonstrate so using nasal cytokine data.
@@ -622,8 +619,8 @@ We do not expect any host immune memory before this first infection, potentially
 
 %\subsection{limitations}
 While this study has a number of significant strengths, including being one of few population-based studies of the first RSV infection during infancy regardless of symptoms among a term healthy infant population, there are limitations which must be considered.
-This cohort was not designed to study persistence of infection, and repeat sampling following initial RSV infection was only done based on symptoms and likely missed some persistent infections in this population. 
-This resulted in a small number of persistent infections to study.
+This cohort was not designed to study persistence of infection, and repeat sampling following initial RSV infection was only done based on symptoms and likely missed some prolonged infections in this population. 
+This resulted in a small number of prolonged infections to study.
 The small sample size also required focus on surface proteins for their prior probability of association and interpretation.
 A larger cohort may in future perform a whole genome analysis.
 
@@ -680,7 +677,7 @@ It uses the attachment protein with neither haemagglutination nor neuraminidase 
 \cite{takimoto2002role, malvoisin1993measles, hu1992functional, horvath1992biological, bousse1994regions}
 The mature isoform of secreted glycoprotein G is believed to help the virus escape antibody-dependent restriction of replication by acting as an antigen decoy and by modulating the activity of leukocytes bearing Fc-gamma receptors 
 \cite{bukreyev2008secreted}.
-This secreted isoform is reported for amino acid positions p.66 – 298, and includes the variants associated with persistent infection in our analysis. 
+This secreted isoform is reported for amino acid positions p.66 – 298, and includes the variants associated with prolonged infection in our analysis. 
 
 Increasingly efficient vaccine development combined with the growing availability of large genomic and functional data sources provides opportunities for controlling the severity of illness, delaying age of infection, and preemptively monitoring for increased viral pathogenicity. 
 As a disease which causes significant morbidity and mortality, each advance in preventative measures can have lasting consequences for global health.
@@ -820,7 +817,7 @@ Population structure was controlled by GRM eigenvectors and analysis covariates 
 
 \begin{figure}[ht] \hspace{-0.5cm} \begin{center}
     \includegraphics[scale=0.6]{S2}
-	\caption{\textbf{Supplemental: Publicly available RSV sequence data for $>30$ years}. (A) Global sample collection per year. (B) Variant associated with persistent infection tracked in public data. (C) \% variance explained per year for all G protein amino acid variants from 1990-2022} 
+	\caption{\textbf{Supplemental: Publicly available RSV sequence data for $>30$ years}. (A) Global sample collection per year. (B) Variant associated with prolonged infection tracked in public data. (C) \% variance explained per year for all G protein amino acid variants from 1990-2022} 
 	\label{fig:S2} \end{center}
 \end{figure}
 
