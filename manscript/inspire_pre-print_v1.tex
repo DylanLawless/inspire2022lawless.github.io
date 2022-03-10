@@ -1,10 +1,14 @@
 \documentclass{article} % for elife comment
+ \usepackage[document]{ragged2e}
+\setlength{\RaggedRightParindent}{\parindent}
+\setlength{\parskip}{1em}
+
 % \documentclass[9pt
 % \item neno]{elife}
 
 \usepackage{geometry} % for elife comment
-  \geometry{a4paper, left=30mm, right=30mm, top=30mm, bottom=30mm} % for elife comment
- 
+  \geometry{a4paper, left=32mm, right=32mm, top=30mm, bottom=30mm} % for elife comment
+
 \usepackage[utf8]{inputenc}
 \usepackage{authblk} % authors
 
@@ -43,6 +47,14 @@
 \usepackage{pdflscape} % for rotated table
 \usepackage{multirow} % for table
 
+%Define command to start a supplemental section
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+     }
+
 \begin{document}
 \date{} %don't want date printed
 %make title bold and 14 pt font (Latex default is non-bold, 16 pt)
@@ -54,7 +66,10 @@ and from the
 All code and supplemental live data results at \href{https://github.com/DylanLawless/inspire2022lawless.github.io}{https://github.com/DylanLawless/inspire2022lawless.github.io}. 
 The PDF will be published on  \href{https://www.medrxiv.org}{medrxiv} 
 before submission.
-Please note the URL is on my personal domain temporarily; this will be switched for release.}
+Please note the URL is on my personal domain temporarily; this will be switched for release.
+For eLife, authors are asked to agree to publish their work under the terms of the Creative Commons Attribution license
+\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY-4.0}.
+}
 }
 %\thanks {Use thanks if u you need it}
 %for single author (just remove % characters)
@@ -63,11 +78,11 @@ Please note the URL is on my personal domain temporarily; this will be switched 
 \author[penn]{\rm Christopher G. McKennan, PhD}
 \author[sib]{\rm Thomas Junier, PhD}
 \author[epfl]{\rm Zhi Ming Xu, MSc}
-\author[]{\rm Suman Das, PhD}
+\author[**]{\rm Suman Das, PhD}
 \author[emoryPed]{\rm Larry J Anderson}
 \author[bioVan]{\rm  Tebeb Gebretsadik}
-\author[]{\rm Meghan Shilts}
-\author[]{\rm Christian Rosas-Salazar}
+\author[**]{\rm Meghan Shilts}
+\author[**]{\rm Christian Rosas-Salazar}
 \author[pedVan]{\rm James D. Chappell, MD}
 \author[epfl]{\rm Jacques Fellay, MD, PhD }
 \author[pedVan,medVan]{\rm Tina V. Hartert, MD, MPH}
@@ -79,6 +94,7 @@ Please note the URL is on my personal domain temporarily; this will be switched 
 \affil[medVan]{Department of Medicine, Vanderbilt University Medical Center, Nashville, Tennessee, United States of America}
 \affil[emoryPed]{Department of Pediatrics, Emory University School of Medicine, Atlanta, Georgia, United States of America}
 \affil[bioVan]{Department of Biostatistics, Vanderbilt University Medical Center, Nashville, Tennessee, United States of America}
+\affil[**]{Missing}
 %\affil[ ]{\textit {\{email1,email2,email3,email4\}@xyz.edu}}
 \maketitle
 
@@ -89,6 +105,7 @@ Please note the URL is on my personal domain temporarily; this will be switched 
 % <!-- * PLOS pathogens - Good quality but could be a little slower. -->
 % <!-- * Journal of virology. -->
 
+\clearpage
 % \linenumbers
 \subsection*{Abbreviations}
 ALT (alternative);
@@ -804,9 +821,13 @@ Population structure was controlled by GRM eigenvectors and analysis covariates 
 \bibliographystyle{unsrtnat}
 \bibliography{references}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Supplemental       %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Supplemental Figures}
-
+\beginsupplement
+\section{Supplemental}
+ \label{sec:Supplemental_text}
 									
 \begin{figure}[ht] \hspace{-0.5cm} 
     \includegraphics[scale=0.85]{S1}
