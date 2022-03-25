@@ -58,7 +58,7 @@
 \begin{document}
 \date{} %don't want date printed
 %make title bold and 14 pt font (Latex default is non-bold, 16 pt)
-\title{\Large \bf Viral genetic determinants of prolonged human orthopneumovirus infection.
+\title{\Large \bf Viral genetic determinants of prolonged respiratory syncytial virus infection among infants in a healthy term birth cohort.
 \footnote{This document's source code is available to co-authors from the 
 \href{https://github.com/DylanLawless/inspire2022lawless.github.io}{GitHub repository} 
 and from the 
@@ -98,12 +98,13 @@ For eLife, authors are asked to agree to publish their work under the terms of t
 %\affil[ ]{\textit {\{email1,email2,email3,email4\}@xyz.edu}}
 \maketitle
 
-%W eLife
-% CID - clinical spin, Jim describes other good examples in this journal. Up to 5 keywords  Word limit: 3000 words (excluding the abstract and references). Key points should be summarized on the title page in 40-words or less. Abstract: Up to 250 words. Tables/Figures: As required / No max? References: 40 or less. References should be numbered consecutively, in brackets on the text line (e.g., [3, 7–9, 57]). For references with more than 6 authors, the first 3 authors should be listed, followed by et al. 
-% % <!-- ## Backups -->
-% <!-- * JID -  would probably do well here. -->
-% <!-- * PLOS pathogens - Good quality but could be a little slower. -->
-% <!-- * Journal of virology. -->
+% ## Journal 
+% * eLife
+% ## Backups
+% *  CID
+% * JID -  would probably do well here. 
+% * PLOS pathogens - Good quality but could be a little slower.
+% * Journal of virology.
 
 \clearpage
 % \linenumbers
@@ -125,59 +126,57 @@ PCA (Principal component analysis);
 REF (reference);
 RT (reverse transcription);
 SVD (singular value decomposition);
+SNP (single nucleotide polymorphism);
 VE (variance explained);
 MSA (multiple sequence alignment);
 RSV (respiratory syncytial virus).
 
+\subsection*{Notice of Prior Presentation}
+The results of the genome wide association study analyses included in this manuscript were presented during the European Society of Human Genetics Conference in June 2020 in Berlin, Germany, which was held remotely.
+
 \section{Abstract}
-Respiratory syncytial virus (RSV) is a seasonal mucosal pathogen that infects the respiratory epithelium and results in the most severe morbidity in the first six months of life. 
-RSV is a common cause of acute respiratory infection during infancy with nearly all children becoming infected by the age of two years.
-Infection and immunological response are shaped by both host and pathogen genetics as well as other environmental factors. 
-Our surveillance cohort of 1741 infants with
-natural quasi random infection events included monitoring by RT-qPCR, serology, and sequencing. 
-We performed viral genetic association testing to detect variants that contribute to prolonged infection.
-Analysis controlled for all know demographic factors including host age, sex, ethnicity, sibling contact transmission, viral population, and we have previously excluded host genetic causes of infection susceptibility.
-We identify RSV variants in surface G glycoprotein that were associated with prolonged infection, investigated their functional role, and reviewed all publicly available pathogen sequence data spanning several decades. 
-RSV plays a major role in global health and remains a target for vaccine development.
-Strong evidence also supports RSV as a modifiable risk factor for asthma development. Preventing or delaying infant infection is likely to have a positive impact on life-long human health worldwide.
+\textbf{Background}: Respiratory syncytial virus (RSV) is primarily associated with acute respiratory infection, however, many RNA viruses can establish prolonged or persistent infection in some infected individuals.\\
+\textbf{Objectives}: To identify viral genetic variants associated with “prolonged infection” and determine if there are host genetic risk alleles for first RSV infection risk.\\
+\textbf{Methods}: In a population-based cohort study of healthy term infants, RSV infection was determined by biweekly surveillance for RSV and and 1-year RSV serology. Using RSV whole-genome sequencing, viral amino acids (genotype) were tested for association with a priori defined ``prolonged'' infant RSV infection adjusting for host features associated with increased infection risk. We tested the association of infant RSV infection risk with severe RSV and childhood asthma-associated SNPs.\\
+\textbf{Results}: A significant viral genetic association in the RSV G protein p.E123K/D and p.P218T/S/L were the candidate causal variants associated with ``prolonged'' infection after Bonferroni correction for multiple testing. These variants were associated exclusively with upper respiratory tract infection, and on average, milder clinical infection compared with other circulating variants (results). We found no evidence of host genetic risk of RSV infection.\\
+\textbf{Conclusions}: While we found no evidence of host genetic susceptibility to first RSV infection during infancy, we identified a novel RSV viral variant associated with prolonged infection in healthy infants. As the capacity of RSV for chronicity and its viral reservoir are not understood, these results are of fundamental interest in understanding host genetic and viral genetic contributions that may underlie the development of chronic respiratory morbidity.
 
 \section{Introduction}
-Respiratory syncytial virus (RSV), a human orthopneumovirus, is the single most important respiratory virus to global health and resulting in significant morbidity and mortality in infants 
+Respiratory syncytial virus (RSV), a human orthopneumovirus, is the single most important respiratory virus to infant global health, resulting in significant morbidity and mortality in infants 
 \cite{hall_burden_2009}.
-By the age of two years, nearly all children are infected with RSV at least once 
+By the age of two to three years, nearly all children are infected with RSV at least once 
 \cite{glezen_risk_1986}.
-RSV infects primarily the upper and lower respiratory tract epithelium, although has been recovered from non-airway sources 
+RSV is a seasonal mucosal pathogen that infects primarily the upper and lower respiratory tract epithelium, although it has been recovered from non-airway sources 
 \cite{bokun_respiratory_2019,
 cubie_detection_1997,
 nadal_isolation_1990,
 odonnell_respiratory_1998,
 rezaee_respiratory_2011,
 rohwedder_detection_1998}.
+RSV is primarily associated with acute respiratory infection, however, many RNA viruses can establish prolonged or persistent infection in some infected individuals. [refs] 
 Prolonged shedding of RSV, especially in young infants and following first infection, has been demonstrated, with longer average duration of viral shedding using polymerase chain reaction (PCR) to detect RSV 
 \cite{munywoki_influence_2015}.
 While younger age and first infection are associated with persistence of infection, what is not understood is whether there are viral factors contributing to prolonged shedding or persistence of RSV in young infants. 
 This is important, as prolonged infection, or prolonged shedding may contribute to enhanced transmission and developmental changes to the early life airway epithelium. 
 Further, the reservoir of RSV infection is not understood, 
 and it is possible that some RSV strains and/or hosts could serve as a dormant reservoir for infection that is activated by seasonal or other influences 
-\cite{hobson_prolonged_2008}.
-Host genetic and viral genetic interactions have never been studied for RSV.
-With increasing adoption of human genomics in parallel with pathogen sequencing, novel methods for genome-to-genome analysis provide opportunities to identify selective pressure between host and pathogen \cite{naret2018correcting}.
-We have previously investigated host genetics as a source of susceptibility to infection.
-GWAS analyses adjusted for 
-all known covariates revealed no significant associations.
-We also estimated narrow sense heritability of RSV liability $h_l$ to be 0, indicating no accumulation of small genetics effects. 
-The prior probability of rare variants as a cause of susceptibility
-to infection in our cohort is extremely low and reinforced by our enrollment criteria (cite).
-Several environmental factors have a significant impact on the risk of infection. 
-Population genetics also contributes important features that must be accounted for during genetics association analysis. 
-These features not only depend on host genetics as seen within a typical genome-wide association study (GWAS), but also depend on viral genetics.
-Analysis of viral populations not only requires variant-level information, but genome-wide information since pathogen fitness can modulate the effect of variant-specific mutation.  
-RSV strains A and B impart the largest separation within the viral population phylogeny and are important features to control, similar to the use of principal component analysis (PCA) in human GWAS.
-In this study we perform genomic analysis of RSV to identify variants that are significantly associated with prolonged infection in otherwise healthy children.
+\citep{hobson_persistent_2008}.
+
+The objectives of this study were to identify viral genetic variants associated with ``prolonged infection'' and determine if there are host genetic risk alleles for first RSV infection risk. 
+These questions are of fundamental interest in understanding host genetic and viral genetic contributions that may underlie the development of chronic respiratory morbidity.
+
+% \cite{naret2018correcting}.
+To determine if there is evidence of host genetic factors for risk of infant RSV infection we tested the association of $\approx 60$ severe RSV and childhood asthma-associated single nucleotide polymorphisms (SNPs) in a population-based cohort of term healthy infants.
+ We also conducted a host GWAS to identify common variants associated with infant RSV infection, and narrow sense heritability to test for small cumulative effects. 
+We a priori defined the clinical entity of ``prolonged'' infection during infancy as those with repeat positive PCR separated by 15 or more days and who repeatedly met pre-specified criteria for an acute respiratory infection. 
+RSV genome sequencing was done on all isolates meeting illness criteria with positive RSV PCR. 
+Viral amino acids (genotype) of the F and G glycoprotein were tested for association with ``prolonged'' infection adjusting for host features associated with increased infection risk. 
+We focused our analyses on the surface F (fusion) and G (attachment) proteins of RSV as they have been implicated in pathogenesis (refs a,b), and both are targets for neutralizing antibodies during infection (refs c,d).
+Lastly, to determine if the variants of interest were enriched by selective pressure over time, we used public data from the past three decades to assess variant frequency over time.
 
 \section{Methods}
 \subsection{Study population}
-The protocol and informed consent documents were approved by the Institutional Review Board at Vanderbilt University Medical Center. 
+The protocol and informed consent documents were approved by the Institutional Review Board at Vanderbilt University Medical Center (\#111299).  
 One parent of each participant in the cohort study provided written informed consent for participation in this study. 
 The informed consent document explained study procedures, use of data and biospecimens for future studies, including genetic studies.
 
@@ -186,18 +185,17 @@ Additional details of this birth cohort have been previously published
 \cite{larkin_objectives_2015}.
 Briefly, the cohort includes 1952 term ($\ge$ 37 weeks gestation), non-low birth weight ($\ge$ 2250 g, 5 lbs), otherwise healthy infants from a population-representative sample of pediatric practices located in a rural, suburban, and urban regions of the southeastern US during 2012-2014. 
 Infants were born June through December so that they would, by design, be 6 months of age or less entering their first RSV season. 
-Infant (i.e., the first year of life) RSV infection was ascertained through passive and active biweekly surveillance during each infants' first RSV season and RSV serology
-(Table \ref{tab:1}).
 
 \subsection{Biweekly surveillance of RSV infection}
-To capture all RSV infections of children enrolled in INSPIRE throughout infancy (i.e., the first year of life), we conducted passive and active surveillance during their first RSV season by 1) performing bi-weekly phone, email, and/or in person follow-up, 2) frequently educating and reminding parents to call us at the onset of any acute respiratory symptoms, and 3) approaching all infants who were seen at one of the participating pediatric practices for an unscheduled visit. 
-If an infant met pre-specified criteria for an acute respiratory infection, we then conducted an in-person respiratory illness visit at which time we administered a parental questionnaire, performed a physical exam, collected a nasal wash, and (in infants seen during an unscheduled visit) completed a structured medical chart review.
-Nasal sample collections were assessed by reverse transcription-quantitative PCR for RSV 
-\cite{larkin2015objectives}.
-At one year of age infants underwent blood draw for RSV serology to determine infection status during infancy. 
-[Plots with CT-value from Tina, either as supplemental or first mention later so not to pollute the order].
-Infants with positive PCR separated by 15 or more days were annotated during analysis as ``prolonged or repeat infection''
+Infant (i.e., the first year of life) RSV infection was ascertained through passive and active biweekly surveillance during each infants' first RSV season and RSV serology
+(Table \ref{tab:1}).
+If an infant met pre-specified criteria for an acute respiratory infection, we then conducted an in-person respiratory illness visit at which time we administered a parental questionnaire, performed a physical exam, collected a nasal wash, and completed a structured medical chart review in infants seen during an unscheduled visit. 
+Viral identification in nasal samples was done by reverse transcription-quantitative PCR for RSV
+\cite{larkin2015objectives}. 
+[Plots with CT-value from Tina, either as supplemental or first mention later so not to pollute the order]. 
+We use the term “prolonged infection” for infections among infants with positive PCR separated by 15 or more days and repeatedly met pre-specified criteria for an acute respiratory infection 
 (Figure \ref{fig:1}).
+Viral genetic analyses were then conducted on this set of infants.
 
 \subsection{Descriptive analyses}
 Descriptive analyses of the cohort were conducted using R 4.0.5 (available at: 
@@ -205,7 +203,45 @@ Descriptive analyses of the cohort were conducted using R 4.0.5 (available at:
 Pearson or Wilcoxon tests were used for comparing infants with and without prolonged RSV infection.
 The main descriptive features are provided in 
 Table \ref{tab:1}.
-[Consider plotting these also in the Hmisc Harrell style as seen in his book, RegerssionModellingStrategies2015].
+% [Consider plotting these also in the Hmisc Harrell style as seen in his book, RegerssionModellingStrategies2015].
+
+\subsection{Host DNA Collection and Genotyping}
+One-year blood samples were selected based on availability of DNA among a random group of children and genotyped with the MEGA microarray (Illumina, CA, United States) at the University of Washington DNA Sequencing and Gene Analysis Center as per their standard manual of procedures.
+
+\subsection{Genetic Analyses of RSV Infection in Infancy}
+A GWAS was performed on 621 children with available DNA for the association between host genotype and RSV infection during infancy.
+Due to sample size constraints we also restricted our sub-analysis to the $\approx 60$ LRTI- and childhood asthma-associated host SNPs identified in 
+\citet{pividori2019shared, janssen2007genetic, pasanen2017genome}, 
+respectively, to test the association of infant RSV infection risk as defined by RSV infection detected through biweekly surveillance or RSV serology with known childhood asthma- or RSV bronchiolitis-associated single nucleotide polymorphisms.
+%[refs]
+We additionally evaluated the accumulation of small genetic effects that would go undetected in a GWAS by estimating the heritability of RSV infection. 
+
+For GWAS analyses, the initial round of data quality control was performed on individual populations (self-reported as White, Black, and  Hispanic) using PLINK version 1.9 
+\citep{purcell2007plink}.
+Subjects with a missing genotype call rate of 5\% were removed. 
+The single nucleotide polymorphism (SNP) minor allele frequency (MAF) threshold was set for cohorts as MAF $> $ 0.01, 0.03, 0.08 for White, Black, and Hispanic, respectively
+\citep{liu2016dbnsfp}.
+The groups were merged for a total of 1,086,830 variants and a genotyping rate of 0.78. 
+Subject independence was assessed to prevent spurious associations. 
+However, no probable relatives or duplicates were detected based on pairwise identify-by-state. 
+Reported and estimated sex was also examined for discrepancies. 
+Next, a second round of quality control on the combined dataset was conducted, which removed 74 samples due to genotype missingness and 399,991 variants with a genotype rate $< 0.1$. 
+Samples were checked for departure from Hardy-Weinberg equilibrium (HWE) (P $< 1e^{-6}$) to uncover features of selection, population admixture, cryptic relatedness, or genotyping error. 
+This was only performed on controls to prevent removal of genuine genetic associations that can be associated with this measurement, removing 6,024 variants. 
+No variants had a MAF $< 0.01$ after merging. 
+SNP positions and identifiers were compared and updated according to dbNSFP4.0a (hg19) with 289 variants removed due to a missing coordinate and SNPs identifier
+\citep{liu2016dbnsfp}.
+This resulted in an analysis-ready dataset of 680,526 variants from 621 children (509 and 112 with and without RSV infection in infancy, respectively) with a total genotyping rate of 0.98. 
+No genomic inflation was evident with an estimated lambda (based on median chi-squared test) equal to 1. 
+We then used genome-wide complex trait analysis (GCTA) software (\url{https://cnsgenomics.com/software/gcta/}) to calculate the genetic relationship matrix and performed principal component analysis to account for population structure
+\citep{yang2011gcta}.
+Genome-wide association analysis was performed using PLINK version 1.9 for logistic regression with multiple covariates that included the child's birth month, enrollment year (as a marker of RSV season), daycare attendance, the presence of another child $\le 6$ years of age at home, and 6 ancestry principal components as covariates
+\citep{purcell2007plink}.
+Due to the multiple testing burden likely precluding our ability to identify small genetic effects in our GWAS, we conducted additional heritability analyses.
+
+For the heritability analyses, we used the method described by Golan et al to estimate the narrow-sense heritability of RSV infection infancy on the latent liability scale ($h_l^2$), which, if  $> 0$, would indicate an accumulation of small genetic effects
+\citep{golan2014measuring}.
+We estimated $h_l^2$ to be exactly 0, suggesting that, if present, infant RSV infection-related genetic signals are both small and sparse. 
 
 \subsection{RSV whole-genome sequencing}
 RSV whole-genome sequencing of this study population has been previously described 
@@ -247,7 +283,7 @@ Figure \ref{fig:1}.
 These were separated and repooled to create 11 single fasta files for each gene containing all 350 samples. 
 % <!---split_seg.sh --->
 % <!---With awk, I split each fasta to a new file and labeled with the real name. i.e. segment 1 for all samples is in the file seg\_1, etc. dir: ./seg--->
-Sequences were checked that they also be at least 90\% as long as the maximum length 
+Sequences were checked so that they would also be at least 90\% as long as the maximum length 
 for the corresponding gene in order to minimize the loss of aligned positions when computing the phylogenetic tree. 
 % <!---_Multiple seuqnce alignment:_--->
 % <!---aln/ Feb 18th--->
@@ -302,7 +338,7 @@ Examining the sequences with an alignment viewer showed that a small number of s
 % <!-- ## Data merged and cleaned -->
 % <!--Label repeat infections -->
 Viral sequence data and clinical information was merged and cleaned with R.
-Clinical IDs matching more than one viral sequence ID were used to re-identify samples from the same individual as ``repeat or prolonged'' infections. 
+Clinical IDs matching more than one viral sequence ID were used to re-identify samples from the same individual as ``prolonged'' infections. 
 Genetic variation was quantified in these samples and for subsequent analysis only the first viral sequence was included for association testing. 
 Typing of strain A and B had been completed previously and labels were included to annotate each sample accordingly.
 
@@ -310,7 +346,7 @@ The cohort-specific variant frequency per position was calculated;
 residues were counted and ranked by frequency
 with the most frequent residue defined as reference (REF) and alternative (ALT) for variants.
 Positions with at least one ALT were checked for potential misalignment or other sources of error. 
-Variants positions were selected for association analysis, while non-variant position were ignored.
+Variant positions were selected for association analysis, while non-variant position were ignored.
 
 A number of host features have been previously shown to influence infection susceptibility and were therefore included as covariates in our analysis (cite Rosas-Salazar).
 Six samples were excluded due to insufficient covariate data, resulting in 344 test samples. 
@@ -336,8 +372,7 @@ self-reported race/ethnicity, child-care attendance, living with siblings (cite 
 % $ glm(\text{Infection status} \text{\textasciitilde} \text{genotype} + \text{PCs} + \text{birth month} + \text{sex} + \text{race} + \text{child-care} + \text{siblings}, \text{family} = \text{'binomial'}) $
 
 The environmental host covariates did not contribute any significant effect in our model for the candidate-causal association.
-Five viral PCs were included in our model for accuracy, however the clinical 
-strain labels (A/B) also reflected the majority of cohort population structure.
+Five viral PCs were included in our model to account for population structure.
 % [Check the \% VE from PC scree plot stats to 1 decimal place and list it here.]
 Bonferroni correction for multiple testing was applied based on the number of independent variants tested.
 R package \textit{stats} was used for a range of analysis including glm for logistic regressions. 
@@ -366,7 +401,8 @@ a subset of only strain B was performed.
 % Adjust based on discussion with co-authors.
 Infant RSV infection results in decreased barrier function of the airway epithelium
 \cite{connelly2021metabolic}.
-Association between INF-gama and RSV amino acid position (W= wild type vs A=alternatives) was adjusted for the same covariates as the main analysis. Wilcox test comparing interferon (IFN)-$\gamma$, and INF-$\alpha$, between RSV amino acid positions (W= wild type vs A=alternatives [3 combined]).
+Association between INF-$\gamma$ and RSV amino acid position (W=wild type versus A=alternatives) was adjusted for the same covariates as the main analysis.
+Wilcox test comparing interferon (IFN)-$\gamma$, and INF-$\alpha$, between RSV amino acid positions (W= wild type vs A=alternatives [3 combined]).
 Protein structures were analysed with data sourced from 
 RCSB PDB \url{https://www.rcsb.org}.
 % (Define the choice of PDB used - refer to R script). 
@@ -394,19 +430,15 @@ including defining protein chain, topological domain, transmembrane, site, disul
 The INSPIRE cohort consisted of 1,949 enrolled infants 
 (Figure \ref{fig:1}).
 Of these, 1,220 ($\sim 63\%$) had $\ge$ 1 in-person respiratory illness visit(s). 
-In total, there were 2,093 in-person respiratory illness visits completed and the median (interquartile range [IQR]) number of in-person respiratory illness visits per infant was 1 (1-2). 
-% The characteristics of these infants compared with the other RSV infected infants and the entire cohort is shown in Table 1.
+In total, there were 2,093 in-person respiratory illness visits completed and the median (interquartile range [IQR]) number of in-person respiratory illness visits per infant was 1 (1-2).
 From the cohort, 344 RSV viral samples from 326 individuals were sequenced.
-There were 19 infants with RSV-positive PCR $\ge$ 15 days apart who we suspected as having either prolonged or repeat infection (based on genetic analysis).
-% <!-- Also those who were sick enough to have a resp illness visit. --> 
+There were 19 infants with RSV-positive PCR $\ge$ 15 days apart who met the a priori definition of prolonged infection with viral genetic analysis used to determine if these represented the same or new virus.
 Table \ref{tab:1} lists the cohort characteristics of infants with prolonged RSV infection compared with other RSV infection and the entire cohort. 
-Repeat or prolonged infection is defined as RSV sequence positive with $\ge$ 15 days between testing.
-% Pearson1, Wilcoxon2.
-% <!-- There are other variables that we can include, although this seems sufficient. -->
-% [For Tebeb: We will need to recalculate this to represent just the first infection, as this small number infections include repeat infections which likely drives the median higher.]
+Prolonged infection was a priori defined as RSV sequence positive with $\ge$ 15 days between testing and meeting criteria for acute respiratory infection.
 
 The relatively small sample size of our cohort required analysis that targeted only genes which were \textit{a priori} likely to functionally contribute to the clinical phenotype. 
-Therefore, our analysis focused on G glycoprotein (citations probably not required: PMC8310105, 33115881, 23598484, 31533056).
+Therefore, our analysis focused on the F and G glycoprotein. 
+% (citations probably not required: PMC8310105, 33115881, 23598484, 31533056).
 % <!-- [Include some points for our reasoning; -->
 % <!-- Would we have false positives in other genes? -->
 % <!-- We can interpret the results in F and G. -->
@@ -424,7 +456,7 @@ Therefore, our analysis focused on G glycoprotein (citations probably not requir
 
 \begin{figure}[ht] \hspace*{0cm}  \begin{center}
     \includegraphics[scale=0.1]{f1_rsv_persist2022}
-	\caption{\textbf{INSPIRE cohort summary}. Natural quasi random RSV infection events were monitored by RT-qPCR, serology, and sequencing.}
+	\caption{\textbf{Cohort characteristics of infants with prolonged RSV infection compared with other RSV infection and entire cohort}. Prolonged infection is defined as RSV sequence positive, with $\ge 15$ days between testing and meeting criteria for acute respiratory infection. Respiratory severity score (median, IQR). Test statistic $P = 0.27$. Pearson, Wilcoxon.}
 	\label{fig:1}
  \end{center} \end{figure}
  
@@ -463,19 +495,58 @@ Therefore, our analysis focused on G glycoprotein (citations probably not requir
 \bottomrule										
 \caption{										
 \textbf{Cohort characteristics of infants with prolonged RSV infection compared with other RSV infection and entire cohort}. 	
-Infection is defined as RSV sequence positive, with $\ge$15 days between testing. Respiratory severity score (median, IQR) Test statistic $P = 0.27^1$. Pearson$^1$, Wilcoxon$^2$.}							
+Prolonged infection is defined as RSV sequence positive, with $\ge$15 days between testing. Respiratory severity score (median, IQR) Test statistic $P = 0.27^1$. Pearson$^1$, Wilcoxon$^2$.}
 \label{tab:1}
 \end{tabularx}
-\end{table} 										
+\end{table}
 \end{landscape}	
 
 \clearpage	
 
+\subsection{Host Genetic Analyses}
+We explored whether RSV infection in infancy (or the lack thereof) is a natural assignment (quasi-random) event and, unlike the severity of early-life RSV infection,
+\citep{larkin2015genes}
+not determined by host genetics. 
+For the candidate-SNP analysis, we considered childhood asthma- and RSV bronchiolitis-associated SNPs identified in 
+\citet{pividori2019shared, janssen2007genetic, pasanen2017genome}.
+The former is the largest childhood asthma GWAS to date, and, as far as we are aware, the latter 2 represent the most comprehensive studies of RSV bronchiolitis-associated SNPs. 
+To further reduce the multiple testing burden, we only analyzed SNPs with MAF$\ge 0.1$ in at least one of the White, Black, or Hispanic ethnicity groups. 
+The associations between the genotype at the resulting 54 SNPs (50 childhood asthma- and 4 RSV bronchiolitis-associated SNPs) and RSV infection in infancy in our data are given in 
+\textbf{Figure} \ref{fig:host_genetics}
+which suggests that the genotype at these SNPs have little to no effect on RSV infection in infancy. 
+We further investigated the possibility that we were underpowered to observe associations with these SNPs by pooling information across SNPs to estimate the average genetic effect size. 
+In brief, we computed a z-score for each SNP, where the average (across SNPs) squared z-score $\bar{G}$ is proportional to the average squared genetic effect on RSV infection in infancy. 
+As $\bar{G}$ is an average of $p=54$ approximately independent statistics, 
+it is approximately
+$N(n\mu^2 + 1,2/p)$
+where $n=621$ is the sample size and $\mu^2$ is a function of the average squared genetic effect on RSV infection in infancy. 
+Using the genetic effect estimates from 
+\citet{pividori2019shared, janssen2007genetic, pasanen2017genome}
+we calculated that we would have 80\% power to reject the global null hypothesis of no genetic effect on RSV infection in infancy at any of these SNPs (i.e. $\mu^2 =0$) if, on average across the 54 SNPs, the genetic effect on RSV infection in infancy was at least 61\% as large as those estimated in the aforementioned 3 studies. 
+We found $\bar{G}$=1.00 in our data, which corresponds to a p-value of 0.50. 
+This result indicates that the genetic effect on RSV infection in infancy is zero or small at SNPs a priori likely to be associated with RSV infection.	
+
+\begin{figure}[ht] \hspace{-0.5cm}
+\begin{center}
+    \includegraphics[scale=0.07]{host_genetics}
+\end{center} 
+	\caption{\textbf{Genetic analyses of RSV infection in infancy}.
+		(A) The Manhattan plot shows no genome-wide significant associations (p-value threshold of $5e^{-8}$).
+		(B) The Q-Q plot demonstrates that the observed p-values are congruent with those expected under the null hypothesis that RSV infection in infancy is independent of genotype. 
+		(C) The association between the 54 selected childhood asthma- or RSV bronchiolitis-associated SNPs and RSV infection in infancy in our data. 
+		The solid red line is the identity line, and the dashed grey lines are $/pm 1$ standard deviation around the expected -log10(p-value). 
+		The results suggest that the genotype at these SNPs have little to no effect on RSV infection in infancy. 
+		Definition of abbreviations: RSV = Respiratory syncytial virus, SNP = Single nucleotide polymorphism.
+	}
+	\label{fig:host_genetics} 
+\end{figure}
+\clearpage
+
 \subsection{Population structure}
-A summary of Protein coding genes in RSV are illustrated in
+A summary of protein coding genes in RSV is illustrated in
 Figure \ref{fig:2} A.
-Out analysis focused on G protein.
-The phylogenetic tree based based on multiple sequence alignemnt (MSA) of amino acid G protein sequences is shown in 
+Our analysis focused on G protein, as indicated.
+The phylogenetic tree based based on multiple sequence alignment (MSA) of amino acid G protein sequences is shown in 
 Figure \ref{fig:2} B.
 One obvious feature causing a separation in genetic diversity is seen due to the G protein partial gene duplication, 
 which has emerged in recent years within RSV-A strains 
@@ -504,7 +575,7 @@ The duration of RSV shedding duration in Kenyan infants has been reported previo
 \cite{okiro2010duration}.
  % <!-- \url{https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-10-15#Sec1} -->
 % <!-- This is the follow up. Ask Tina about the first paper too. --> 
-Based on these finding, infections separated by at least 15 days were expected to be ``new'' infections. 
+Based on these findings, infections separated by at least 15 days were expected to be ``new'' infections. 
 % <!-- In addition to our within-cohort genetic analysis showing --> 
 Figure \ref{fig:2} D (panel [i]) summarises every pairwise genetic distance between every viral sequence.
 Sequence from the same clades have the smallest distance; panel [ii] shows genetic invariance between viral sequences within the same host for infections separated by at least 15 days. 
@@ -517,7 +588,7 @@ We therefore refer to these cases as prolonged infection rather than second infe
     \includegraphics[scale=0.8]{f2}
 	\caption{\textbf{Population structure}.
 (A) Protein coding genes in RSV.
-(B) Phylogenetic tree based based on multiple sequence alignemnt (MSA) of amino acid G protein sequences.
+(B) Phylogenetic tree based based on multiple sequence alignment (MSA) of amino acid G protein sequences.
 (C) Principal component analysis (PCA) PCs1-3 with labels indicating repeat/prolonged infections from different phylogenetic clades.
 (D) Panel [i] summarises every pairwise genetic distance between every viral sequence.
 Genetic invariance in repeat/prolonged infections separated by at least 15 days compared to other genetic variation within clades  
@@ -529,15 +600,15 @@ Genetic invariance in repeat/prolonged infections separated by at least 15 days 
 \subsection{Variants in G glycoprotein significantly associated with prolonged infection}
 The consensus sequence within the cohort was assigned based on the major allele.
 Variants at the amino acid level were defined as either REF/ALT and assessed for their association with persistence.
-The model consisted of
+The model consisted of 
 the binary response (prolonged infection Yes/No),
-and predictors; viral genotype (REF/ALT amino acid), viral PCs 1-5, host sex, and it also accounted for host features that have been previously demonstrated as significantly associated with infection;
+and predictors; viral genotype (REF/ALT amino acid), viral PCs 1-5, host sex, and host features that have been previously demonstrated as significantly associated with infection;
 self-reported race/ethnicity, child-care attendance, or living with siblings
 \cite{hall1976respiratory}.
 % NB don't jettison this citation.
 Analysis was performed using R stats (3.6.2) \textit{glm} function. 
 % <!-- glm ( infection ~ genotype + PCs + sex + other). -->
-A significant genetic association was identified for prolonged infection after Bonferroni correction for multiple testing (threshold for number independent variants $<0.05/23=0.002$), 
+A significant genetic association was identified for prolonged infection after Bonferroni correction for multiple testing (threshold for number independent variants $< 0.05/23 = 0.002$), 
 as shown in 
 Figure \ref{fig:3} A. 
 Since many variants within RSV coding genes have non-random association due to selection, like linkage disequilibrium (LD) in human GWAS, 
@@ -567,7 +638,7 @@ The association model was repeated for all variants to produce a LocusZoom-style
 Figure \ref{fig:3} C.
 This shows both G protein 
 % <!-- "V126" --> 
-p.fE123K/D and 
+p.E123K/D and 
 % <!-- "V221" --> 
 p.P218T/S/L as candidate causal variants associated with prolonged infection, and no other variants in correlation with this association. 
 
@@ -595,7 +666,8 @@ However, correlation between the two positions associated with prolonged infecti
 The main features of RSV surface glycoprotein are illustrated in Figure \ref{fig:3} D.
 The variant associated with prolonged infection in our cohort are seen in the extracellular region. 
 There are no known mechanistic features that directly overlap. 
-Figure \ref{fig:3} D (Structure) shows the possible site for  initiation of infection by interaction of heparan sulfate and host cell membrane (p.187-198), during the  \cite{levine1987demonstration, feldman1999identification, feldman2000fusion}.
+Figure \ref{fig:3} D (structure) shows the possible site for initiation of infection by interaction of heparan sulfate and host cell membrane (p.187-198)
+\cite{levine1987demonstration, feldman1999identification, feldman2000fusion}.
 Protein structure evidence from PDB was insufficient to determine an effect on conformation. 
 Paramyxoviridae cell attachment proteins (G protein in RSV) span the viral envelope and project from the surface as spikes 
 % [note: confirm the consensus] A/B; 
@@ -619,7 +691,7 @@ Figure \ref{fig:3} D (Features) shows the isoform of mature secreted glycoprotei
 
 \subsection{Clinical and interferon response}
 These variants were not associated with more severe infection in patients. 
-Infections were on average less severe compared with other circulating variants, and resulting in upper respiratory tract infection (Table \ref{tab:1}). 
+Infections were on average less severe compared with other circulating variants, and all were upper respiratory tract infection (Table \ref{tab:1}). 
 We also assessed the association of nasal cytokines in nasal wash samples during acute infection as anti-viral immune response biomarkers with the variants of interest.
 IFN$\alpha$ and IFN$\gamma$ were associated with strain A/B.
 Since the viral strains correlated with the presence of the variants of interest, co-linearity meant that it was not possible to attribute these variants as the cause of a differential interferon response.
@@ -731,14 +803,16 @@ As a disease which causes significant morbidity and mortality, each advance in p
 \item clc\_novo\_assemble \href{https://resources.qiagenbioinformatics.com/manuals
 /clcgenomicsworkbench/852/index.php?manual=De_novo_assembly.html}{qiagenbioinformatics.com} \
 \item Clustal Omega \url{https://www.ebi.ac.uk/Tools/msa/clustalo/}
+\item GCTA \url{https://cnsgenomics.com/software/gcta/}
 \item GenBank \url{https://www.ncbi.nlm.nih.gov/genbank/}
 \item IQ-Tree \url{https://www.iqtree.org/}
 \item MAFFT \url{https://mafft.cbrc.jp/alignment/software/} \cite{katoh2013mafft}
-\item  NextAlign \href{https://github.com/nextstrain/nextclade}{https://github.com/nextstrain/nextclade}.
+\item NextAlign \url{https://github.com/nextstrain/nextclade}
+\item PLINK \url{http://zzz.bwh.harvard.edu/plink/}
 \item Tbl2asn \url{https://www.ncbi.nlm.nih.gov/genbank/tbl2asn2/}
 \item Viral Genome ORF Reader, VIGOR 3.0 \url{https://sourceforge.net/projects/jcvi-vigor/files/}
-\item RCSB PDB	\url{https://www.rcsb.org}
-\item UniProt	\url{https://www.uniprot.org}
+\item RCSB PDB \url{https://www.rcsb.org}
+\item UniProt \url{https://www.uniprot.org}
 
 \end{description}
 
