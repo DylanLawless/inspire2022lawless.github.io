@@ -72,17 +72,7 @@
 \date{} %don't want date printed
 %make title bold and 14 pt font (Latex default is non-bold, 16 pt)
 \title{\Large \bf Viral genetic determinants of prolonged respiratory syncytial virus infection among infants in a healthy term birth cohort.
-\footnote{This document's source code is available to co-authors from the 
-\href{https://github.com/DylanLawless/inspire2022lawless.github.io}{GitHub repository} 
-and from the 
-\href{https://www.overleaf.com/project/61718a4e077acc3d20ee68f1}{overleaf online editor document}. 
-All code and supplemental live data results at \href{https://github.com/DylanLawless/inspire2022lawless.github.io}{https://github.com/DylanLawless/inspire2022lawless.github.io}. 
-The PDF will be published on  \href{https://www.medrxiv.org}{medrxiv} 
-before submission.
-Please note the URL is on my personal domain temporarily; this will be switched for release.
-For eLife, authors are asked to agree to publish their work under the terms of the Creative Commons Attribution license
-\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY-4.0}.
-}
+% \footnote{This document's source code is available to co-authors from the  \href{https://github.com/DylanLawless/inspire2022lawless.github.io}{GitHub repository} and from the \href{https://www.overleaf.com/project/61718a4e077acc3d20ee68f1}{overleaf online editor document}.  All code and supplemental live data results at \href{https://github.com/DylanLawless/inspire2022lawless.github.io}{https://github.com/DylanLawless/inspire2022lawless.github.io}. The PDF will be published on  \href{https://www.medrxiv.org}{medrxiv}  before submission. Please note the URL is on my personal domain temporarily; this will be switched for release. For eLife, authors are asked to agree to publish their work under the terms of the Creative Commons Attribution license \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY-4.0}. }
 }
 
 % 1 epfl
@@ -124,7 +114,6 @@ For eLife, authors are asked to agree to publish their work under the terms of t
 % Journal: eLife
 % alternates: CID, JID, PLOS pathogens, Journal of virology.
 
-\clearpage
 % \linenumbers
 \subsection*{Abbreviations}
 ALT (alternative);
@@ -239,7 +228,9 @@ Authors are required to provide suggestions for at least four potential reviewer
 
 \textbf{Objectives}: To identify viral genetic variants associated with prolonged infection and determine if there are host genetic risk alleles for first RSV infection risk.
 
-\textbf{Methods}: In a population-based cohort study of healthy term infants, RSV infection was determined by biweekly surveillance for RSV and 1-year RSV serology. Using RSV whole-genome sequencing, viral amino acids (genotype) were tested for association with \textit{a priori} defined ``prolonged'' infant RSV infection adjusting for host features associated with increased infection risk. We tested the association of infant RSV infection risk with severe RSV and childhood asthma-associated SNPs.
+\textbf{Methods}: In a population-based cohort study of healthy term infants, RSV infection was determined by biweekly surveillance for RSV and 1-year RSV serology. Using RSV whole-genome sequencing, viral amino acids (genotype) were tested for association with 
+% \textit{a priori} defined 
+prolonged infant RSV infection adjusting for host features associated with increased infection risk. We tested the association of infant RSV infection risk with severe RSV and childhood asthma-associated SNPs.
 
 \textbf{Results}: A significant viral genetic association in the RSV G protein, p.E123K/D and p.P218T/S/L, identified as candidate causal variants associated with prolonged infection after Bonferroni correction for multiple testing. These variants were associated exclusively with upper respiratory tract infection, and on average, milder clinical infection compared with other circulating variants. We found no evidence of host genetic risk for RSV infection.
 
@@ -276,7 +267,9 @@ We \textit{a priori} defined the clinical entity of ``prolonged'' infection duri
 \citep{okiro2010duration}.
 RSV genome sequencing was done on all isolates meeting illness criteria with positive RSV PCR. 
 Viral amino acids (genotype) of the F and G glycoprotein were tested for association with ``prolonged'' infection adjusting for host features associated with increased infection risk. 
-We focused our analyses on the surface F (fusion) and G (attachment) proteins of RSV as they have been implicated in pathogenesis (refs a,b), and both are targets for neutralizing antibodies during infection (refs c,d).
+We focused our analyses on the surface F (fusion) and G (attachment) proteins of RSV as they have been implicated in pathogenesis \citep{boyoglu2015anti,bukreyev2012secreted}, 
+and both are targets for neutralizing antibodies during infection
+\citep{anderson1988neutralization, ngwuta2015prefusion}.
 Lastly, to determine if the variants of interest were enriched by selective pressure over time, we used public data from the past three decades to assess variant frequency over time.
 
 \section{Methods}
@@ -285,7 +278,7 @@ The protocol and informed consent documents were approved by the Institutional R
 One parent of each participant in the cohort study provided written informed consent for participation in this study. 
 The informed consent document explained study procedures and use of data and biospecimens for future studies, including genetic studies.
 
-The study population is a longitudinal birth cohort - The INfant Susceptibility to Pulmonary Infections and Asthma Following RSV Exposure (INSPIRE) - specifically designed to capture the first RSV infection during infancy in a term healthy birth cohort. 
+The study population is a longitudinal birth cohort - The INfant Susceptibility to Pulmonary Infections and Asthma Following RSV Exposure (INSPIRE) - specifically designed to capture the first RSV infection for term healthy infants. 
 Additional details of this birth cohort have been previously published 
 \citep{larkin_objectives_2015}.
 Briefly, the cohort includes 1952 term ($\ge$ 37 weeks gestation), non-low birth weight ($\ge$ 2250 g, 5 lbs), otherwise healthy infants from a population-representative sample of pediatric practices located in a rural, suburban, and urban regions of the southeastern US during 2012-2014. 
@@ -297,7 +290,7 @@ Infant (i.e., the first year of life) RSV infection was ascertained through pass
 If an infant met pre-specified criteria for an acute respiratory infection, we then conducted an in-person respiratory illness visit at which time we administered a parental questionnaire, performed a physical exam, collected a nasal wash, and completed a structured medical chart review for infants seen during an unscheduled visit. 
 Viral identification in nasal samples was done by reverse transcription-quantitative PCR for RSV
 \citep{larkin2015objectives}. 
-[Plots with CT-value from Tina, either as supplemental or first mention later so not to pollute the order]. 
+% [Plots with CT-value from Tina, either as supplemental or first mention later so not to pollute the order]. 
 We defined ``prolonged'' infections as those among infants with positive PCR separated by 15 or more days and repeatedly met pre-specified criteria for an acute respiratory infection 
 (Figure \ref{fig:1}).
 Viral genetic analyses were then conducted on this set of infants.
@@ -311,7 +304,7 @@ Table \ref{tab:1}.
 % [Consider plotting these also in the Hmisc Harrell style as seen in his book, RegerssionModellingStrategies2015].
 
 \subsection{Host DNA Collection and Genotyping}
-One-year blood samples were selected based on availability of DNA among a random group of children and genotyped with the MEGA microarray (Illumina, CA, United States) at the University of Washington DNA Sequencing and Gene Analysis Center per their standard manual of procedures.
+One-year blood samples were selected based on availability of DNA among a random group of children and genotyped with the Multi-Ethnic Global Array microarray (Illumina, CA, United States) at the University of Washington DNA Sequencing and Gene Analysis Center.
 
 \subsection{Genetic Analyses of RSV Infection in Infancy}
 A GWAS was performed on 621 children with available DNA for the association between host genotype and RSV infection during infancy.
@@ -398,7 +391,7 @@ for the corresponding gene in order to minimize the loss of aligned positions wh
 Each of the eleven resulting sets was aligned with MAFFT v7 (\url{https://mafft.cbrc.jp/alignment/software/})
 \citep{katoh2013mafft},
 using default  parameters.
-The sequence of the orthologous gene from the \textit{Bovine orthopneumovirus} 
+The sequence of the orthologous gene from  \textit{Bovine orthopneumovirus} 
 (\href{https://www.ncbi.nlm.nih.gov/nuccore/NC_001989}{GenBank:NC\_001989}) 
 was added to each set as an outgroup. 
 % <!---
@@ -448,7 +441,7 @@ Examining the sequences with an alignment viewer showed that a small number of s
 Viral sequence data and clinical information were merged and cleaned with R.
 Clinical IDs matching more than one viral sequence ID were used to re-identify samples from the same individual as prolonged infections. 
 Genetic variation was quantified in these samples and for subsequent analysis only the first viral sequence was included for association testing. 
-Typing of strain A and B had been completed previously and labels were included to annotate each sample accordingly.
+Antigenic grouping of strain A and B had been completed previously and labels were included to annotate each sample accordingly.
 
 The cohort-specific variant frequency per position was calculated;
 residues were counted and ranked by frequency
@@ -456,15 +449,16 @@ with the most frequent residue defined as reference (REF) and alternative (ALT) 
 Positions with at least one ALT were checked for potential misalignment or other sources of error. 
 Variant positions were selected for association analysis, while non-variant position were ignored.
 
-A number of host features have been previously shown to influence infection susceptibility and were therefore included as covariates in our analysis [ref]. %(cite Rosas-Salazar).
+A number of host features have been previously shown to influence infection susceptibility and were therefore included as covariates in our analysis 
+\citep{rosas2022upper}.
 Six samples were excluded due to insufficient covariate data, resulting in 344 test samples. 
-Of these, 36 were from the same patients (prolonged or repeat infection) of which half (18) were included for association testing; 326 samples total.
+Of these, 38 were from the same patients (prolonged or repeat infection) of which half (19) were included for association testing; 325 samples total.
 % <!--Correlations viewed with: corrplot, ggcorrplot, caret.-->
 
 \subsection{Population structure}
 The genetic distances to nearest neighbors were computed based on phylogenetic 
 trees generated with MAFFT.
-[Other methods also used but not pertinent; include some info from the code].
+% [Other methods also used but not pertinent; include some info from the code].
 Principal component analysis (PCA) and singular value decomposition (SVD) were used in dimensionality reduction for exploratory data analysis of viral phylogeny.
 R package \textit{factoextra} was used for PCA, and to visualise eigenvalues and variance. 
 R package \textit{caret} was used to analyse genetic correlations.
@@ -475,7 +469,8 @@ including key covariates that are significantly associated with infection.
 Analysis was performed using logistic regression with the
 R stats (3.6.2) \textit{glm} function as a generalized linear model.
 The model consisted of the binary response (prolonged infection Yes/No), and predictors - viral genotype (REF/ALT amino acid), viral PCs 1-5, host sex, and accounted for host features that have been previously demonstrated as significantly associated with infection: 
-self-reported race/ethnicity, child-care attendance, living with siblings [ref]. %(cite Rosas-Salazar).
+self-reported race/ethnicity, child-care attendance, living with siblings 
+\citep{rosas2022upper}.
 
 % $ glm(\text{Infection status} \text{\textasciitilde} \text{genotype} + \text{PCs} + \text{birth month} + \text{sex} + \text{race} + \text{child-care} + \text{siblings}, \text{family} = \text{'binomial'}) $
 
@@ -509,7 +504,7 @@ a subset of only strain B was performed.
 Infant RSV infection results in decreased barrier function of the airway epithelium
 \citep{connelly2021metabolic}.
 Association between interferon (INF)-$\gamma$ and RSV amino acid position (W=wild type versus A=alternatives) was adjusted for the same covariates as the main analysis.
-Wilcoxon test comparing IFN-$\gamma$, and IFN-$\alpha$, between RSV amino acid positions (W= wild type vs A=alternatives [3 combined]).
+% Wilcoxon test comparing IFN-$\gamma$, and IFN-$\alpha$, between RSV amino acid positions (W= wild type vs A=alternatives [3 combined]).
 Protein structures were analysed with data sourced from 
 RCSB PDB \url{https://www.rcsb.org}.
 % (Define the choice of PDB used - refer to R script). 
@@ -569,45 +564,43 @@ Therefore, our analysis focused on the F and G glycoprotein.
   \begin{landscape}										
 \begin{table}[ht]										
 \centering										
-\begin{tabularx}{\linewidth}{ X l X X X X }								
+\begin{tabularx}{\linewidth}{ X l X X X X }										
 \toprule										
 {		} & {		} & {	Prolonged RSV N=19	} & {	Other RSV N=342	} & {	Total N=1949	} \\
 \midrule										
 \multirow{2}{*}{	Illness	} &{	Illness age, months (median, IQR)	} & {	6 (4, 6) 	} & {	4 (2, 5)	} & {	NA	} \\
 {		} &{	Respiratory severity score (median, IQR)	} & {	2.0 (1.2, 3.0)	} & {	3.0 (2.0, 4.0)	} & {	NA	 } \\
 \midrule										
-\multirow{2}{*}{	Viral strain	} & {	RSV A	} & {	73\%	} & {	60\%	} & {	NA	} \\
-{		} & {	RSV B	} & {	27\% 	} & {	40\%	} & {		} \\
-\midrule										
 \multirow{2}{*} {	RSV season	} & {	2012-13	} & {	68\%	} & {	54\%	} & {	44\%	} \\
 {		} & {	2013-14	} & {	32\%	} & {	46\%	} & {	56\%	} \\
 \midrule										
-\multirow{4}{*}{	Self reported Race	} & {	Non-Hispanic Black	} & {	11\%	} & {	16\%	} & {	18\%	} \\
-{		} & {	 Non-Hispanic White	} & {	79\%	} & {	66\%	} & {	65\%	} \\
-{		} & {	 Hispanic	} & {	0\%	} & {	9\%	} & {	9\%	} \\
-{		} & {	 Multi-race/ethnicity/other 	} & {	11\%	} & {	8\%	} & {	9\%	} \\
+\multirow{4}{*}{	Self reported Race	} & {	Non-Hispanic Black	} & {	37\%	} & {	13\%	} & {	18\%	} \\
+{		} & {	 Non-Hispanic White	} & {	63\%	} & {	69\%	} & {	65\%	} \\
+{		} & {	 Hispanic	} & {	0\%	} & {	10\%	} & {	9\%	} \\
+{		} & {	 Multi-race/ethnicity/other 	} & {	0\%	} & {	8\%	} & {	8\%	} \\
 \midrule										
 \multirow{2}{*}{	Sex	} & {	Female	} & {	53\%	} & {	44\%	} & {	48\%	} \\
 {		} & {	 Male	} & {	47\%	} & {	56\%	} & {	52\%	} \\
  \midrule										
- {	Smoke	} & {	Second-hand smoke exposure	} & {	58\%	} & {	44\%	} & {	47\%	} \\
+\multirow{2}{*}{	Second-hand smoke exposure	} & {	No	} & {	79\%	} & {	77\%	} & {	53\%	} \\
+{		} & {	Yes	} & {	21\%	} & {	23\%	} & {	47\%	} \\
 \midrule										
- \multirow{3}{*}{	Insurance	} & {	Medicaid	} & {	32\%	} & {	52\%	} & {	54\%	} \\
-{		} & {	Private	} & {	68\%	} & {	47\%	} & {	45\%	} \\
+ \multirow{3}{*}{	Insurance	} & {	Medicaid	} & {	68\%	} & {	48\%	} & {	54\%	} \\
+{		} & {	Private	} & {	32\%	} & {	51\%	} & {	45\%	} \\
 {		} & {	None/unknown	} & {	0\%	} & {	1\%	} & {	1\%	} \\
 \midrule										
- \multirow{2}{*}{	Familial	} & {	Daycare	} & {		} & {		} & {		} \\
-{		} & {	Siblings	} & {		} & {		} & {		} \\
+ \multirow{2}{*}{	Daycare/Sibling*	} & {	No	} & {	16\%	} & {	22\%	} & {	34\%	} \\
+{		} & {	Yes	} & {	84\%	} & {	78\%	} & {	66\%	} \\
 \bottomrule										
 \caption{										
-\textbf{Cohort characteristics of infants with prolonged RSV infection compared with other RSV infection and entire cohort}. 	
-Prolonged infection is defined as RSV sequence positive, with $\ge$15 days between testing. Respiratory severity score (median, IQR) Test statistic $P = 0.27^1$. Pearson$^1$, Wilcoxon$^2$.}
-\label{tab:1}
-\end{tabularx}
-\end{table}
-\end{landscape}	
+\textbf{Cohort characteristics of infants with prolonged RSV infection compared with other RSV infection and entire cohort}. 										
+Prolonged infection is defined as RSV sequence positive, with $\ge$15 days between testing and meeting criteria for acute respiratory infection. *Presence of sibling or another child $\le$ 6 years of age at home.}										
+\label{tab:1}										
+\end{tabularx}										
+\end{table}										
+\end{landscape}										
 
-\clearpage	
+\clearpage										
 
 \subsection{Host Genetic Analyses}
 We explored whether RSV infection in infancy (or the lack thereof) is a natural assignment (quasi-random) event and, unlike the severity of early-life RSV infection,
@@ -652,7 +645,7 @@ This result indicates that the genetic effect on RSV infection in infancy is zer
 A summary of protein coding genes in RSV is illustrated in
 Figure \ref{fig:2} A.
 Our analysis focused on G protein, as indicated.
-The phylogenetic tree based based on multiple sequence alignment (MSA) of G protein amino acid sequences is shown in 
+The phylogenetic tree based on multiple sequence alignment (MSA) of G protein amino acid sequences is shown in 
 Figure \ref{fig:2} B.
 One obvious feature causing a separation in genetic diversity is G protein partial gene duplication, 
 which has emerged in recent years within RSV-A strains 
@@ -695,9 +688,9 @@ We therefore refer to these cases as prolonged infection rather than reinfection
 	\caption{\textbf{Population structure}.
 (A) Protein coding genes in RSV.
 (B) Phylogenetic tree based based on multiple sequence alignment (MSA) of G protein amino acid sequences.
-(C) Principal component analysis (PCA) PCs1-3 with labels indicating repeat/prolonged infections from different phylogenetic clades.
+(C) Principal component analysis (PCA) PCs1-3 with labels indicating prolonged infections from different phylogenetic clades.
 (D) Panel [i] summarises every pairwise genetic distance between every viral sequence.
-Genetic invariance in repeat/prolonged infections separated by at least 15 days compared to other genetic variation within clades  
+Genetic invariance in prolonged infections separated by at least 15 days compared to other genetic variation within clades  
 (panel [ii]) and within all possible pairs (panel [iii]).}
 	\label{fig:2} 
 \end{figure}
@@ -732,7 +725,7 @@ we assessed the magnitude of variance explained (VE) at every amino acid positio
 Figure \ref{fig:3} B (panel [i]) shows the variance explained by each individual variant in PCs1-5.
 The values are illustrated according to protein position in panels [ii-iii].
 The lead association variant had 
-$-0.996\%$ VE for PC1 and $-1.66\%$ VE for PC2; 
+$-0.996\%$ VE for PC1 and $-1.66\%$ VE for PC2,
 a negligible effect that precludes spurious association by allele frequency between populations.
 
 After identifying a significant association with prolonged infection,
@@ -742,26 +735,13 @@ we quantified the correlation of variants with the lead proxy.
 Clumping was performed with ranking based on MAF and with a cut-off threshold of $r^2 \ge 0.8$ (Supplemental Figure \ref{fig:S1}).
 The association model was repeated for all variants to produce a LocusZoom-style Manhattan plot with $r^2$ by color and P-value statistics as shown in 
 Figure \ref{fig:3} C.
-This shows both G protein 
+This shows G protein 
 % <!-- "V126" --> 
 p.E123K/D and 
 % <!-- "V221" --> 
 p.P218T/S/L as candidate causal variants associated with prolonged infection. 
 No other variants were correlated with this outcome. 
 
-% <!-- We see that for 344 samples: --> 
-% <!-- positions 280-300 = 80% variance in cohort. -->
-% <!-- For a table, include average var expl for all variants. --> 
-% <!-- Our variant of interest has extremely low %VE compared to the the top VE from PC1/PC2. -->
-% <!-- This indicates that it is not a false positive due to a variant driving population structure. --> 
-% <!-- | Var | PC | % VE | -->
-% <!-- |-----|-----|-----| -->
-% <!-- | 221 | PC1 | -0.996 | -->
-% <!-- | 221 | PC2 | -1.66 | -->
-
-% <!-- ## Variance explained over time, localised or general? --> 
-% <!-- Phylogentic tree, eg 2016 paper. -->
-% <!-- ## Public data -->
 To determine whether p.E123K/D and p.P218T/S/L variant genotypes are novel and potentially influence viral fitness, we searched  the public viral data repository of NCBI \textit{Human orthopneumovirus}, taxid:11250, which contained data from 
 27 unique countries worldwide, sample collection dates from 1956 onward, and 1084 glycoprotein protein sequences after curation.
 The variants were present at a low and stable frequency, without obvious temporal enrichment. 
@@ -794,26 +774,39 @@ In addition, these positions do not contribute to known neutralization epitopes 
 
 \subsection{Host response}
 Prolonged infections associated with G protein variants p.E123K/D and p.P218T/S/L were on average less severe compared with other circulating variants, and all were limited to the upper respiratory tract(Table \ref{tab:1}). 
-We also assessed the association of nasal cytokines in nasal wash samples during acute infection as anti-viral immune response biomarkers with the variants of interest.
-IFN$\alpha$ and IFN$\gamma$ were associated with strain A/B.
-Since the viral strains correlated with the presence of the variants of interest, co-linearity meant that it was not possible to attribute these variants as the cause of a differential interferon response.
-However, the more pronounced antiviral response is unlikely to be due to the variants associated with prolonged infection and more likely due to other features that separate strain A and B; an observation that has been anecdotally reported previously 
-(do we have a reference to strain B being more pathogenic than strain A? - rephrase if the reports are anecdotal or common knowledge). 
+Therefore, we analyzed nasal wash samples collected during acute RSV infection for a panel of cytokines involved in antiviral immune responses and observed differential IFN$\alpha$ and IFN$\gamma$ levels segregating according to viral antigenic group—A or B.
+Both cytokines were elevated in group [x] infections compared to group [y].
+As prolonged infections with p.E123K/D and p.P218T/S/L genotypes were exclusively group [?], 
+the dichotomous relationship of IFN$\alpha$ and IFN$\gamma$ levels to antigenic group precluded evaluation of G protein variants as independent predictors of IFN$\alpha$ and IFN$\gamma$ production. 
+We reviewed records of p.E123K/D and p.P218T/S/L genotypes in public databases and found that these variants [do/do not] occur preferentially in group A or B strains, which suggests that [insert conservative statement about possible contribution of variant sequences to prolonged infection depending on whether published sequences display group bias].  
+% I am unsure how much effort would be required to extract this information, assuming it exists in published records. I included provisional text for consideration as a section fortifier if potential impact justifies the data mining.
+
+% Since the viral strains correlated with the presence of the variants of interest, co-linearity meant that it was not possible to attribute these variants as the cause of a differential interferon response.
+% The more pronounced antiviral response is unlikely to be due to the variants associated with prolonged infection and more likely due to other features that separate strain A and B
 
 \section{Discussion}
-In this study of term healthy infants in whom we identified their first RSV infection through surveillance, we conducted a viral genetic association study and identified variants associated with prolonged infection. 
-The variants were not associated with severe disease, had not arisen as a recent mutation, and have persisted in the population at a low prevalence for decades.
-We hypothesized that they might induce dampened anti-viral immune responses making it more difficult to be cleared. 
-However, we were unable to demonstrate so using nasal cytokine data.
-Since these variants are co-linear with strain A and B, the differences in antiviral response are most likely strain-dependent rather than due to these particular variants.
-We do not expect any host immune memory before this first infection, potentially beyond maternal antibody.
+In this study of term healthy infants, we identified a significant viral genetic association in the RSV G protein of candidate causal variants associated with prolonged infant RSV infection. These variants were not associated with severe disease, had not arisen as a recent mutation, and have been present in public sequence data at a low prevalence for decades. Demonstrating that there is no evidence of host genetic susceptibility for risk of infection with RSV during infancy allowed our analysis to focus on the viral genetic features which may drive prolonged infection without requiring adjustment for host factors. The variant associated with prolonged infection in our cohort is in the extracellular region, and there are no known mechanistic features that directly overlap, although it is possible that variant positions approximate sequences that bind a putative viral receptor, heparan sulfate \citep{feldman1999identification}, in the G protein three-dimensional structure.  As neither the capacity of RSV for prolonged infection in immunocompetent hosts nor the viral reservoir has been delineated,  these results are of fundamental interest in understanding viral and host genetic contributions that may underlie the development of chronic respiratory morbidity.
+Although this study was not designed to define mechanisms underlying the association of G protein variants with prolonged infection, we hypothesize that these sequence changes dampen antiviral immune responses and thereby delay viral clearance. We do not expect a role for immune memory in these first-in-life RSV infections; however, we cannot exclude modulatory effects of maternal antibody. 
+
+%\subsection{Cytokines}
+We observed differences in the acute antiviral response between subjects with resolved and prolonged infection, specifically, [state difference with respect to IFN in nasal secretions] — but causal inference about variant sequences is co-founded by co-linearity of these polymorphisms with RSV antigenic group. Results of nasal cytokine analysis are nevertheless consistent with a contemplated role for altered immune responses in extended infections by G protein variant strains. 
+The possibility of viral mutational immune escape has been reported for 
+infants who struggle to control primary RSV infections, allowing for prolonged viral replication and not previously described viral rebound
+\citep{brint2017prolonged}.
+
+Strains harboring G protein p.E123K/D and p.P218T/S/L variants might be cleared more slowly and foster an immune environment of low-level chronic stimulation or exhaustion. 
+We previously demonstrated that infants infected with RSV in their first year of life have dampened subsequent antiviral immune responses in early childhood \citep{chirkova2022effect} as well as changes in airway epithelial cell metabolism \citep{connelly2021metabolic}.
+
+% Within-host variation with \textit{de novo} mutation may allow variants to present within some individuals but failing to persist within the population, however, we have not been able to conclusively assess this possibility.
+Public data show the consistent presence of G protein p.E123K/D and p.P218T/S/L variants at low frequencies [insert frequency range here?] over the past 30 years, without evidence of enrichment by positive selective pressure over time. Yet, why such variants have maintained a stable but low frequency in the human population for decades is unclear. These strains are a potential reservoir, emerging seasonally in response to immune, environmental, or other forces. Alternatively, the polymorphisms might recurrently emerge \textit{de novo} during infection of some individuals but are poorly transmissible because of suboptimal fitness. 
+
+%\subsection{functional interpret}
+G protein p.E123K/D and p.P218T/S/L variants are not part of known antibody neutralization epitopes or CD8+ cytotoxic T-cell epitopes (Figure \ref{fig:3}). In addition to heparan sulfate, interactions between viral G protein and CX3CR1, the receptor for the CX3C chemokine fractalkine, have been reported to modulate the immune response and facilitate infection
+\citep{levine1987demonstration, feldman1999identification, feldman2000fusion, johnson2015respiratory, tripp2001cx3c, jeong2015cx3cr1}.
+Furthermore, the mature secreted isoform of G protein (p.66-298) is thought to facilitate viral antibody evasion by acting as an antigen decoy and modifying the activity of leukocytes bearing Fc-gamma receptors \citep{bukreyev2008secreted}. Our findings raise the interesting prospect that G protein variants associated with prolonged infection alter a key interaction at the immune interface between pathogen and host.
 
 %\subsection{limitations}
-While this study has a number of significant strengths, including being one of few population-based studies of the first RSV infection during infancy regardless of symptoms among a term healthy infant population, there are limitations which must be considered.
-This cohort was not designed to study persistence of infection, and repeat sampling following initial RSV infection was only done based on symptoms and likely missed some prolonged infections in this population. 
-This resulted in a small number of prolonged infections to study.
-The small sample size also required focus on surface proteins for their prior probability of association and interpretation.
-A larger cohort may in future perform a whole genome analysis.
+While this study has a number of significant strengths, including one of few population-based surveillance studies of first RSV infections during infancy among term healthy infants, our findings are also subject to some limitations. First, this study was not designed with primary intention to examine infection duration, and repeat sampling following initial RSV infection was performed based on criteria for an acute respiratory infection. Asymptomatic prolonged infections would not have been captured. Second, our study cohort was small, necessitating focus on viral surface glycoproteins, F and G, due to their variability and presumed likelihood of a positive association. A larger cohort with serial sampling would be required to diminish the impact of co-linearity of viral genotypes with antigenic groups and to perform informative viral whole genome analysis. Genome-wide information might elucidate other determinants of prolonged infection or pathogen fitness that mediate and/or modulate effects of phenotype-driving variations. Third, again due to small sample size, we could not investigate host genetic risk for prolonged infection. While we have not specifically assessed subjects for rare monogenic variants that may cause an underlying immunodeficiency, our enrollment criteria included only infants who were term and otherwise healthy. 
 
 %\subsection{asthma}
 A host genetic interaction for asthma has been demonstrated previously 
@@ -823,69 +816,8 @@ but no significant interaction was found.
 However, our sample size is unlikely to be sufficient to answer this question, 
 which may be addressed with future studies. 
 
-%\subsection{Other genetics}
-Genomic analysis of both human and pathogen in tandem is being increasingly adopted. 
-Application of the same statistical methods that are commonly used for human GWAS while extending the boundary from host genome to pathogen genome can allow for robust analysis of novel genotype-phenotype associations.
-In this study we combined the outcome of host phenotype and covariates with the pathogen genotype as a predictor. 
-Cohort sizes as little as 2-3 times larger than that reported here are capable of detecting signals in genome-to-genome analysis
-\citep{fellay2020exploring}.  % temp use this citation but switch to Mack's if available. % \citep{mack hbv, n=400}.
-While we have not overtly assessed patients for rare monogenic variants that may cause an underlying immunodeficiency, our enrollment criteria included only patients who were otherwise healthy.
-We have also previously demonstrated that there is no evidence for host genetic susceptibility due to common variants for risk of infection with RSV during infancy (cite). 
-%your ESHG abstract, and if our other paper is published).
-Accounting for host genetic factors allowed our analysis to focus on the viral genetic features which may drive persistence.
-The possibility of viral mutational immune escape has been reported for 
-infants who struggle to control primary RSV infections, allowing for prolonged viral replication and not previously described viral rebound
-\citep{brint2017prolonged}.
+In summary, we identified a novel RSV viral variant associated with prolonged infection in healthy infants, but no evidence of host genetic susceptibility to infant RSV infection. Understanding host and viral mechanisms that contribute to prolonged infection will be important in crafting strategies to control the short- and long-term impact of RSV infection. The identification of RSV variants associated with prolonged infection might also improve vaccine design, particularly if these variants stimulate robust immunity or, in contrast, escape the immune response or induce immunopathologic conditions. The growing availability of large genomic and functional data sources provides opportunities for understanding pathogenesis of infant RSV infection, contribution of viral genetic variants to acute and chronic illness, and pathways to effective vaccines.
 
-%\subsection{functional interpret}
-We suspected that the variants of interest may either be enriched by selective pressure over time, however inspecting public data from the last two decades shows presence of these variants at low frequencies.
-Within-host variation with \textit{de novo} mutation may allow variants to present within some individuals but failing to persist within the population, however, we have not been able to conclusively assess this possibility.
-Why these variants, which appear quite stable, have persisted at low frequency in the population for decades is uncertain. 
-It is possible that a virus that persists or is cleared less rapidly may have a greater impact on epigenetic changes and reprogramming of the developing airway epithelium, or results in a low-level chronic stimulation or immune exhaustion. 
-We have previously demonstrated that infants infected with RSV in their first year of life have dampened subsequent anti-viral immune responses in early childhood (cite Frontiers in Immunol Chirkova T et al. under review) as well as changes in airway epithelial cell metabolism 
-\citep{connelly2021metabolic}.
-
-Known neutralization epitopes were not found for our variant site (Jim).
-Attachment of the virion to the host cell membrane is thought to occur through interaction with heparan sulfate as shown in Figure \ref{fig:3}
-(p.187-198), thereby initiating infection 
-\citep{levine1987demonstration, feldman1999identification, feldman2000fusion}.
-Specifically, interactions between viral G protein and host CX3CR1, the receptor for the CX3C chemokine fractalkine, have been reported to modulate the immune response and facilitate infection 
-\citep{johnson2015respiratory, tripp2001cx3c, jeong2015cx3cr1}.
-CX3CR1 is well known as a coreceptor for HIV-1. 
-Variations in \textit{CX3CR1} are known to have important effects on the susceptibility to HIV-1 infection and the hosts' potential for controlling infection [cite, ask Jacques].
-In general, viral envelope glycoproteins bind to specific cellular receptors and initiate fusion with the host cell membrane, 
-which allows the penetration of the viral genome into host cells. 
-The negative-strand RNA family of Paramyxoviridae rely on a pair of binding and fusion functions for infection, mediated by one or multiple envelope glycoproteins,
-which span the viral envelope and project from the surface as spikes 
-%[confirm the consensus domain position here for A/B; 
-(p.1-43 cytoplasmic, 43-63 helical, 64-298 extracellular).
-These proteins are generally designated as either hemagglutinin (H), hemagglutinin-neuraminidase (HN), or glycoprotein (G). 
-Haemagglutination activity which is responsible for the binding of virus (i.e. Influenza) to sialic acid on the surface of target cells.
-Haemagglutination and neuraminidase (HN) activity cleaves sialic acid on the cell surface, preventing viral particles from reattaching to previously infected cells. 
-Unlike the other paramyxovirus attachment proteins, 
-RSV glycoprotein lacks hemagglutinin-neuraminidase (HN) activities.
-It uses the attachment protein with neither haemagglutination nor neuraminidase activity, designated as G (glycoprotein), which are found in henipaviruses.
-\citep{takimoto2002role, malvoisin1993measles, hu1992functional, horvath1992biological, bousse1994regions}
-The mature isoform of secreted glycoprotein G is believed to help the virus escape antibody-dependent restriction of replication by acting as an antigen decoy and by modulating the activity of leukocytes bearing Fc-gamma receptors 
-\citep{bukreyev2008secreted}.
-This secreted isoform is reported for amino acid positions p.66 – 298, and includes the variants associated with prolonged infection in our analysis. 
-
-Increasingly efficient vaccine development combined with the growing availability of large genomic and functional data sources provides opportunities for controlling the severity of illness, delaying age of infection, and preemptively monitoring for increased viral pathogenicity. 
-As a disease which causes significant morbidity and mortality, each advance in preventative measures can have lasting consequences for global health.
-
-%[These 2 following citation summaries were copied and I have not read them yet] 
-%Interacts with the host lectins CD209/DC-SIGN and CD209L/L-SIGN on dendritic cells; these interactions stimulate the phosphorylation of MAPK3/ERK1 and MAPK1/ERK2, which inhibits dendritic cell activation and could participate in the limited immunity against RSV reinfection 
-%\citep{johnson2012respiratory}.
-%Part of a complex composed of F1, F2 and G glycoproteins have been reported to form part of a complex
-%\citep{low2008rsv}.
-
-%Bring up the idea of immune response once already inside cell. 
-%Tina made the point that initial binding may not be the most important feature.
-%CT values go up when it is being cleared  - first illness CT rarely lower than second CT = reducing virus.
-
-%Note: Testing glycosylation. 
-%define window of glycos sites (2-3 AA size)
-%random sample (variant) and get P that it lies within this site.
 
 
 \section{Links}
@@ -925,16 +857,16 @@ As a disease which causes significant morbidity and mortality, each advance in p
 \item Dataset \url{https://www.ncbi.nlm.nih.gov/bioproject/267583}.
 \item Dataset \url{https://www.ncbi.nlm.nih.gov/bioproject/225816}.
 \item J. Craig Venter Institute \url{https://www.jcvi.org}.
-\item GenBank:NC\_001989 Bovine orthopneumovirus, complete genome \url{https://www.ncbi.nlm.nih.gov/nuccore/NC_001989}.
+\item GenBank:NC\_001989 \textit{Bovine orthopneumovirus}, complete genome \url{https://www.ncbi.nlm.nih.gov/nuccore/NC_001989}.
 \item Reference data \url{https://www.ncbi.nlm.nih.gov/gene/?term=1489824}.
-G attachment glycoprotein [Human orthopneumovirus]; ID: 1489824; Location: NC\_001781.1 (4675..5600); Aliases: HRSVgp07.
+G attachment glycoprotein [\textit{Human orthopneumovirus}]; ID: 1489824; Location: NC\_001781.1 (4675..5600); Aliases: HRSVgp07.
 \item Reference data \url{https://www.ncbi.nlm.nih.gov/gene/?term=37607642}. 
-G attachment glycoprotein [Human orthopneumovirus]; ID: 37607642; Location: NC\_038235.1 (4673..5595); Aliases: DZD21\_gp07.
+G attachment glycoprotein [\textit{Human orthopneumovirus}]; ID: 37607642; Location: NC\_038235.1 (4673..5595); Aliases: DZD21\_gp07.
 \item Reference data for all public NCBI Virus 
-\url{https://www.ncbi.nlm.nih.gov/labs/virus/vssi/} for species: Human orthopneumovirus; genus: orthopneumovirus; family: Pneumoviridae.
+\url{https://www.ncbi.nlm.nih.gov/labs/virus/vssi/} for species: \textit{Human orthopneumovirus}; genus: \textit{Orthopneumovirus}; family: \textit{Pneumoviridae}.
 \item Reference data \url{https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Human\%20orthopneumovirus,\%20taxid:11250}
 - contains sequence data for 
-Virus Lineage ss=Human orthopneumovirus, taxid:11250
+Virus Lineage ss=\textit{Human orthopneumovirus}, taxid:11250
 nucleotide: 26’965, 
 protein: 53’804, 
 RefSeq Genomes: 2.
