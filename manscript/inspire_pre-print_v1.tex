@@ -471,7 +471,8 @@ R package \textit{caret} was used to analyse genetic correlations.
 Viral amino acids (genotype collapsed into REF/ALT) were tested for association with infection types \textit{single} and \textit{prolonged}, 
 including key covariates that are significantly associated with infection.
 To reduce the testing burden, proxy SNPs were identified by
-performing clumping with ranking based on MAF and with a cut-off threshold of $r^2 \ge 0.8$.
+performing clumping with ranking based on MAF and with a cut-off threshold of $r^2 \ge 0.8$ 
+(Supplemental Figure \ref{fig:S1}).
 Analysis was performed using logistic regression with the
 R stats (3.6.2) \textit{glm} function as a generalized linear model.
 The model consisted of the binary response (prolonged infection Yes/No), and predictors - viral genotype (REF/ALT amino acid), viral PCs 1-5, host sex, and accounted for host features that have been previously demonstrated as significantly associated with infection: 
@@ -520,7 +521,8 @@ The dataset which contained data from 27 unique countries worldwide and 1084 gly
 Sequence and meta data were merged.
 Multiple sequence alignment was performed to find consensus relative positions for all sequences. 
 Regions of interest were then extracted and re-annotated with their correct amino acid positions matching the reference sequence.
-Summary statistics were gathered including number of samples, collection date, geo-location, variant frequency, strain, etc. for the specified amino acid.
+Summary statistics were gathered including number of samples, collection date, geo-location, variant frequency, strain, etc. for the specified amino acid
+(Supplemental Figure \ref{fig:S2}).
 
 \subsection{Biological interpretation}
 %Some but not all of these methods will be included for our results section. 
@@ -578,8 +580,9 @@ Therefore, our analysis focused on the F and G glycoprotein.
 % <!-- Their clinical relevance.] -->
 
 \begin{figure}[ht] \hspace*{0cm}  \begin{center}
-    \includegraphics[scale=0.1]{f1_rsv_persist2022}
-	\caption{\textbf{Cohort characteristics of infants with prolonged RSV infection compared with other RSV infection and entire cohort}. Prolonged infection is defined as RSV sequence positive, with $\ge 15$ days between testing and meeting criteria for acute respiratory infection.}
+    \includegraphics[scale=0.15]{f1_rsv_persist2022}
+	\caption{\textbf{INfant Susceptibility to Pulmonary Infections and Asthma Following RSV Exposure (INSPIRE)}.
+	 The study population is a longitudinal birth cohort specifically designed to capture the first RSV infection for term healthy infants. RSV infection was determined by biweekly surveillance for RSV and 1-year RSV serology.}
 
 	\label{fig:1}
  \end{center} \end{figure}
@@ -764,7 +767,8 @@ No other variants were correlated with this outcome.
 
 To determine whether p.E123K/D and p.P218T/S/L variant genotypes are novel and potentially influence viral fitness, we searched  the public viral data repository of NCBI \textit{Human orthopneumovirus}, taxid:11250, which contained data from 
 27 unique countries worldwide, sample collection dates from 1956 onward, and 1084 glycoprotein protein sequences after curation.
-The variants were present at a low and stable frequency, without obvious temporal enrichment. 
+The variants were present at a low and stable frequency, without obvious temporal enrichment 
+(Supplemental Figure \ref{fig:S2}).
 Thus, while historical data reveal no positive selective advantage attached to p.E123K/D and p.P218T/S/L, longstanding circulation and linkage in prolonged RSV infection suggest that these polymorphisms are present in the viral inoculum and do not arise through recurrent mutational events.
 
 \subsection{Functional interpretation}
@@ -787,9 +791,9 @@ The potential effect on glycosylation is indeterminate.
 Figure \ref{fig:3} D illustrates the position (dotted red lines) of these variants relative to summarised known functional features.
 
 
-\begin{figure}[ht] \hspace{-0.5cm} 
-    \includegraphics[scale=0.8]{f4}
-	\caption{\textbf{Viral genetic association with prolonged infection}. (A) Amino acid association with prolonged infection after multiple testing correction (significant threshold shown by dotted line). (B) Variance explained (VE) within cohort. The effect of each variant on cohort structure is shown for PCs1-2. A large \% VE for a significantly associated variant would indicate a false positive. (C) Variants in strong correlation were clumped for association testing using proxies for $r^2 \ge 0.8$. One significant association was identified (shown in A); the $r^2$ values for all other variants show a single highly correlated variant with the lead proxy (red). 
+\begin{figure}[ht] \hspace{-1.5cm} 
+    \includegraphics[scale=0.9]{f4}
+	\caption{\textbf{Viral genetic association with prolonged infection}. (A) Amino acid association with prolonged infection after multiple testing correction (significant threshold shown by dotted line). (B) Variance explained (VE) within cohort. The effect of each variant on cohort structure is shown for PCs1-2. The small \% VE for a significantly associated variant supports a true positive. (C) Variants in strong correlation were clumped for association testing using proxies for $r^2 \ge 0.8$. One significant association was identified (shown in A); the $r^2$ values for all other variants show a single highly correlated variant with the lead proxy (red), identifying p.E123K/D and p.P218T/S/L.
 	(D) Evidence for biological interpretation for every amino acid position is summarised. Dotted red lines indicate the positions at p.123, p.218.}
 	\label{fig:3}
 \end{figure}
@@ -926,10 +930,11 @@ Public upload of analysis code on GitHub \url{https://github.com/DylanLawless/}.
 	\label{fig:S1}
 \end{figure}
 
-
 \begin{figure}[ht] \hspace{-0.5cm} \begin{center}
     \includegraphics[scale=0.6]{S2}
-	\caption{\textbf{Supplemental: Publicly available RSV sequence data for $>30$ years}. (A) Global sample collection per year. (B) Variant associated with prolonged infection tracked in public data. (C) \% variance explained per year for all G protein amino acid variants from 1990-2022} 
+	\caption{\textbf{Supplemental: Publicly available RSV sequence data for $>30$ years}. (A) Global sample collection per year. (B) Variant associated with prolonged infection tracked in public data. 
+	The lead proxy SNP, p.P218T/S/L is illustrated here (relative amino acid positive 410 in MSA). The major alleles (for proline, leuceine) are seen for group A/B, with minor alleles (for serine, threonine) generally at low frequency $<$10\%.
+	(C) \% variance explained per year for all G protein amino acid variants from 1990-2022} 
 	\label{fig:S2} \end{center}
 \end{figure}
 
