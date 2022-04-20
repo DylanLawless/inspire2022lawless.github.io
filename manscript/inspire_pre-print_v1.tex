@@ -341,7 +341,7 @@ This resulted in an analysis-ready dataset of 680,526 variants from 621 children
 No genomic inflation was evident with an estimated lambda (based on median chi-squared test) equal to 1. 
 We then used genome-wide complex trait analysis (GCTA) software (\url{https://cnsgenomics.com/software/gcta/}) to calculate the genetic relationship matrix and performed principal component analysis to account for population structure
 \citep{yang2011gcta}.
-Genome-wide association analysis was performed using PLINK version 1.9 for logistic regression with multiple covariates that consisted of the child's birth month, enrollment year (as a marker of RSV season), daycare attendance, the presence of another child $\le 6$ years of age at home, sex, and 6 ancestry principal components as covariates
+Genome-wide association analysis was performed using PLINK version 1.9 for logistic regression with multiple covariates that consisted of the child's birth month, enrolment year (as a marker of RSV season), daycare attendance, the presence of another child $\le 6$ years of age at home, sex, and 6 ancestry principal components as covariates
 \citep{purcell2007plink}.
 Due to the multiple testing burden likely precluding our ability to identify small genetic effects in our GWAS, we conducted additional heritability analyses.
 
@@ -460,7 +460,7 @@ Of these, 38 were from the same patients (prolonged or repeat infection) of whic
 % <!--Correlations viewed with: corrplot, ggcorrplot, caret.-->
 
 \subsection{Population structure}
-The genetic distances to nearest neighbors were computed based on phylogenetic 
+The genetic distances to nearest neighbours were computed based on phylogenetic 
 trees generated with MAFFT.
 % [Other methods also used but not pertinent; include some info from the code].
 Principal component analysis (PCA) and singular value decomposition (SVD) were used in dimensionality reduction for exploratory data analysis of viral phylogeny.
@@ -700,7 +700,6 @@ a subset analysis of individual strains was performed to confirm the validity of
 The duration of RSV shedding in Kenyan infants has been reported previously
 \citep{okiro2010duration}.
 Based on these findings, infections separated by at least 15 days were expected to be ``new'' infections. 
-
 Figure \ref{fig:2} D (panel [i]) summarises every pairwise genetic distance between every viral sequence.
 Sequence from closely related sequences have the smallest distance; panel [ii] shows genetic invariance between viral sequences within the same host for infections separated by at least 15 days. 
 There was no significant genetic variation in prolonged viral sequence within individuals versus significantly increased genetic diversity between any of the most closely related sequences ($\text{p value} = 0.008$).
@@ -712,7 +711,7 @@ We therefore refer to these cases as prolonged infection rather than reinfection
     \includegraphics[scale=0.8]{f2}
 	\caption{\textbf{Population structure}.
 (A) Protein coding genes in RSV.
-(B) Phylogenetic tree based based on multiple sequence alignment (MSA) of G protein amino acid sequences.
+(B) Phylogenetic tree based on multiple sequence alignment (MSA) of G protein amino acid sequences.
 (C) Principal component analysis (PCA) PCs1-3 with labels indicating prolonged infections from different phylogenetic clades.
 (D) Panel [i] summarises every pairwise genetic distance between every viral sequence.
 Genetic invariance in prolonged infections separated by at least 15 days compared to other genetic variation within the most closely related sequences
@@ -840,7 +839,7 @@ G protein p.E123K/D and p.P218T/S/L variants are not part of known antibody neut
 Furthermore, the mature secreted isoform of G protein (p.66-298) is thought to facilitate viral antibody evasion by acting as an antigen decoy and modifying the activity of leukocytes bearing Fc-gamma receptors \citep{bukreyev2008secreted}. Our findings raise the interesting prospect that G protein variants associated with prolonged infection alter a key interaction at the immune interface between pathogen and host.
 
 %\subsection{limitations}
-While this study has a number of significant strengths, including one of few population-based surveillance studies of first RSV infections during infancy among term healthy infants, our findings are also subject to some limitations. First, this study was not designed with primary intention to examine infection duration, and repeat sampling following initial RSV infection was performed based on criteria for an acute respiratory infection. Asymptomatic prolonged infections would not have been captured. Second, our study cohort was small, necessitating focus on viral surface glycoproteins, F and G, due to their variability and presumed likelihood of a positive association. A larger cohort with serial sampling would be required to diminish the impact of co-linearity of viral genotypes with antigenic groups and to perform informative viral whole genome analysis. Genome-wide information might elucidate other determinants of prolonged infection or pathogen fitness that mediate and/or modulate effects of phenotype-driving variations. Third, again due to small sample size, we could not investigate host genetic risk for prolonged infection. While we have not specifically assessed subjects for rare monogenic variants that may cause an underlying immunodeficiency, our enrollment criteria included only infants who were term and otherwise healthy. 
+While this study has a number of significant strengths, including one of few population-based surveillance studies of first RSV infections during infancy among term healthy infants, our findings are also subject to some limitations. First, this study was not designed with primary intention to examine infection duration, and repeat sampling following initial RSV infection was performed based on criteria for an acute respiratory infection. Asymptomatic prolonged infections would not have been captured. Second, our study cohort was small, necessitating focus on viral surface glycoproteins, F and G, due to their variability and presumed likelihood of a positive association. A larger cohort with serial sampling would be required to diminish the impact of co-linearity of viral genotypes with antigenic groups and to perform informative viral whole genome analysis. Genome-wide information might elucidate other determinants of prolonged infection or pathogen fitness that mediate and/or modulate effects of phenotype-driving variations. Third, again due to small sample size, we could not investigate host genetic risk for prolonged infection. While we have not specifically assessed subjects for rare monogenic variants that may cause an underlying immunodeficiency, our enrolment criteria included only infants who were term and otherwise healthy. 
 
 %\subsection{asthma}
 A host genetic interaction for asthma has been demonstrated previously 
@@ -933,7 +932,7 @@ Public upload of analysis code on GitHub \url{https://github.com/DylanLawless/}.
 \begin{figure}[ht] \hspace{-0.5cm} \begin{center}
     \includegraphics[scale=0.6]{S2}
 	\caption{\textbf{Supplemental: Publicly available RSV sequence data for $>30$ years}. (A) Global sample collection per year. (B) Variant associated with prolonged infection tracked in public data. 
-	The lead proxy SNP, p.P218T/S/L is illustrated here (relative amino acid positive 410 in MSA). The major alleles (for proline, leuceine) are seen for group A/B, with minor alleles (for serine, threonine) generally at low frequency $<$10\%.
+	The lead proxy SNP, p.P218T/S/L is illustrated here (relative amino acid positive 410 in MSA). The major alleles (for proline, leucine) are seen for group A/B, with minor alleles (for serine, threonine) generally at low frequency $<$10\%.
 	(C) \% variance explained per year for all G protein amino acid variants from 1990-2022} 
 	\label{fig:S2} \end{center}
 \end{figure}
