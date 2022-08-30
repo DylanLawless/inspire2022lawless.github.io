@@ -1,0 +1,37 @@
+## Irritations
+
+Upload took about 2 hours to make sure all data was entered on drop down menus, correct title style so that all authors match, document automated reformatting.
+MS word only.
+Title must be <64 characters.
+Please upload a single file...
+Cover letter option only appears after attaching first file.
+Country of origin.. (what paper is only from one country today?).
+Do you accept the additional fee for color figure printing? 
+Add funding sources with drop down menu of "all" possible sources, very slow for several.
+.docx file is formatted before converting to PDF (e.g. a logical page break is now different due to a change in font/size).
+
+## Suggest editors:
+
+David Pegues (Deputy)
+Adam Ratner (Associate) – his interests are the most relevant
+ 
+## Suggest reviewers: Subject expert
+
+Mitch Grayson (Nationwide Children’s) Professor Mitchell.Grayson@Nationwidechildrens.org, grayson.79@osu.edu
+Steve Varga (University of Iowa) Professor steven-varga@uiowa.edu
+Ed Walsh (University of Rochester) Professor edward.walsh@rochesterregional.org
+John Devincenzo (UT Memphis)  Dr  jdevince@uthsc.edu
+Louis Bont (Utrecht) Professor lbont@umcutrecht.nl
+Ralph Tripp (Georgia) Professor ratripp@uga.edu
+
+Short title:
+RSV variants and prolonged infection
+
+Key words
+RSV, variants, prolonged, infection, GWAS
+
+This is the corresponding author (access for confirming final PDF):
+Dylan
+
+Post-Publication Corresponding Author:
+Tina

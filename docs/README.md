@@ -4,7 +4,7 @@
 * Manuscript and source code: <https://github.com/DylanLawless/inspire2022lawless.github.io>
 * Pre-print on Overleaf <https://www.overleaf.com/project/61718a4e077acc3d20ee68f1>
 * Final publication doi [citation].
-* Pre-print on medarxiv [citation].
+* Pre-print on medarxiv: [https://doi.org/10.1101/2022.06.22.22276752](https://www.medrxiv.org/content/10.1101/2022.06.22.22276752v1).
 * Git commit ID and md5sum of publication version:
 
 <!-- test -->
